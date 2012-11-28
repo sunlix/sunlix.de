@@ -24,7 +24,7 @@
 
 
 	<!-- modifie these settings for you computer -->
-	<taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask" classpath="C:\Users\admin\Arbeitsbereich\tools\gcc\compiler.jar"/>
+	<property name="compiler" value="${basedir}/../../../tools/gcc/compiler.jar"/>
 	<condition property="compass-exec" value="compass.bat" else="compass">
 		<os family="windows" />
 	</condition>
@@ -64,22 +64,19 @@
 			<arg line="compile -e production --force" />
 		</exec>
 		<!-- define js compression -->
-<!-- 		<jscomp compilationLevel="simple" warning="verbose" debug="false" output="${basedir}/js/min.js">
-			<externs dir="${basedir}/js">
-				<file name="jquery.js" />
-			</externs>
-
-			<sources dir="${basedir}/js">
-				<file name="jquery.js" />
-				<file name="jquery.fancybox.js" />
-				<file name="jquery.mousewheel-3.0.6.js" />
-				<file name="jquery.scrollTo.js" />
-				<file name="jquery.snippet.js" />
-				<file name="jquery.waypoints.js" />
-				<file name="jquery.zettings.js" />
-				<file name="yaml-focusfix.js" />
-			</sources>
-		</jscomp> -->
+		<apply executable="java" parallel="false" verbose="true" dest="${basedir}/js">
+			<fileset dir="${basedir}/js">
+				<include name="jquery*.js" />
+			</fileset>
+			<arg line="-jar" />
+			<arg path="${compiler}" />
+			<arg value="--warning_level" />
+			<arg value="QUIET" />
+			<arg value="--js_output_file" />
+			<targetfile />
+			<arg value="--js" />
+			<mapper type="glob" from="*.js" to="*.min.js" />
+		</apply>
 	</target>
 
 <!-- ===============================

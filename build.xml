@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <project name="sunlix" default="usage" basedir=".">
 
@@ -13,18 +13,19 @@
 
 	<!-- ##################################################
 		How to use:
-		   - set path variables for your local system
-		   - go to the path where this build.xml file is located
+			- set path variables for your local system
+			- go to the path where this build.xml file is located
 			 on your computer
-		   - run "ant deploy-preview" or "ant deploy-production"
+			- run "ant deploy-preview" or "ant deploy-production"
 			 to deploy files
-		   - run "ant compile-preview" or "compile-production"
+			- run "ant compile-preview" or "compile-production"
 			 if you only want to compile with compass
 	################################################## -->
 
 
-	<!-- modifie these settings for you computer -->
+	<!-- modify these settings for your computer -->
 	<property name="compiler" value="${basedir}/../../../tools/gcc/compiler.jar"/>
+	<!-- In particular, if you do not put a file extension on the executable, only ".EXE" files are looked for -->
 	<condition property="compass-exec" value="compass.bat" else="compass">
 		<os family="windows" />
 	</condition>
@@ -47,7 +48,7 @@
 	</fileset>
 
 <!-- ===============================
-	 [Compile] related tasks
+	[Compile] related tasks
 ================================ -->
 	<target name="compile" depends="compile-preview" description="set default compile settings" />
 
@@ -80,7 +81,7 @@
 	</target>
 
 <!-- ===============================
-	 [Deploy] related tasks
+	[Deploy] related tasks
 ================================ -->
 	<target name="deploy" depends="deploy-preview" description="define default deployment behavior" />
 
@@ -111,7 +112,7 @@
 	</target>
 
 <!-- ===============================
-	 [Clean] related tasks
+	[Clean] related tasks
 ================================ -->
 	<target name="clear" description="delete all deployed files">
 		<delete dir="${stage-preview-path}"/>

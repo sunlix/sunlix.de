@@ -48,6 +48,15 @@
 	</fileset>
 
 <!-- ===============================
+	[Concat] related tasks
+================================ -->
+	<target name="concat" description="concatenate the javascript files">
+		<echo message="concatenate js libs..." />
+		<concat destfile="${basedir}/js/jquery.libs.js">
+			<fileset dir="${basedir}/js/libs" includes="*.js" />
+		</concat>
+	</target>
+<!-- ===============================
 	[Compile] related tasks
 ================================ -->
 	<target name="compile" depends="compile-preview" description="set default compile settings" />
@@ -57,6 +66,7 @@
 		<exec executable="${compass-exec}">
 			<arg line="compile -e development --force" />
 		</exec>
+		<antcall target="concat" />
 	</target>
 
 	<target name="compile-production" description="compile for production purposes, i.e. compressed, etc.">
@@ -64,11 +74,10 @@
 		<exec executable="${compass-exec}">
 			<arg line="compile -e production --force" />
 		</exec>
+		<antcall target="concat" />
 		<!-- define js compression -->
 		<apply executable="java" parallel="false" verbose="true" dest="${basedir}/js">
-			<fileset dir="${basedir}/js">
-				<include name="jquery*.js" />
-			</fileset>
+			<fileset dir="${basedir}/js" includes="*.js" excludes="*.min.js" />
 			<arg line="-jar" />
 			<arg path="${compiler}" />
 			<arg value="--warning_level" />

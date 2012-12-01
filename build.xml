@@ -24,13 +24,14 @@
 
 
 	<!-- modify these settings for your computer -->
-	<property name="compiler" value="${basedir}/../../../tools/gcc/compiler.jar"/>
+	<property name="compiler" value="${basedir}/../../../tools/gcc/compiler.jar" />
 	<!-- In particular, if you do not put a file extension on the executable, only ".EXE" files are looked for -->
 	<condition property="compass-exec" value="compass.bat" else="compass">
 		<os family="windows" />
 	</condition>
-	<property name="stage-preview-path" value="${basedir}/../prev"/>
-	<property name="stage-production-path" value="${basedir}/../prod"/>
+	<property name="js-dir" value="js" />
+	<property name="stage-preview-path" value="${basedir}/../prev" />
+	<property name="stage-production-path" value="${basedir}/../prod" />
 
 	<target name="usage" description="Display usage information">
 		<echo message="Execute 'ant -projecthelp' for build file help." />
@@ -47,22 +48,20 @@
 		<include name="**/*.jpg" />
 	</fileset>
 
-<!-- ===============================
-	[Concat] related tasks
-================================ -->
 	<target name="concat" description="concatenate the javascript files">
 		<echo message="concatenate js libs..." />
-		<concat destfile="${basedir}/js/jquery.libs.js">
-			<fileset dir="${basedir}/js/libs" includes="*.js" />
+		<concat destfile="${basedir}/${js-dir}/jquery.libs.js">
+			<fileset dir="${basedir}/${js-dir}/libs" includes="*.js" />
 		</concat>
 	</target>
+
 <!-- ===============================
 	[Compile] related tasks
 ================================ -->
 	<target name="compile" depends="compile-preview" description="set default compile settings" />
 
 	<target name="compile-preview" description="compile pretty for dev purposes, i.e. no compression, etc.">
-		<echo message="compiling with compass ..."/>
+		<echo message="compiling with compass ..." />
 		<exec executable="${compass-exec}">
 			<arg line="compile -e development --force" />
 		</exec>
@@ -70,14 +69,14 @@
 	</target>
 
 	<target name="compile-production" description="compile for production purposes, i.e. compressed, etc.">
-		<echo message="compiling with compass ..."/>
+		<echo message="compiling with compass ..." />
 		<exec executable="${compass-exec}">
 			<arg line="compile -e production --force" />
 		</exec>
 		<antcall target="concat" />
 		<!-- define js compression -->
-		<apply executable="java" parallel="false" verbose="true" dest="${basedir}/js">
-			<fileset dir="${basedir}/js" includes="*.js" excludes="*.min.js" />
+		<apply executable="java" parallel="false" verbose="true" dest="${basedir}/${js-dir}">
+			<fileset dir="${basedir}/${js-dir}" includes="*.js" excludes="*.min.js" />
 			<arg line="-jar" />
 			<arg path="${compiler}" />
 			<arg value="--warning_level" />
@@ -95,8 +94,8 @@
 	<target name="deploy" depends="deploy-preview" description="define default deployment behavior" />
 
 	<target name="deploy-production" depends="compile-production" description="deploy files to production">
-		<delete dir="${stage-production-path}"/>
-		<mkdir dir="${stage-production-path}"/>
+		<delete dir="${stage-production-path}" />
+		<mkdir dir="${stage-production-path}" />
 		<copy todir="${stage-production-path}">
 			<fileset refid="deployable" />
 		</copy>
@@ -113,8 +112,8 @@
 	</target>
 
 	<target name="deploy-preview-compress" depends="compile-production" description="deploy files to preview">
-		<delete dir="${stage-preview-path}"/>
-		<mkdir dir="${stage-preview-path}"/>
+		<delete dir="${stage-preview-path}" />
+		<mkdir dir="${stage-preview-path}" />
 		<copy todir="${stage-preview-path}">
 			<fileset refid="deployable" />
 		</copy>
@@ -124,14 +123,17 @@
 	[Clean] related tasks
 ================================ -->
 	<target name="clear" description="delete all deployed files">
-		<delete dir="${stage-preview-path}"/>
-		<delete dir="${stage-production-path}"/>
+		<delete dir="${stage-preview-path}" />
+		<delete dir="${stage-production-path}" />
 	</target>
 
-	<target name="clear-sass-cache" description="delete all deployed files">
-		<echo message="compass clean"/>
+	<target name="clear-sass-cache" description="delete all compiled files">
+		<echo message="compass clean" />
 		<exec executable="${compass-exec}" output="${basedir}/../compass-output.txt">
 			<arg line="clean" />
 		</exec>
+		<delete>
+			<fileset dir="${basedir}" includes="**/*.min.js" />
+		</delete>
 	</target>
 </project>

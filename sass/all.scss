@@ -3,38 +3,37 @@
 /**
  * config
  */
-
  $icons-info_box-position: 100%;
 
 /**
  * import core styles
  */
-@import "base/base.scss";
+@import "core/base";
 
 /**
  * import screen layout
  */
-@import "navigations.scss";
-@import "forms.scss";
+@import "navigation/navigations";
+@import "forms/forms";
 
 /**
  * import layout (incl. responsive layout)
  */
-@import "layout.scss";
+@import "screen/layout";
 
 /**
  * import typography and
  * standard content styles
  */
-@import "content.scss";
+@import "screen/typography";
 
 /**
  * import add-on styles
  */
-@import "plugins/jquery.fancybox.scss";
-@import "plugins/jquery.snippet.scss";
+@import "add-ons/fancybox/jquery.fancybox";
+@import "add-ons/snippet/jquery.snippet";
 
 /**
  * import print layout
  */
-@import "print.scss";
+@import "print/print";

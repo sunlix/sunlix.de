@@ -1,0 +1,412 @@
+@import "../_yaml-var-globals",
+		"../mixins/yaml-mixins-core";
+
+@media screen {
+
+	/**
+	 * base layout
+	 */
+
+	/* force vertical scrollbar */
+	body {
+		overflow-y: scroll;
+		background-color: #efefef;
+		padding-bottom: 20px;
+	}
+
+	/* fallback for missing media queries support */
+	body {
+		& > header,
+		& > footer,
+		& > nav {
+			min-width: 760px;
+		}
+		& > .ym-wrapper {
+			background-color: #fff;
+			-webkit-box-shadow: 0 0 10px #ddd;
+			box-shadow: 0 0 10px #ddd;
+		}
+	}
+
+	/* Layout Module Configuration */
+	.ym-wrapper	{
+		max-width: 80em;
+		margin: 0 auto;
+	}
+
+	.ym-wbox {
+		padding: 1.5em;
+	}
+
+	.ym-wrapper,
+	.ym-col1,
+	.ym-col2,
+	.ym-col3 {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 10px;
+	}
+
+	.ym-col1 {
+		float: right;
+		width: 37%;
+	}
+
+	.ym-col3 {
+		margin-left: 0;
+		margin-right: 37%;
+	}
+
+	.ym-hlist .ym-wrapper {
+		padding: 0;
+	}
+
+	footer .ym-wrapper {
+		padding: 0;
+	}
+
+	/* Basic Element Styling */
+	header {
+		background: #444;
+		color: #ccc;
+
+		h1 {
+			background: transparent;
+			color: #fff;
+		}
+
+		.ym-wbox {
+			padding: 1.5em;
+		}
+	}
+
+	nav {
+		background: #222222;
+	}
+
+	main {
+		.info {
+			margin-bottom: 1.5em;
+		}
+		aside .ym-gbox-right {
+			border-left: 1px #ddd solid;
+		}
+	}
+
+	footer {
+		background: #eee;
+		color: #444;
+
+		p {
+			margin: 0;
+		}
+
+		.ym-wbox {
+			padding: 1.5em;
+		}
+	}
+
+
+	.ym-gbox { padding: 0 1.5em; }
+	.ym-gbox-left { padding: 0 1.5em 0 0; }
+	.ym-gbox-right { padding: 0 0 0 1.5em; }
+
+	/* skip links styling */
+	.ym-skiplinks {
+		a.ym-skip:focus,
+		a.ym-skip:active {
+			color:#fff;
+			background:#333;
+			border-bottom:1px #000 solid;
+			padding:10px 0;
+			text-align: center;
+			text-decoration:none;
+		}
+	}
+
+	/**
+	 * sprites
+	 */
+
+	@import "icons/*.png";
+
+	/**
+	 * search form
+	 */
+
+	 .search-form .ym-hideme {
+	 	position: absolute !important;
+	 }
+
+	 .search-form div.ym-fbox-text {
+	 	padding: 1em;
+	 }
+
+	/**
+	 * articles
+	 */
+
+	.ym-col3 > article footer {
+		margin-top: 10px;
+	}
+
+	.author	{
+		margin: 1.5em 0;
+	}
+
+	/**
+	 * comments
+	 */
+
+	.comments article {
+		width: auto;
+		margin-top: 1.2857em;
+	}
+
+	.comments article article,
+	/* wordpress specific */
+	.comments div div {
+		margin-left: 5%;
+	}
+
+	.comments article h5 {
+		margin: 0 !important;
+	}
+
+	.comments article > p,
+	.author > p	{
+		margin: 0 1.5em 0 0;
+	}
+
+	.comments .acomment	{
+		border-top: 5px #eee solid;
+		border-bottom: 5px #eee solid;
+		background-color: #f9f9f9;
+	}
+
+	#top {
+		float: right;
+		height: 16px;
+		width: 16px;
+		margin: 7px 20px;
+		text-indent: -200em;
+		@include icons-sprite(ico_br_up);
+	}
+
+	.no-margin a {
+		margin-top: 0;
+	}
+
+	/**
+	 * social media bar
+	*/
+
+	.social {
+		margin: .5em 0 0 0;
+	}
+
+	.btn {
+		display: block;
+		float: left;
+		width: auto;
+		min-height: 20px;
+		padding-right: 10px;
+		color: #000;
+	}
+
+	.btn:hover,
+	.btn:active,
+	.btn:active,
+	.btn:focus {
+		color: #000;
+		background-color: inherit;
+	}
+
+	.btn > span:first-child {
+		display: block;
+		float: left;
+		width: 16px;
+		height: 16px;
+		margin-top: 2px;
+		text-indent: 200em;
+		overflow: hidden;
+	}
+
+	.btn.comment > span:first-child {
+		@include icons-sprite(ico_spechbubble);
+	}
+
+	.btn.tweet > span:first-child {
+		@include icons-sprite(ico_twitter);
+	}
+
+	.btn.fbook > span:first-child {
+		@include icons-sprite(ico_facebook);
+	}
+
+	.btn.gplus > span:first-child {
+		@include icons-sprite(ico_google);
+	}
+
+	.btn > span:last-child {
+		display: block;
+		float: left;
+		margin-left: 3px;
+		@include icons-sprite(info_box);
+	}
+
+	.btn > span:last-child span {
+		display: block;
+		line-height: 20px;
+		margin-left: 6px;
+		padding: 0 7px 0 4px;
+		min-width: 10px;
+		@include icons-sprite(info_box, false, 100%);
+	}
+
+	/**
+	 * sidebar
+	 */
+
+	.categories ul {
+		display: table;
+		width: 100%;
+		list-style: none;
+		margin: 1.125em 0 0 0;
+	}
+
+	.categories ul li {
+		float: left;
+		margin: 0 .8em 0 0;
+	}
+
+	.archives ul,
+	.blogroll ul {
+		list-style: none;
+	}
+
+	.archives ul li,
+	.blogroll ul li {
+		@include icons-sprite(ico_br_next);
+		padding-left: 20px;
+		margin: 0;
+		line-height: 16px;
+		margin-bottom: .5em;
+	}
+
+	/**
+	 * search box in sidebar
+	*/
+
+	.search .ym-form .ym-fbox-text {
+		margin: 0;
+	}
+
+	/**
+	 * gallery list style
+	 */
+
+	.gallery {
+		display: table;
+		width: 100%;
+		overflow: visible;
+		list-style: none;
+		margin: 0;
+	}
+
+	.gallery li {
+		float: left;
+		margin: 1.5em .8em 0 0;
+		border: 5px #ddd solid;
+	}
+
+	.gallery li img,
+	.entry .lefty img {
+		vertical-align: bottom;
+	}
+
+}
+
+/* reset fallback values in modern browsers */
+@media screen and ( min-width: 0px ) {
+
+	body {
+		& > header,
+		& > nav,
+		& > main,
+		& > footer {
+			min-width: 0;
+		}
+	}
+}
+
+@media screen and ( max-width: 760px ) {
+
+	/* Linearisation for Grid- and Column-Module, based on CSS class .linearize-level-1 */
+	.linearize-level-1 {
+		@include ym-linearize-grids-and-columns();
+	}
+
+	.secondary {
+		border-top: 1px #888 solid;
+		margin-top: 1.5em !important;
+		padding-top: 1.5em !important;
+	}
+
+	main aside .ym-gbox-right {
+		border: 0 none;
+	}
+
+	.ym-searchform {
+		display:block;
+		float: none;
+		width: auto;
+		text-align: right;
+	}
+
+	.ym-searchform input[type="search"] {
+		width: 14%;
+	}
+}
+
+@media screen and ( max-width: 480px) {
+
+	/* Linearisation for Grid- and Column-Module, based on CSS class .linearize-level-2 */
+	.linearize-level-2 {
+		@include ym-linearize-grids-and-columns();
+	}
+
+	header {
+		.ym-wbox {
+			padding: 0.75em 10px;
+		}
+
+		h1 {
+			font-size: 1.5em;
+			line-height: 1em;
+			margin: 0;
+		}
+	}
+
+	footer .ym-wbox,
+	.ym-wbox,
+	.ym-searchform,
+	nav .ym-hlist ul {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.ym-searchform,
+	nav .ym-hlist ul,
+	nav .ym-hlist li {
+		display:block;
+		float: none;
+		width: auto;
+		text-align: left;
+	}
+
+	.ym-searchform input[type="search"] {
+		width: 75%;
+	}
+}

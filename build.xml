@@ -29,7 +29,7 @@
 	<condition property="compass-exec" value="compass.bat" else="compass">
 		<os family="windows" />
 	</condition>
-	<property name="js-dir" value="js" />
+	<property name="js-dir" value="assets/js" />
 	<property name="stage-preview-path" value="${basedir}/../prev" />
 	<property name="stage-production-path" value="${basedir}/../prod" />
 

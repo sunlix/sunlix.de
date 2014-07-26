@@ -18,16 +18,16 @@ $ym-print-href			: false !default;
 
 // Font Settings
 // ---------------------------------
-$ym-font-sans				: "Droid Sans", Arial, Helvetica, sans-serif;
-$ym-font-serif				: "Droid Serif", Georgia, "Times New Roman", Times, serif;
+$ym-font-sans				: $font-family;
+$ym-font-serif				: $font-family;
 $ym-font-monospace			: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
 
 // Color Settings
 // ---------------------------------
 // standard typography colors
-$ym-text-color				: #444;
-$ym-headings-color			: #161e21;
-$ym-blockquote-text-color	: #666;
+$ym-text-color				: $color-text;
+$ym-headings-color			: $color-text-secondary;
+$ym-blockquote-text-color	: $color-text;
 $ym-blockquote-bg-color		: transparent;
 $ym-pre-text-color			: #800;
 $ym-kbd-text-color			: #666;
@@ -35,19 +35,19 @@ $ym-mark-text-color			: #000;
 $ym-mark-bg-color			: #ff0;
 
 // highlight colors
-$ym-highlight-info-color	: #f4f4f4;
-$ym-highlight-success-color	: #8c8;
-$ym-highlight-warning-color	: #cc8;
-$ym-highlight-error-color	: #c88;
+$ym-highlight-info-color	: $bg-color-info;
+$ym-highlight-success-color	: $bg-color-success;
+$ym-highlight-warning-color	: $bg-color-warning;
+$ym-highlight-error-color	: $bg-color-error;
 
 // link colors
-$ym-link-text-color			: #4d87c7;
+$ym-link-text-color			: $color-main-500;
 $ym-link-bg-color			: transparent;
-$ym-link-focus-text-color	: #fff;
-$ym-link-focus-bg-color		: #4d87c7;
+$ym-link-focus-text-color	: $color-main-600;
+$ym-link-focus-bg-color		: inherit;
 
 // special colors
-$ym-hr-color				: #eee;
+$ym-hr-color				: $color-text-divider;
 $ym-highlight-text-color	: #c30;
 $ym-dimmed-text-color		: #888;
 

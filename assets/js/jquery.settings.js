@@ -1,35 +1,44 @@
 $(document).ready(function() {
 
+	/**
+	 * accesible tabs
+	 */
+	$('.jquery_tabs').accessibleTabs({
+		clearfixClass: 'ym-clearfix',
+		fx:"show",
+		fxspeed:null,
+		syncheights: true
+	});
 
-	// WAYPOINTS WITH DYNAMIC TO-TOP-LINK
-	$('#top').addClass('ym-hideme');
-	$.waypoints.settings.scrollThrottle = 30;
-	$('#main').waypoint(function(event, direction) {
-		$('#top').toggleClass('ym-hideme', direction === "up");
+	/**
+	 * define waypoint to the middle of the viewport
+	 */
+	$('#main').waypoint(function() {
+		$('.toTop').toggleClass('hide');
 	}, {
-		offset: '-50%'
-	}).parent().find('#nav-main').waypoint(function(event, direction) {
-		$(this).toggleClass('sticky', direction === "down");
-		event.stopPropagation();
-	});
-
-	// SCROLL TO TOP
-	$("#top").on("click", function() {
-		$.scrollTo("#main", 500);
-	});
-
-	// SNIPPET HIGHLIGHTING
-	$.each($("pre"), function () {
-		$(this).snippet($(this).attr("class"), {"style": "symfony"});
-	});
-
-	// FANCYOX GALLERY
-	$(".entry .gallery a, .entry .lefty a").attr("rel", "fancybox").fancybox({
-		helpers: {
-			title: {
-				type: "over"
-			}
+		offset: function() {
+			return -$(this).height() / 4;
 		}
+	});
+
+	/**
+	 * Scroll to top
+	 */
+	$('body').scrollTo(0);
+	$.scrollTo(0);
+	$('.toTop').click(function () {
+		$('body').stop().scrollTo( $('#main'), 800);
+
+		return false;
+	});
+
+	/**
+	 * initiate magnific popup module
+	 */
+	$('.gallery').magnificPopup({
+		delegate: 'a', // child items selector, by clicking on it popup will open
+		type: 'image',
+		gallery: {enabled:true}
 	});
 
 });

@@ -1,5 +1,6 @@
-@import "../yaml-var-globals";
-@import "../mixins/yaml-mixins-core";
+@import "../yaml-var-globals",
+		"../mixins/yaml-mixins-core",
+		"../var-custom";
 
 @media all {
 	.ym-hlist {
@@ -9,7 +10,6 @@
 		overflow:hidden;
 		position:relative;	//(en|de) Bugfix:IE - collapsing horizontal margins
 		line-height:1em;
-		background: #222;
 
 		ul {
 			margin:0;
@@ -27,41 +27,28 @@
 				padding:0;
 
 				a, strong {
-					background:transparent;
-					color:#aaa;
 					display:block;
 					font-size:1em;
 					line-height: 2em;
 					padding: 0 0.5em;
 					font-weight:normal;
 					text-decoration:none;
-					text-shadow: 0 1px 1px rgba(0,0,0,.5);
-					width:auto;
+					width: auto;
 				}
 
 				a:focus,
 				a:hover,
 				a:active  {
-					color: #ccc;
-					background:#666;
-					background: rgba(255,255,255,.25);
-					border-radius: 0.2em;
 					text-decoration:none;
 					outline: 0 none;
 				}
 
 				&.active {
-					background:#666;
-					background: rgba(255,255,255,.3);
-					border-radius: 0.2em;
-					color: #fff;
 
 					strong,
 					a:focus,
 					a:hover,
 					a:active {
-						background:transparent;
-						color:#fff;
 						text-decoration:none;
 					}
 				}
@@ -78,29 +65,28 @@
 
 		.ym-searchfield {
 			-webkit-appearance: none;
-			background: #fff;
-			line-height: 1;
 			padding: 0.25em;
 			width: 12em;
-			border: solid 1px #888;
-			border: solid 1px rgba(255,255,255,.1);
 			outline: none;
-			@include ym-box-shadow(0,1px,3px,rgba(0,0,0,.2),inset);
+			border: 0;
+			transition: width 1s;
+
+			&:focus,
+			&:hover {
+				width: 16em;
+			}
 		}
 
 		.ym-searchbutton {
+			position: relative;
+			right: 30px;
+			width: 20px;
 			-webkit-appearance: none;
-			background: #5f5f5f;
-			background: rgba(255,255,255,.2);
-			border-radius: .2em;
-			color: #fff;
 			cursor: pointer;
 			display: inline-block;
-			font-size: 1em;
-			line-height: 1.25;
-			padding: 0.25em;
-			border: solid 1px transparent;
-			text-shadow: 0 1px 1px rgba(0,0,0,.5);
+			text-indent: -200em;
+			transform: rotate(270deg);
+			border: 0;
 		}
 	}
 }

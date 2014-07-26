@@ -1,5 +1,6 @@
 @import "../yaml-var-typography",
-		"../mixins/yaml-mixins-core";
+		"../mixins/yaml-mixins-core",
+		"../var-custom";
 
 @media all {
 
@@ -59,6 +60,7 @@
 		font-size: $ym-h1-font-scale * 100%;
 		line-height: 2 * $line-height / $ym-h1-font-scale;
 		margin: 0 0 $line-height / $ym-h1-font-scale*1em 0;
+		float: left;
 	}
 
 	h2 {
@@ -150,6 +152,8 @@
 		font-size: $ym-text-font-scale * 100%;
 		line-height: 1 * $line-height / $ym-text-font-scale;
 		margin: 0 0 $line-height / $ym-text-font-scale*1em 0;
+		letter-spacing: .1px;
+		//-webkit-font-smoothing: antialiased;
 	}
 
 	blockquote,
@@ -261,17 +265,17 @@
 		color: $ym-link-text-color;
 		background: $ym-link-bg-color;
 		text-decoration: none;
-	}
 
-	a:active { outline: none; }
+		&:active { outline: none; }
 
-	/* (en) maximum constrast for tab focus - change with great care */
-	/* (en) Maximaler Kontrast für Tab Focus - Ändern Sie diese Regel mit Bedacht */
-	a:hover,
-	a:focus {
-		background-color: $ym-link-focus-bg-color;
-		color: $ym-link-focus-text-color;
-		text-decoration: none;
+		/* (en) maximum constrast for tab focus - change with great care */
+		/* (en) Maximaler Kontrast für Tab Focus - Ändern Sie diese Regel mit Bedacht */
+		&:hover,
+		&:focus {
+			background-color: $ym-link-focus-bg-color;
+			color: $ym-link-focus-text-color;
+			text-decoration: underline;
+		}
 	}
 
 	/* --- images ------------------ */
@@ -318,12 +322,10 @@
 	}
 
 	.box {
-		border-radius: 0.3em;
 		border-width: 1px;
 		border-style: solid;
 		border-color: #888;
 		border-color: rgba(0,0,0,.3);
-		@include ym-box-shadow(1px,1px,3px,rgba(0,0,0,.2),inset);
 		color: #444;
 		color: rgba(0,0,0,.8);
 		padding: ($ym-base-line-height - 1) / $ym-base-line-height * $line-height * 1em;
@@ -338,30 +340,40 @@
 		font-family: Verdana, Geneva, sans-serif;
 		padding: 1px 6px 2px;
 		display: inline-block;
-		vertical-align: middle;
+		vertical-align: bottom;
 		letter-spacing: normal;
 		white-space: nowrap;
 		border-radius: 3px;
-		background: #06C;
+		background: $color-accent-700;
 		color: #fff;
 		font-size: 10px;
 		line-height: 12px;
+
+		&:hover,
+		&:focus {
+			background-color: $color-accent-700;
+			color: #fff;
+		}
 	}
 
 	.info {
 		background: $ym-highlight-info-color;
+		color: $text-color-info;
 	}
 
 	.success {
 		background: $ym-highlight-success-color;
+		color: $text-color-success;
 	}
 
 	.warning {
 		background: $ym-highlight-warning-color;
+		color: $text-color-warning;
 	}
 
 	.error {
 		background: $ym-highlight-error-color;
+		color: $text-color-error;
 	}
 
 	.float-left {
@@ -461,25 +473,25 @@
 
 	thead th {
 		text-align: left;
-		color: #000;
-		border-bottom: 2px #000 solid;
+		color: $color-text-secondary;
+		border-bottom: 2px $color-text-divider solid;
 	}
 
 	tbody {
 		th {
 			text-align: left;
-			border-top: 1px solid #ccc;
+			border-top: 1px solid $color-text-divider;
 		}
 
 		td {
 			text-align: left;
-			border-top: 1px solid #ccc;
+			border-top: 1px solid $color-text-divider;
 		}
 
 		/* highlight row on mouse over */
 		tr:hover th,
 		tr:hover td {
-			background:#f8f8f8;
+			background:$color-grey-200;
 		}
 	}
 }

@@ -1,11 +1,6 @@
 @charset "UTF-8";
 
 /**
- * config
- */
- $icons-info_box-position: 100%;
-
-/**
  * import core styles
  */
 @import "core/base";
@@ -13,13 +8,15 @@
 /**
  * import screen layout
  */
-@import "navigation/navigations";
-@import "forms/forms";
+@import "navigation/hlist";
+@import "forms/green-theme";
 
 /**
- * import layout (incl. responsive layout)
+ * import add-on styles
  */
-@import "screen/layout";
+@import "add-ons/magnific-popup/main";
+@import "add-ons/prism/prism";
+@import "add-ons/accessible-tabs/tabs";
 
 /**
  * import typography and
@@ -28,12 +25,11 @@
 @import "screen/typography";
 
 /**
- * import add-on styles
- */
-@import "add-ons/fancybox/jquery.fancybox";
-@import "add-ons/snippet/jquery.snippet";
-
-/**
  * import print layout
  */
 @import "print/print";
+
+/**
+ * import layout (incl. responsive layout)
+ */
+@import "screen/layout";

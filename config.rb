@@ -1,4 +1,4 @@
-Encoding.default_external = 'utf-8'
+#Encoding.default_external = 'utf-8'
 # Set project encoding
 encoding = 'utf-8'
 

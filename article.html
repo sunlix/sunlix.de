@@ -38,7 +38,10 @@
 						<legend class="ym-hideme">Suche</legend>
 
 						<input class="ym-searchfield" type="search" rel="search" placeholder="Search..." />
-						<input class="ym-searchbutton icons-search" type="submit" value="Search" />
+						<button type="submit" class="ym-searchbutton">
+							<i class="oi" data-glyph="magnifying-glass"></i>
+							<span>Search</span>
+						</button>
 					</fieldset>
 				</form>
 				<ul class="linearize-level-2">
@@ -55,12 +58,14 @@
 					<ul>
 						<li>
 							<a href="#" class="btn float-left" rel="prev">
-								<span class="icons-prev">Relaunch geschafft!</span>
+								<i class="oi" data-glyph="chevron-left"></i>
+								<span>Relaunch geschafft!</span>
 							</a>
 						</li>
 						<li>
 							<a href="#" class="btn float-right" rel="next">
-								<span class="icons-next">Mein HQ</span>
+								<span>Mein HQ!</span>
+								<i class="oi" data-glyph="chevron-right"></i>
 							</a>
 						</li>
 					</ul>
@@ -68,13 +73,15 @@
 				<article>
 					<header>
 						<h1>H1. Relaunch sunlix.de</h1>
-						<a href="#" title="Permalink" rel="bookmark">&#182;</a>
+						<a href="#" class="permalink" title="Permalink: Relaunch sunlix.de" rel="bookmark">&#182;</a>
 					</header>
 					<div class="article-content">
-						<figure class="float-left"><img src="http://dummyimage.com/150x150/cccccc/fff.png" alt="Bild 1" /></figure>
-						<p>Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine <a href="#">Kunst darunter leidet</a>. Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege, und näher an der Erde tausend mannigfaltige Gräschen mir merkwürdig werden; wenn ich das Wimmeln der kleinen Welt zwischen Halmen, die unzähligen, unergründlichen Gestalten der Würmchen, der Mückchen näher an meinem Herzen fühle, und fühle die Gegenwart des Allmächtigen</p>
+						<div class="ym-contain-dt">
+							<figure class="float-left"><img src="http://dummyimage.com/150x150/cccccc/fff.png" alt="Bild 1" /></figure>
+							<p>Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine <a href="#">Kunst darunter leidet</a>. Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege, und näher an der Erde tausend mannigfaltige Gräschen mir merkwürdig werden; wenn ich das Wimmeln der kleinen Welt zwischen Halmen, die unzähligen, unergründlichen Gestalten der Würmchen, der Mückchen näher an meinem Herzen fühle, und fühle die Gegenwart des Allmächtigen</p>
+						</div>
 
-						<!-- <h3>Cards</h4> -->
+						<h2>H2. Cards</h2>
 
 						<div class="card">
 							<h4>H4. Cards/Modals</h4>
@@ -99,7 +106,7 @@
 							</div>
 						</div>
 
-						<h3>H3. Simple table</h3>
+						<h2>H2. Simple table</h2>
 
 						<table>
 							<thead>
@@ -143,7 +150,7 @@
 							</tbody>
 						</table>
 
-						<h4>H4. Basic gallery with magnific popup</h4>
+						<h2>H2. Basic gallery with magnific popup</h2>
 
 						<ul class="gallery">
 							<li>
@@ -173,11 +180,7 @@
 							</li>
 						</ul>
 
-						<h5>H5. Headline</h5>
-
-						<p>Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. <code>Ich bin so glücklich, mein Bester</code>, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet. Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege, und näher an der Erde tausend mannigfaltige Gräschen mir merkwürdig werden; wenn ich das Wimmeln der kleinen Welt zwischen Halmen, die unzähligen, unergründlichen Gestalten der Würmchen, der Mückchen näher an meinem Herzen fühle, und fühle die Gegenwart des Allmächtigen</p>
-
-						<h5>H5. Code examples</h5>
+						<h2>H2. Code examples</h2>
 
 <figure>
 <pre class="line-numbers"><code class="language-php">require_once 'Zend.php';
@@ -211,6 +214,13 @@ abstract class Zend_Uri {
 <figcaption>Allgemeine Berschreibung des Code-Beispiels</figcaption>
 </figure>
 
+						<h2>H2. Headline</h2>
+
+						<p>Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. <code>Ich bin so glücklich, mein Bester</code>, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet. Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege, und näher an der Erde tausend mannigfaltige Gräschen mir merkwürdig werden; wenn ich das Wimmeln der kleinen Welt zwischen Halmen, die unzähligen, unergründlichen Gestalten der Würmchen, der Mückchen näher an meinem Herzen fühle, und fühle die Gegenwart des Allmächtigen</p>
+
+						<h3>H3. Headline</h3>
+						<h4>H4. Headline</h4>
+						<h5>H5. Headline</h5>
 						<h6>H6. Headline</h6>
 
 						<p>Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet. Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege, und näher an der Erde tausend mannigfaltige Gräschen mir merkwürdig werden; wenn ich das Wimmeln der kleinen Welt zwischen Halmen, die unzähligen, unergründlichen Gestalten der Würmchen, der Mückchen näher an meinem Herzen fühle, und fühle die Gegenwart des Allmächtigen</p>
@@ -218,22 +228,34 @@ abstract class Zend_Uri {
 					<footer>
 						<!-- article meta data: http://html5doctor.com/the-dl-element/ -->
 						<dl class="article-meta">
-							<dt class="icons-user">Author</dt>
+							<dt>
+								<i class="oi" data-glyph="person"></i>
+								<span>Author</span>
+							</dt>
 							<dd><a href="#" title="Alle Einträge von Sven Schüring anzeigen" rel="author">Sven Schüring</a></dd>
-							<dt class="icons-clock">Datum</dt>
+							<dt>
+								<i class="oi" data-glyph="clock"></i>
+								<span>Datum</span>
+							</dt>
 							<dd><time datetime="2014-04-13T15:33:00+01:00" pubdate="pubdate">13.04.2014</time></dd>
-							<dt class="icons-category">Kategorien</dt>
+							<dt>
+								<i class="oi" data-glyph="folder"></i>
+								<span>Kategorien</span>
+							</dt>
 							<dd><a href="#" title="Alle Einträge der Kategorie Relaunch anzeigen" class="label">Relaunch</a></dd>
 							<dd><a href="#" title="Alle Einträge der Kategorie Wordpress anzeigen" class="label">Wordpress</a></dd>
-							<dt class="icons-tag">Tags</dt>
+							<dt>
+								<i class="oi" data-glyph="tag"></i>
+								<span>Tags</span>
+							</dt>
 							<dd><a href="#" title="Alle Einträge mit dem Tag PHP anzeigen" class="label" rel="tag">PHP</a></dd>
 							<dd><a href="#" title="Alle Einträge mit dem Tag Systemtechnik anzeigen" class="label" rel="tag">Systemtechnik</a></dd>
 							<dd><a href="#" title="Alle Einträge mit dem Tag Tipps anzeigen" class="label" rel="tag">Tipps</a></dd>
 						</dl>
-						<div class="article-author">
+						<aside class="article-author">
 							<p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" alt="" /></p>
 							<p>Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine.</p>
-						</div>
+						</aside>
 					</footer>
 
 					<section id="comments">
@@ -303,31 +325,29 @@ abstract class Zend_Uri {
 						<form action="./" method="post" class="ym-form">
 							<fieldset>
 								<legend>Benutzerdaten</legend>
-								<div class="ym-fbox-text">
+								<div class="ym-fbox ym-fbox-text">
 									<label for="username">Benutzername (erforderlich)</label>
 									<input type="text" name="username" id="username" value="" />
 								</div>
-								<div class="ym-fbox-text ym-error">
+								<div class="ym-fbox ym-fbox-text ym-error">
 									<strong class="ym-message">Bitte tragen Sie eine gültige Adresse ein!</strong>
 									<label for="email">E-Mail (erforderlich)</label>
 									<input type="email" name="email" id="email" value="" />
 								</div>
-								<div class="ym-fbox-text">
+								<div class="ym-fbox ym-fbox-text">
 									<label for="website">Internetseite</label>
 									<input type="url" name="url" id="website" value="" />
 								</div>
 							</fieldset>
 							<fieldset>
 								<legend>Ihr Kommentar</legend>
-								<div class="ym-fbox-text">
+								<div class="ym-fbox ym-fbox-text">
 									<label for="comment">Kommentar (erforderlich)</label>
 									<textarea name="comment" id="comment" cols="30" rows="7"></textarea>
 								</div>
 							</fieldset>
-							<div class="ym-fbox-button">
-								<button type="submit" class="btn">
-									<span class="icons-send">Kommentieren!</span>
-								</button>
+							<div class="ym-fbox-footer ym-fbox-button">
+								<button type="submit" class="btn">Kommentieren!</button>
 							</div>
 						</form>
 					</section>
@@ -338,12 +358,13 @@ abstract class Zend_Uri {
 			<nav id="nav-meta" class="ym-hlist">
 				<div class="ym-wrapper ym-clearfix">
 					<ul class="linearize-level-2">
-						<li><a href="#">Impressum</a></li>
-						<li class="active"><strong>FAQ</strong></li>
+						<li><a href="impressum.html">Impressum &amp; Datenschutz</a></li>
+						<li><a href="#">FAQ</a></li>
 						<li><a href="contact.html">Kontakt</a></li>
 					</ul>
 					<a href="#main" class="btn toTop hide">
-						<span class="icons-up">Zum Seitenanfang</span>
+						<i class="oi" data-glyph="chevron-top"></i>
+						<span>Zum Seitenanfang</span>
 					</a>
 				</div>
 			</nav>

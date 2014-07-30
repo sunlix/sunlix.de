@@ -1,4 +1,9 @@
 @charset "UTF-8";
+@import "https://fonts.googleapis.com/css?family=Lato:100";
+@import "https://fonts.googleapis.com/css?family=RobotoDraft:100,300,400,500,700,900,400italic,700italic";
+/**
+ * Google font API
+ */
 /**
  * import core styles
  */
@@ -7,7 +12,7 @@
    *  @section Normalisation Module
    */
   /* (en) Global reset of paddings and margins for all HTML elements */
-  /* (de) Globales Zurücksetzen der Innen- und Außenabstände für alle HTML-Elemente */
+  /* (de) Globales Zur├╝cksetzen der Innen- und Au├ƒenabst├ñnde f├╝r alle HTML-Elemente */
   /* line 8, ../../sass/core/base-modules/_normalization.scss */
   * {
     margin: 0;
@@ -15,7 +20,7 @@
   }
 
   /* (en) Correction: margin/padding reset caused too small select boxes. */
-  /* (de) Korrektur: Das Zurücksetzen der Abstände verursacht zu kleine Selectboxen. */
+  /* (de) Korrektur: Das Zur├╝cksetzen der Abst├ñnde verursacht zu kleine Selectboxen. */
   /* line 12, ../../sass/core/base-modules/_normalization.scss */
   option {
     padding-left: 0.4em;
@@ -44,7 +49,7 @@
   * (en) Fix for rounding errors when scaling font sizes in older versions of Opera browser
   *      Standard values for colors and text alignment
   *
-  * (de) Beseitigung von Rundungsfehler beim Skalieren von Schriftgrößen in älteren Opera Versionen
+  * (de) Beseitigung von Rundungsfehler beim Skalieren von Schriftgr├Â├ƒen in ├ñlteren Opera Versionen
   *      Vorgabe der Standardfarben und Textausrichtung
   */
   /* line 34, ../../sass/core/base-modules/_normalization.scss */
@@ -86,7 +91,7 @@
   }
 
   /* (en) HTML5 - default media element styles */
-  /* (de) HTML5 - Standard Eigenschaften für Media-Elemente */
+  /* (de) HTML5 - Standard Eigenschaften f├╝r Media-Elemente */
   /* line 74, ../../sass/core/base-modules/_normalization.scss */
   audio,
   canvas,
@@ -102,7 +107,7 @@
   }
 
   /* (en) HTML5 - add missing styling in IE & old FF for hidden attribute */
-  /* (de) HTML5 - Eigenschaften für das hidden-Attribut in älteren IEs und FF nachrüsten */
+  /* (de) HTML5 - Eigenschaften f├╝r das hidden-Attribut in ├ñlteren IEs und FF nachr├╝sten */
   /* line 86, ../../sass/core/base-modules/_normalization.scss */
   [hidden] {
     display: none;
@@ -117,7 +122,7 @@
   }
 
   /* (en) set correct box-modell in IE8/9 plus remove padding */
-  /* (de) Setze das richtige Box-Modell im IE8/9 und entferne unnötiges Padding */
+  /* (de) Setze das richtige Box-Modell im IE8/9 und entferne unn├Âtiges Padding */
   /* line 100, ../../sass/core/base-modules/_normalization.scss */
   input[type="checkbox"],
   input[type="radio"] {
@@ -126,7 +131,7 @@
   }
 
   /* (en) force consistant appearance of input[type="search"] elements in all browser */
-  /* (de) Einheitliches Erscheinungsbild für input[type="search"] Elemente erzwingen */
+  /* (de) Einheitliches Erscheinungsbild f├╝r input[type="search"] Elemente erzwingen */
   /* line 107, ../../sass/core/base-modules/_normalization.scss */
   input[type="search"] {
     -webkit-appearance: textfield;
@@ -149,14 +154,14 @@
   }
 
   /* (en) Address margin not present in IE 8/9 and Safari 5 */
-  /* (en) Ergänzt fehlenden Margin in IE 8/9 und Safari 5 */
+  /* (en) Erg├ñnzt fehlenden Margin in IE 8/9 und Safari 5 */
   /* line 127, ../../sass/core/base-modules/_normalization.scss */
   figure {
     margin: 0;
   }
 
   /* (en) Clear borders for <fieldset> and <img> elements */
-  /* (de) Rahmen für <fieldset> und <img> Elemente löschen */
+  /* (de) Rahmen f├╝r <fieldset> und <img> Elemente l├Âschen */
   /* line 134, ../../sass/core/base-modules/_normalization.scss */
   fieldset,
   img {
@@ -164,7 +169,7 @@
   }
 
   /* (en) new standard values for lists, blockquote, cite and tables */
-  /* (de) Neue Standardwerte für Listen, Zitate und Tabellen */
+  /* (de) Neue Standardwerte f├╝r Listen, Zitate und Tabellen */
   /* line 140, ../../sass/core/base-modules/_normalization.scss */
   ul,
   ol,
@@ -235,7 +240,7 @@
   }
 
   /* (en) alternative solutions to contain floats */
-  /* (de) Alternative Methoden zum Einschließen von Float-Umgebungen */
+  /* (de) Alternative Methoden zum Einschlie├ƒen von Float-Umgebungen */
   /* line 23, ../../sass/core/base-modules/_float-handling.scss */
   .ym-contain-dt {
     display: table;
@@ -306,7 +311,7 @@
   }
 
   /* (en) IE-Clearing: Only used in Internet Explorer, switched on in iehacks.css */
-  /* (de) IE-Clearing: Benötigt nur der Internet Explorer und über iehacks.css zugeschaltet */
+  /* (de) IE-Clearing: Ben├Âtigt nur der Internet Explorer und ├╝ber iehacks.css zugeschaltet */
   /* line 26, ../../sass/core/base-modules/_columns.scss */
   .ym-ie-clearing {
     display: none;
@@ -636,7 +641,7 @@
   *  |-------------------------------------------|
   *
   *  (en) Styling of forms where label floats left of form-elements
-  *  (de) Formulargestaltung, bei der die label-Elemente nach links fließen
+  *  (de) Formulargestaltung, bei der die label-Elemente nach links flie├ƒen
   */
   /* line 224, ../../sass/core/base-modules/_forms-core.scss */
   .ym-columnar input,
@@ -717,7 +722,7 @@
   * (de) Skip-Links und versteckte Inhalte
   */
   /* (en) classes for invisible elements in the base layout */
-  /* (de) Klassen für unsichtbare Elemente im Basislayout */
+  /* (de) Klassen f├╝r unsichtbare Elemente im Basislayout */
   /* line 14, ../../sass/core/base-modules/_accessibility.scss */
   .ym-skip,
   .ym-hideme,
@@ -728,7 +733,7 @@
   }
 
   /* (en) make skip links visible when using tab navigation */
-  /* (de) Skip-Links für Tab-Navigation sichtbar schalten */
+  /* (de) Skip-Links f├╝r Tab-Navigation sichtbar schalten */
   /* line 23, ../../sass/core/base-modules/_accessibility.scss */
   .ym-skip:focus,
   .ym-skip:active {
@@ -763,7 +768,7 @@
   * @section print adjustments for core modules
   *
   * (en) float containment for grids. Uses display:table to avoid bugs in FF & IE
-  * (de) Floats in Grids einschließen. Verwendet display:table, um Darstellungsprobleme im FF & IE zu vermeiden
+  * (de) Floats in Grids einschlie├ƒen. Verwendet display:table, um Darstellungsprobleme im FF & IE zu vermeiden
   *
   * @bugfix
   * @since     3.0
@@ -805,31 +810,11 @@
  * Example Usage
 
 	.item {
-		z-index  : 1;
-		position : relative;
-		display  : block;
-
 		margin  : .7em;
 		padding : .7em;
 		background-color : #fff;
 
-		&:before,
-		&:after {
-			z-index  : -1;
-
-			position : absolute;
-			display  : block;
-			content  : ' ';
-
-			width    : 100%;
-			height   : 100%;
-
-			top  : 0;
-			left : 0;
-
-			margin  : 0;
-			padding : 0;
-		}
+		@include md-raise();
 
 		@include md-shadow(2);
 		&:hover  { @include md-shadow(1); }
@@ -843,22 +828,22 @@
  * Buttons
  */
 /**
- * layout configuration
+ * Base configuration
  */
 /**
- * typography
+ * Layout configuration
  */
 /**
- * color palette
+ * Typography
  */
 /**
- * buttons
+ * Color palette
  */
 /**
- * highlight colors
+ * Buttons
  */
 /**
- * sprites config
+ * Highlight colors
  */
 @media all {
   /* line 6, ../../sass/navigation/_hlist.scss */
@@ -889,143 +874,147 @@
   }
   /* line 29, ../../sass/navigation/_hlist.scss */
   .ym-hlist ul li a, .ym-hlist ul li strong {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
     display: block;
     font-size: 1em;
     line-height: 2em;
     padding: 0 0.5em;
-    font-weight: normal;
+    font-weight: 400;
     text-decoration: none;
+    text-transform: uppercase;
     width: auto;
   }
-  /* line 41, ../../sass/navigation/_hlist.scss */
+  /* line 45, ../../sass/navigation/_hlist.scss */
   .ym-hlist ul li a:focus,
   .ym-hlist ul li a:hover,
   .ym-hlist ul li a:active {
+    color: #fff;
     text-decoration: none;
     outline: 0 none;
   }
   /* line 51, ../../sass/navigation/_hlist.scss */
+  .ym-hlist ul li.active {
+    color: #fff;
+    border-bottom: 2px solid #00b0ff;
+  }
+  /* line 58, ../../sass/navigation/_hlist.scss */
   .ym-hlist ul li.active strong,
   .ym-hlist ul li.active a:focus,
   .ym-hlist ul li.active a:hover,
   .ym-hlist ul li.active a:active {
+    color: #fff;
     text-decoration: none;
   }
 
   /* ------- search form -------- */
-  /* line 60, ../../sass/navigation/_hlist.scss */
+  /* line 68, ../../sass/navigation/_hlist.scss */
   .ym-searchform {
     float: right;
     display: inline;
     line-height: 2;
     padding: 0.5em 1.5em;
   }
-  /* line 66, ../../sass/navigation/_hlist.scss */
+  /* line 74, ../../sass/navigation/_hlist.scss */
   .ym-searchform .ym-searchfield {
     -webkit-appearance: none;
+    background: #fff;
+    line-height: 1;
     padding: 0.25em;
     width: 12em;
-    outline: none;
     border: 0;
-    transition: width 1s;
+    outline: none;
   }
-  /* line 75, ../../sass/navigation/_hlist.scss */
-  .ym-searchform .ym-searchfield:focus, .ym-searchform .ym-searchfield:hover {
-    width: 16em;
-  }
-  /* line 80, ../../sass/navigation/_hlist.scss */
+  /* line 84, ../../sass/navigation/_hlist.scss */
   .ym-searchform .ym-searchbutton {
     position: relative;
     right: 30px;
-    width: 20px;
     -webkit-appearance: none;
+    background: transparent;
+    color: rgba(0, 0, 0, 0.87);
     cursor: pointer;
     display: inline-block;
-    text-indent: -200em;
-    transform: rotate(270deg);
-    border: 0;
+    font-size: 1em;
+    line-height: 1.25;
+    padding: 0.25em;
+    border: solid 1px transparent;
   }
 }
 @media screen {
-  /* line 6, ../../sass/forms/_green-theme.scss */
+  /* line 5, ../../sass/forms/_gray-theme.scss */
   .ym-form {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    overflow: inherit;
     margin: 0 0 1.5em 0;
   }
-  /* line 11, ../../sass/forms/_green-theme.scss */
+  /* line 8, ../../sass/forms/_gray-theme.scss */
   .ym-form fieldset {
     position: static;
     background: transparent;
     margin: 0.75em 0 0.75em 0;
-    padding: 0;
+    padding: 0 0.5em;
   }
-  /* line 18, ../../sass/forms/_green-theme.scss */
+  /* line 15, ../../sass/forms/_gray-theme.scss */
   .ym-form legend {
     background: transparent;
     color: rgba(0, 0, 0, 0.54);
     font-size: 1.2em;
     line-height: 1.25em;
     font-weight: bold;
+    padding: 0 0.5em;
   }
-  /* line 27, ../../sass/forms/_green-theme.scss */
+  /* line 25, ../../sass/forms/_gray-theme.scss */
   .ym-form label,
   .ym-form .ym-label {
     color: rgba(0, 0, 0, 0.54);
     line-height: 1.5;
     padding-top: 0.25em;
   }
-  /* line 33, ../../sass/forms/_green-theme.scss */
+  /* line 31, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-fbox {
     padding: 0 1em;
     margin: 1em 0 0.5em 0;
   }
-  /* line 38, ../../sass/forms/_green-theme.scss */
+  /* line 36, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-fbox-footer {
-    background: #ececec;
-    border-top: 1px solid #e0e0e0;
     padding: 1.5em 1em;
     margin: 0;
   }
-  /* line 45, ../../sass/forms/_green-theme.scss */
+  /* line 41, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-fbox + .ym-fbox {
     margin: 0.5em 0;
   }
-  /* line 49, ../../sass/forms/_green-theme.scss */
+  /* line 45, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-fbox:last-child {
     margin-bottom: 1em;
   }
-  /* line 53, ../../sass/forms/_green-theme.scss */
+  /* line 49, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-fbox + .ym-fbox-footer {
     margin: 1em 0 0 0;
   }
-  /* line 58, ../../sass/forms/_green-theme.scss */
+  /* line 54, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-fbox :last-child,
   .ym-form .ym-fbox-footer :last-child {
     margin-bottom: 0;
   }
-  /* line 62, ../../sass/forms/_green-theme.scss */
+  /* line 58, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-fbox-heading {
     font-size: 1em;
     font-size: 100%;
     color: rgba(0, 0, 0, 0.54);
     margin: 1em;
   }
-  /* line 69, ../../sass/forms/_green-theme.scss */
+  /* line 65, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-fbox-check:focus + label {
-    color: rgba(0, 0, 0, 0.54);
+    color: #000;
   }
-  /* line 73, ../../sass/forms/_green-theme.scss */
+  /* line 69, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-gbox-left {
     padding: 0 4px 0 0;
   }
-  /* line 76, ../../sass/forms/_green-theme.scss */
+  /* line 72, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-gbox-right {
     padding: 0 0 0 4px;
   }
-  /* line 79, ../../sass/forms/_green-theme.scss */
+  /* line 75, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-gbox {
     padding: 0 2px 0 2px;
   }
@@ -1034,25 +1023,27 @@
   * @section styling form elements
   *
   */
-  /* line 92, ../../sass/forms/_green-theme.scss */
+  /* line 88, ../../sass/forms/_gray-theme.scss */
   .ym-form input,
   .ym-form textarea,
   .ym-form select {
-    border: 1px solid #f9f9f9;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    color: rgba(0, 0, 0, 0.87);
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     line-height: 1em;
-    font-family: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
+    font-family: Arial, Helvetica, sans-serif;
   }
-  /* line 100, ../../sass/forms/_green-theme.scss */
+  /* line 98, ../../sass/forms/_gray-theme.scss */
   .ym-form input,
   .ym-form textarea {
     padding: 4px 0.3em;
   }
-  /* line 104, ../../sass/forms/_green-theme.scss */
+  /* line 102, ../../sass/forms/_gray-theme.scss */
   .ym-form select {
     padding: 3px 2px 3px 1px;
   }
-  /* line 116, ../../sass/forms/_green-theme.scss */
+  /* line 114, ../../sass/forms/_gray-theme.scss */
   .ym-form input:focus,
   .ym-form select:focus,
   .ym-form textarea:focus,
@@ -1062,16 +1053,16 @@
   .ym-form input:active,
   .ym-form select:active,
   .ym-form textarea:active {
-    outline: 0;
-    border-bottom: 2px solid #0091ea !important;
+    border-color: #0091ea;
+    outline: none;
   }
-  /* line 121, ../../sass/forms/_green-theme.scss */
+  /* line 119, ../../sass/forms/_gray-theme.scss */
   .ym-form optgroup {
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: bold;
   }
-  /* line 130, ../../sass/forms/_green-theme.scss */
+  /* line 128, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-fbox-check input,
   .ym-form input[type="image"],
   .ym-form input[type="radio"],
@@ -1079,51 +1070,50 @@
     border: 0 none !important;
     background: transparent !important;
   }
-  /* line 135, ../../sass/forms/_green-theme.scss */
+  /* line 133, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-message {
     color: rgba(0, 0, 0, 0.26);
     margin-bottom: 0.5em;
   }
-  /* line 139, ../../sass/forms/_green-theme.scss */
+  /* line 137, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-required {
     color: #e51c23;
     font-weight: bold;
   }
-  /* line 146, ../../sass/forms/_green-theme.scss */
+  /* line 144, ../../sass/forms/_gray-theme.scss */
   .ym-form input:valid,
   .ym-form textarea:valid {
     background-color: transparent;
   }
-  /* line 148, ../../sass/forms/_green-theme.scss */
+  /* line 146, ../../sass/forms/_gray-theme.scss */
   .ym-form input:invalid,
   .ym-form textarea:invalid {
-    background-color: transparent;
-    border-bottom: 2px solid #e51c23;
+    background-color: #fde0dc;
   }
-  /* line 151, ../../sass/forms/_green-theme.scss */
+  /* line 149, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-error label {
     color: #e51c23;
     font-weight: normal;
   }
-  /* line 157, ../../sass/forms/_green-theme.scss */
+  /* line 155, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-error input,
   .ym-form .ym-error select,
   .ym-form .ym-error textarea {
-    border-bottom: 2px solid #e51c23;
+    border-color: #e51c23;
   }
-  /* line 165, ../../sass/forms/_green-theme.scss */
+  /* line 163, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-error input:hover,
   .ym-form .ym-error input:focus,
   .ym-form .ym-error select:hover,
   .ym-form .ym-error select:focus,
   .ym-form .ym-error textarea:hover,
   .ym-form .ym-error textarea:focus {
-    border-bottom: 2px solid #e51c23;
+    border-color: #0091ea;
   }
-  /* line 168, ../../sass/forms/_green-theme.scss */
+  /* line 166, ../../sass/forms/_gray-theme.scss */
   .ym-form .ym-error .ym-message {
     color: #e51c23;
-    font-weight: 700;
+    font-weight: bold;
     margin-top: 0;
   }
 
@@ -1131,7 +1121,7 @@
   * @section Buttons
   * inspired from: Catalin Rosu (http://www.red-team-design.com/just-another-awesome-css3-buttons)
   */
-  /* line 185, ../../sass/forms/_green-theme.scss */
+  /* line 183, ../../sass/forms/_gray-theme.scss */
   .ym-button,
   .ym-form button,
   .ym-form input[type="button"],
@@ -1139,59 +1129,181 @@
   .ym-form input[type="submit"] {
     display: inline-block;
     white-space: nowrap;
+    border: 0;
     cursor: pointer;
+    font: normal 1em/2em Arial, Helvetica;
     margin: 0 0.75em 0 0;
-    padding: .7em;
+    padding: 0 1.5em;
     overflow: visible;
     /* removes extra side spacing in IE */
     text-decoration: none !important;
-    border: 0;
+    color: #fff !important;
+    background-color: #259b24;
+    font-weight: 500;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    padding: .7em;
+    z-index: 1;
+    position: relative;
+    display: block;
   }
-  /* line 198, ../../sass/forms/_green-theme.scss */
+  /* line 138, ../../sass/mixins/_custom-mixins.scss */
+  .ym-button:hover, .ym-button:focus,
+  .ym-form button:hover,
+  .ym-form button:focus,
+  .ym-form input[type="button"]:hover,
+  .ym-form input[type="button"]:focus,
+  .ym-form input[type="reset"]:hover,
+  .ym-form input[type="reset"]:focus,
+  .ym-form input[type="submit"]:hover,
+  .ym-form input[type="submit"]:focus {
+    background-color: #0a8f08;
+  }
+  /* line 139, ../../sass/mixins/_custom-mixins.scss */
   .ym-button:active,
   .ym-form button:active,
   .ym-form input[type="button"]:active,
   .ym-form input[type="reset"]:active,
   .ym-form input[type="submit"]:active {
-    position: relative;
-    top: 1px;
+    background-color: #0a7e07;
   }
-  /* line 202, ../../sass/forms/_green-theme.scss */
-  .ym-button:focus,
-  .ym-form button:focus,
-  .ym-form input[type="button"]:focus,
-  .ym-form input[type="reset"]:focus,
-  .ym-form input[type="submit"]:focus {
-    outline: 0;
+  /* line 141, ../../sass/mixins/_custom-mixins.scss */
+  .ym-button.disabled,
+  .ym-form button.disabled,
+  .ym-form input[type="button"].disabled,
+  .ym-form input[type="reset"].disabled,
+  .ym-form input[type="submit"].disabled {
+    background-color: disabled rgba(204, 204, 204, 0.1);
+  }
+  /* line 98, ../../sass/mixins/_custom-mixins.scss */
+  .ym-button:before, .ym-button:after,
+  .ym-form button:before,
+  .ym-form button:after,
+  .ym-form input[type="button"]:before,
+  .ym-form input[type="button"]:after,
+  .ym-form input[type="reset"]:before,
+  .ym-form input[type="reset"]:after,
+  .ym-form input[type="submit"]:before,
+  .ym-form input[type="submit"]:after {
+    z-index: -1;
+    position: absolute;
+    display: block;
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 42, ../../sass/mixins/_custom-mixins.scss */
+  .ym-button:before,
+  .ym-form button:before,
+  .ym-form input[type="button"]:before,
+  .ym-form input[type="reset"]:before,
+  .ym-form input[type="submit"]:before {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=16);
+    opacity: 0.16;
+    -webkit-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+  }
+  /* line 59, ../../sass/mixins/_custom-mixins.scss */
+  .ym-button:after,
+  .ym-form button:after,
+  .ym-form input[type="button"]:after,
+  .ym-form input[type="reset"]:after,
+  .ym-form input[type="submit"]:after {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=23);
+    opacity: 0.23;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+  }
+  /* line 42, ../../sass/mixins/_custom-mixins.scss */
+  .ym-button:hover:before, .ym-button:focus:before,
+  .ym-form button:hover:before,
+  .ym-form button:focus:before,
+  .ym-form input[type="button"]:hover:before,
+  .ym-form input[type="button"]:focus:before,
+  .ym-form input[type="reset"]:hover:before,
+  .ym-form input[type="reset"]:focus:before,
+  .ym-form input[type="submit"]:hover:before,
+  .ym-form input[type="submit"]:focus:before {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=12);
+    opacity: 0.12;
+    -webkit-box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+  }
+  /* line 59, ../../sass/mixins/_custom-mixins.scss */
+  .ym-button:hover:after, .ym-button:focus:after,
+  .ym-form button:hover:after,
+  .ym-form button:focus:after,
+  .ym-form input[type="button"]:hover:after,
+  .ym-form input[type="button"]:focus:after,
+  .ym-form input[type="reset"]:hover:after,
+  .ym-form input[type="reset"]:focus:after,
+  .ym-form input[type="submit"]:hover:after,
+  .ym-form input[type="submit"]:focus:after {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=24);
+    opacity: 0.24;
+    -webkit-box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+  }
+  /* line 42, ../../sass/mixins/_custom-mixins.scss */
+  .ym-button:active:before,
+  .ym-form button:active:before,
+  .ym-form input[type="button"]:active:before,
+  .ym-form input[type="reset"]:active:before,
+  .ym-form input[type="submit"]:active:before {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=19);
+    opacity: 0.19;
+    -webkit-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+  }
+  /* line 59, ../../sass/mixins/_custom-mixins.scss */
+  .ym-button:active:after,
+  .ym-form button:active:after,
+  .ym-form input[type="button"]:active:after,
+  .ym-form input[type="reset"]:active:after,
+  .ym-form input[type="submit"]:active:after {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=23);
+    opacity: 0.23;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
   }
 
   /* Button size-scaling classes */
-  /* line 208, ../../sass/forms/_green-theme.scss */
+  /* line 199, ../../sass/forms/_gray-theme.scss */
   .ym-button {
     /* 21px */
     /* 18px */
     /* 12px */
     /* 10px */
   }
-  /* line 209, ../../sass/forms/_green-theme.scss */
+  /* line 200, ../../sass/forms/_gray-theme.scss */
   .ym-button.ym-xlarge {
     font-size: 1.5em;
   }
-  /* line 210, ../../sass/forms/_green-theme.scss */
+  /* line 201, ../../sass/forms/_gray-theme.scss */
   .ym-button.ym-large {
     font-size: 1.2857em;
   }
-  /* line 211, ../../sass/forms/_green-theme.scss */
+  /* line 202, ../../sass/forms/_gray-theme.scss */
   .ym-button.ym-small {
     font-size: 0.8571em;
   }
-  /* line 212, ../../sass/forms/_green-theme.scss */
+  /* line 203, ../../sass/forms/_gray-theme.scss */
   .ym-button.ym-xsmall {
     font-size: 0.7143em;
   }
 
   /* pseudo elements don't work on input */
-  /* line 217, ../../sass/forms/_green-theme.scss */
+  /* line 208, ../../sass/forms/_gray-theme.scss */
   .ym-form button:before,
   .ym-button:before {
     float: left;
@@ -1200,8 +1312,85 @@
     pointer-events: none;
   }
 
+  /* line 220, ../../sass/forms/_gray-theme.scss */
+  .ym-add:before {
+    content: "\271A";
+  }
+
+  /* line 221, ../../sass/forms/_gray-theme.scss */
+  .ym-delete:before {
+    content: "\2718";
+  }
+
+  /* line 222, ../../sass/forms/_gray-theme.scss */
+  .ym-close:before {
+    content: "\2715";
+  }
+
+  /* line 223, ../../sass/forms/_gray-theme.scss */
+  .ym-edit:before {
+    content: "\270E";
+  }
+
+  /* line 224, ../../sass/forms/_gray-theme.scss */
+  .ym-email:before {
+    content: "\2709";
+  }
+
+  /* line 225, ../../sass/forms/_gray-theme.scss */
+  .ym-like:before {
+    content: "\2764";
+  }
+
+  /* line 226, ../../sass/forms/_gray-theme.scss */
+  .ym-next:before {
+    content: "\279C";
+  }
+
+  /* line 227, ../../sass/forms/_gray-theme.scss */
+  .ym-play:before {
+    content: "\25B6";
+  }
+
+  /* line 228, ../../sass/forms/_gray-theme.scss */
+  .ym-reply:before {
+    content: "\27A5";
+  }
+
+  /* line 229, ../../sass/forms/_gray-theme.scss */
+  .ym-save:before {
+    content: "\2714";
+  }
+
+  /* line 230, ../../sass/forms/_gray-theme.scss */
+  .ym-sign:before {
+    content: "\270D";
+  }
+
+  /* line 231, ../../sass/forms/_gray-theme.scss */
+  .ym-spark:before {
+    content: "\2737";
+  }
+
+  /* line 232, ../../sass/forms/_gray-theme.scss */
+  .ym-support:before {
+    content: "\2706";
+  }
+
+  /* line 233, ../../sass/forms/_gray-theme.scss */
+  .ym-star:before {
+    content: "\2605";
+  }
+
+  /* removes extra inner spacing in Firefox */
+  /* line 235, ../../sass/forms/_gray-theme.scss */
+  .ym-form button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
   /* If line-height can't be modified, then fix Firefox spacing with padding */
-  /* line 227, ../../sass/forms/_green-theme.scss */
+  /* line 243, ../../sass/forms/_gray-theme.scss */
   .ym-form input[type=button]::-moz-focus-inner,
   .ym-form input[type=reset]::-moz-focus-inner,
   .ym-form input[type=submit]::-moz-focus-inner {
@@ -1209,7 +1398,7 @@
   }
 
   /* The disabled styles */
-  /* line 241, ../../sass/forms/_green-theme.scss */
+  /* line 257, ../../sass/forms/_gray-theme.scss */
   .ym-form button[disabled],
   .ym-form button[disabled]:hover,
   .ym-form input[type=button][disabled],
@@ -1231,7 +1420,7 @@
   }
 
   /* ie6 support styles - redefined buttons, because of missing support for attribute selectors */
-  /* line 255, ../../sass/forms/_green-theme.scss */
+  /* line 271, ../../sass/forms/_gray-theme.scss */
   * html .ym-button,
   * html .ym-form button {
     display: inline-block;
@@ -1248,19 +1437,19 @@
     /* removes extra side spacing in IE */
     text-decoration: none !important;
   }
-  /* line 271, ../../sass/forms/_green-theme.scss */
+  /* line 287, ../../sass/forms/_gray-theme.scss */
   * html .ym-form button:focus,
   * html .ym-button:focus {
     outline: 0;
     background: #fafafa;
   }
-  /* line 277, ../../sass/forms/_green-theme.scss */
+  /* line 293, ../../sass/forms/_gray-theme.scss */
   * html .ym-form button:hover,
   * html .ym-button:hover {
     background-color: #ddd;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#fafafa', EndColorStr='#dddddd');
   }
-  /* line 283, ../../sass/forms/_green-theme.scss */
+  /* line 299, ../../sass/forms/_gray-theme.scss */
   * html .ym-form button:active,
   * html .ym-button:active {
     background-color: #bbb;
@@ -1268,7 +1457,7 @@
     position: relative;
     top: 1px;
   }
-  /* line 290, ../../sass/forms/_green-theme.scss */
+  /* line 306, ../../sass/forms/_gray-theme.scss */
   * html .ym-button.ym-disabled,
   * html .ym-button.ym-disabled:hover {
     background: #eee;
@@ -1278,7 +1467,7 @@
     text-shadow: none;
     position: static;
   }
-  /* line 299, ../../sass/forms/_green-theme.scss */
+  /* line 315, ../../sass/forms/_gray-theme.scss */
   * html .ym-button {
     /* Button size-scaling classes */
     /* 21px */
@@ -1286,42 +1475,2537 @@
     /* 12px */
     /* 10px */
   }
-  /* line 300, ../../sass/forms/_green-theme.scss */
+  /* line 316, ../../sass/forms/_gray-theme.scss */
   * html .ym-button.ym-primary {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#8888ee', EndColorStr='#6666cc');
   }
-  /* line 303, ../../sass/forms/_green-theme.scss */
+  /* line 319, ../../sass/forms/_gray-theme.scss */
   * html .ym-button.ym-success {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#66bb66', EndColorStr='#449944');
   }
-  /* line 306, ../../sass/forms/_green-theme.scss */
+  /* line 322, ../../sass/forms/_gray-theme.scss */
   * html .ym-button.ym-warning {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ddaa44', EndColorStr='#BB7722');
   }
-  /* line 309, ../../sass/forms/_green-theme.scss */
+  /* line 325, ../../sass/forms/_gray-theme.scss */
   * html .ym-button.ym-danger {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#bb6666', EndColorStr='#994444');
   }
-  /* line 314, ../../sass/forms/_green-theme.scss */
+  /* line 330, ../../sass/forms/_gray-theme.scss */
   * html .ym-button.ym-xlarge {
     font-size: 1.5em;
   }
-  /* line 315, ../../sass/forms/_green-theme.scss */
+  /* line 331, ../../sass/forms/_gray-theme.scss */
   * html .ym-button.ym-large {
     font-size: 1.2857em;
   }
-  /* line 316, ../../sass/forms/_green-theme.scss */
+  /* line 332, ../../sass/forms/_gray-theme.scss */
   * html .ym-button.ym-small {
     font-size: 0.8571em;
   }
-  /* line 317, ../../sass/forms/_green-theme.scss */
+  /* line 333, ../../sass/forms/_gray-theme.scss */
   * html .ym-button.ym-xsmall {
     font-size: 0.7143em;
   }
 }
 /**
+ * color palette for material design
+ * http://www.google.com/design/spec/style/color.html#color-ui-color-palette
+ */
+/*
+ * Example Usage
+
+	.item {
+		margin  : .7em;
+		padding : .7em;
+		background-color : #fff;
+
+		@include md-raise();
+
+		@include md-shadow(2);
+		&:hover  { @include md-shadow(1); }
+		&:active { @include md-shadow(3); }
+	}
+*/
+/**
+ * Cards
+ */
+/**
+ * Buttons
+ */
+/**
+ * Base configuration
+ */
+/**
+ * Layout configuration
+ */
+/**
+ * Typography
+ */
+/**
+ * Color palette
+ */
+/**
+ * Buttons
+ */
+/**
+ * Highlight colors
+ */
+@media screen {
+  /* force vertical scrollbar */
+  /* line 8, ../../sass/screen/_layout.scss */
+  body {
+    overflow-y: scroll;
+  }
+
+  /* Layout Module Configuration */
+  /* line 17, ../../sass/screen/_layout.scss */
+  .ym-wrapper,
+  .ym-col1,
+  .ym-col2,
+  .ym-col3 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  /* line 23, ../../sass/screen/_layout.scss */
+  .ym-wrapper {
+    max-width: 80em;
+    margin: 0 auto;
+  }
+
+  /* line 28, ../../sass/screen/_layout.scss */
+  .ym-hlist .ym-wrapper {
+    padding: 0;
+  }
+
+  /* line 38, ../../sass/screen/_layout.scss */
+  .ym-col1 {
+    float: left;
+    width: 75%;
+  }
+
+  /* content */
+  /* line 43, ../../sass/screen/_layout.scss */
+  .ym-col3 {
+    margin: 0 0 0 75%;
+  }
+
+  /* sidebar */
+  /* fallback for missing media queries support*/
+  /* line 52, ../../sass/screen/_layout.scss */
+  body > header, body > nav, body > main, body > footer {
+    min-width: 760px;
+  }
+
+  /* Basic Element Styling */
+  /* line 58, ../../sass/screen/_layout.scss */
+  body {
+    background-color: #f9f9f9;
+  }
+  /* line 61, ../../sass/screen/_layout.scss */
+  body > header {
+    margin-top: 42px;
+    background-color: #259b24;
+    z-index: 1;
+    position: relative;
+    display: block;
+  }
+  /* line 98, ../../sass/mixins/_custom-mixins.scss */
+  body > header:before, body > header:after {
+    z-index: -1;
+    position: absolute;
+    display: block;
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 42, ../../sass/mixins/_custom-mixins.scss */
+  body > header:before {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=16);
+    opacity: 0.16;
+    -webkit-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+  }
+  /* line 59, ../../sass/mixins/_custom-mixins.scss */
+  body > header:after {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=23);
+    opacity: 0.23;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+  }
+  /* line 68, ../../sass/screen/_layout.scss */
+  body > nav {
+    position: absolute !important;
+    top: 0;
+    background: #0a7e07;
+  }
+  /* line 73, ../../sass/screen/_layout.scss */
+  body > footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  /* line 86, ../../sass/screen/_layout.scss */
+  main {
+    padding: 2em 0;
+  }
+  /* line 89, ../../sass/screen/_layout.scss */
+  main aside .ym-gbox-right {
+    border-left: 1px #ddd solid;
+  }
+
+  /* line 96, ../../sass/screen/_layout.scss */
+  footer p {
+    margin: 0;
+  }
+  /* line 100, ../../sass/screen/_layout.scss */
+  footer .ym-wbox {
+    padding: 1.5em;
+  }
+
+  /* line 105, ../../sass/screen/_layout.scss */
+  .ym-gbox {
+    padding: 0 1.5em;
+  }
+
+  /* line 106, ../../sass/screen/_layout.scss */
+  .ym-gbox-left {
+    padding: 0 1.5em 0 0;
+  }
+
+  /* line 107, ../../sass/screen/_layout.scss */
+  .ym-gbox-right {
+    padding: 0 0 0 1.5em;
+  }
+
+  /* skip links styling */
+  /* line 112, ../../sass/screen/_layout.scss */
+  .ym-skiplinks a.ym-skip:focus,
+  .ym-skiplinks a.ym-skip:active {
+    color: #fff;
+    background: #333;
+    border-bottom: 1px #000 solid;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+/* reset fallback values in modern browsers */
+@media screen and (min-width: 0px) {
+  /* line 130, ../../sass/screen/_layout.scss */
+  body > header, body > nav, body > main, body > footer {
+    min-width: 0;
+  }
+}
+@media screen and (max-width: 760px) {
+  /* Linearisation for Grid- and Column-Module, based on CSS class .linearize-level-1 */
+  /* line 115, ../../sass/mixins/_yaml-mixins-core.scss */
+  .linearize-level-1, .linearize-level-1 > [class*="ym-c"], .linearize-level-1 > [class*="ym-g"] {
+    /* linearization for grids and columns module */
+    display: block;
+    float: none;
+    padding: 0;
+    margin: 0;
+    width: auto !important;
+  }
+  /* line 125, ../../sass/mixins/_yaml-mixins-core.scss */
+  .linearize-level-1 > [class*="ym-c"] > [class*="ym-cbox"], .linearize-level-1 > [class*="ym-g"] > [class*="ym-gbox"] {
+    /* reset defined gutter values */
+    margin: 0;
+    padding: 0;
+    /* optional for containing floats */
+    overflow: hidden;
+  }
+
+  /* line 143, ../../sass/screen/_layout.scss */
+  .secondary {
+    border-top: 1px #888 solid;
+    margin-top: 1.5em !important;
+    padding-top: 1.5em !important;
+  }
+
+  /* line 149, ../../sass/screen/_layout.scss */
+  main aside .ym-gbox-right {
+    border: 0 none;
+  }
+
+  /* line 153, ../../sass/screen/_layout.scss */
+  .ym-searchform {
+    display: block;
+    float: none;
+    width: auto;
+    text-align: right;
+  }
+
+  /* line 160, ../../sass/screen/_layout.scss */
+  .ym-searchform input[type="search"] {
+    width: 14%;
+  }
+
+  /**
+   * custom responsive definition
+   */
+  /* line 169, ../../sass/screen/_layout.scss */
+  .article-meta dt {
+    clear: left;
+    display: inline !important;
+    margin: .5em 0 0 0 !important;
+  }
+  /* line 174, ../../sass/screen/_layout.scss */
+  .article-meta dd {
+    display: block !important;
+    margin: .5em 0 0 .5em !important;
+  }
+
+  /* line 180, ../../sass/screen/_layout.scss */
+  .toTop {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* Linearisation for Grid- and Column-Module, based on CSS class .linearize-level-2 */
+  /* line 115, ../../sass/mixins/_yaml-mixins-core.scss */
+  .linearize-level-2, .linearize-level-2 > [class*="ym-c"], .linearize-level-2 > [class*="ym-g"] {
+    /* linearization for grids and columns module */
+    display: block;
+    float: none;
+    padding: 0;
+    margin: 0;
+    width: auto !important;
+  }
+  /* line 125, ../../sass/mixins/_yaml-mixins-core.scss */
+  .linearize-level-2 > [class*="ym-c"] > [class*="ym-cbox"], .linearize-level-2 > [class*="ym-g"] > [class*="ym-gbox"] {
+    /* reset defined gutter values */
+    margin: 0;
+    padding: 0;
+    /* optional for containing floats */
+    overflow: hidden;
+  }
+
+  /* line 193, ../../sass/screen/_layout.scss */
+  header .ym-wbox {
+    padding: 0.75em 10px;
+  }
+  /* line 199, ../../sass/screen/_layout.scss */
+  header h1,
+  header .slogan,
+  header .permalink {
+    font-size: 1.5em !important;
+    line-height: 1em !important;
+  }
+
+  /* line 208, ../../sass/screen/_layout.scss */
+  footer .ym-wbox,
+  .ym-wbox,
+  .ym-searchform,
+  nav .ym-hlist ul {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* line 215, ../../sass/screen/_layout.scss */
+  .ym-searchform,
+  nav .ym-hlist ul,
+  nav .ym-hlist li {
+    display: block;
+    float: none;
+    width: auto;
+    text-align: left;
+  }
+
+  /* line 222, ../../sass/screen/_layout.scss */
+  .ym-searchform input[type="search"] {
+    width: 75%;
+  }
+}
+/**
+ * color palette for material design
+ * http://www.google.com/design/spec/style/color.html#color-ui-color-palette
+ */
+/*
+ * Example Usage
+
+	.item {
+		margin  : .7em;
+		padding : .7em;
+		background-color : #fff;
+
+		@include md-raise();
+
+		@include md-shadow(2);
+		&:hover  { @include md-shadow(1); }
+		&:active { @include md-shadow(3); }
+	}
+*/
+/**
+ * Cards
+ */
+/**
+ * Buttons
+ */
+/**
+ * Base configuration
+ */
+/**
+ * Layout configuration
+ */
+/**
+ * Typography
+ */
+/**
+ * Color palette
+ */
+/**
+ * Buttons
+ */
+/**
+ * Highlight colors
+ */
+@media screen {
+  /* line 8, ../../sass/screen/_layout-custom.scss */
+  .slogan {
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 342.85714%;
+    font-weight: 100;
+    color: #fff;
+    margin: 0;
+  }
+
+  /**
+   * @section Sidebar definition
+   */
+  /* line 21, ../../sass/screen/_layout-custom.scss */
+  .comments blockquote {
+    margin: 0 0 1.5em 1.5em;
+  }
+
+  /**
+   * @section Navigation definition
+   */
+  /* line 32, ../../sass/screen/_layout-custom.scss */
+  #nav-meta li.active strong {
+    color: #0091ea;
+    border-color: #0091ea;
+  }
+  /* line 39, ../../sass/screen/_layout-custom.scss */
+  #nav-meta li a,
+  #nav-meta li strong {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  /* line 44, ../../sass/screen/_layout-custom.scss */
+  #nav-meta li a:hover, #nav-meta li a:focus, #nav-meta li a:active,
+  #nav-meta li strong:hover,
+  #nav-meta li strong:focus,
+  #nav-meta li strong:active {
+    color: #0091ea;
+  }
+
+  /* line 52, ../../sass/screen/_layout-custom.scss */
+  .nav-pages {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 0 0 1.5em;
+  }
+  /* line 57, ../../sass/screen/_layout-custom.scss */
+  .nav-pages ul {
+    list-style: none;
+    margin: 0;
+  }
+  /* line 61, ../../sass/screen/_layout-custom.scss */
+  .nav-pages ul li {
+    margin: 0;
+  }
+
+  /**
+   * @section Module definition
+   */
+  /* line 71, ../../sass/screen/_layout-custom.scss */
+  .btn {
+    color: #fff !important;
+    background-color: #259b24;
+    font-weight: 500;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    padding: .7em;
+    z-index: 1;
+    position: relative;
+    display: block;
+  }
+  /* line 138, ../../sass/mixins/_custom-mixins.scss */
+  .btn:hover, .btn:focus {
+    background-color: #0a8f08;
+  }
+  /* line 139, ../../sass/mixins/_custom-mixins.scss */
+  .btn:active {
+    background-color: #0a7e07;
+  }
+  /* line 141, ../../sass/mixins/_custom-mixins.scss */
+  .btn.disabled {
+    background-color: disabled rgba(204, 204, 204, 0.1);
+  }
+  /* line 98, ../../sass/mixins/_custom-mixins.scss */
+  .btn:before, .btn:after {
+    z-index: -1;
+    position: absolute;
+    display: block;
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 42, ../../sass/mixins/_custom-mixins.scss */
+  .btn:before {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=16);
+    opacity: 0.16;
+    -webkit-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+  }
+  /* line 59, ../../sass/mixins/_custom-mixins.scss */
+  .btn:after {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=23);
+    opacity: 0.23;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+  }
+  /* line 42, ../../sass/mixins/_custom-mixins.scss */
+  .btn:hover:before, .btn:focus:before {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=12);
+    opacity: 0.12;
+    -webkit-box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+  }
+  /* line 59, ../../sass/mixins/_custom-mixins.scss */
+  .btn:hover:after, .btn:focus:after {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=24);
+    opacity: 0.24;
+    -webkit-box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+  }
+  /* line 42, ../../sass/mixins/_custom-mixins.scss */
+  .btn:active:before {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=19);
+    opacity: 0.19;
+    -webkit-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+  }
+  /* line 59, ../../sass/mixins/_custom-mixins.scss */
+  .btn:active:after {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=23);
+    opacity: 0.23;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+  }
+  /* line 74, ../../sass/screen/_layout-custom.scss */
+  .btn span {
+    padding: 0 1.5em;
+  }
+
+  /* line 79, ../../sass/screen/_layout-custom.scss */
+  .toTop {
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 5em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  /* line 89, ../../sass/screen/_layout-custom.scss */
+  .toTop span {
+    display: inline-block;
+    text-indent: 100%;
+    overflow: hidden;
+    width: 0;
+  }
+  /* line 98, ../../sass/screen/_layout-custom.scss */
+  .toTop:before, .toTop:after {
+    border-radius: 50%;
+  }
+
+  /* line 103, ../../sass/screen/_layout-custom.scss */
+  .hide {
+    display: none;
+  }
+
+  /* line 107, ../../sass/screen/_layout-custom.scss */
+  .c-list li {
+    display: inline;
+    margin: 0 .8em 0 0;
+  }
+
+  /* line 116, ../../sass/screen/_layout-custom.scss */
+  .ym-searchbutton span,
+  .article-meta span,
+  .toTop span {
+    display: inline-block;
+    text-indent: 100%;
+    overflow: hidden;
+    width: 0;
+  }
+
+  /* line 124, ../../sass/screen/_layout-custom.scss */
+  .card {
+    z-index: 1;
+    position: relative;
+    display: block;
+    padding: .7em;
+    margin-bottom: 1.5em;
+  }
+  /* line 98, ../../sass/mixins/_custom-mixins.scss */
+  .card:before, .card:after {
+    z-index: -1;
+    position: absolute;
+    display: block;
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 34, ../../sass/mixins/_custom-mixins.scss */
+  .card:before, .card:after {
+    -webkit-transition: box-shadow 0.7s 0.01s;
+    -webkit-transition-delay: cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  /* line 42, ../../sass/mixins/_custom-mixins.scss */
+  .card:before {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=16);
+    opacity: 0.16;
+    -webkit-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+  }
+  /* line 59, ../../sass/mixins/_custom-mixins.scss */
+  .card:after {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=23);
+    opacity: 0.23;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+  }
+  /* line 34, ../../sass/mixins/_custom-mixins.scss */
+  .card:hover:before, .card:hover:after, .card:focus:before, .card:focus:after {
+    -webkit-transition: box-shadow 0.7s 0.01s;
+    -webkit-transition-delay: cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  /* line 42, ../../sass/mixins/_custom-mixins.scss */
+  .card:hover:before, .card:focus:before {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=12);
+    opacity: 0.12;
+    -webkit-box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+  }
+  /* line 59, ../../sass/mixins/_custom-mixins.scss */
+  .card:hover:after, .card:focus:after {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=24);
+    opacity: 0.24;
+    -webkit-box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+  }
+  /* line 34, ../../sass/mixins/_custom-mixins.scss */
+  .card:active:before, .card:active:after {
+    -webkit-transition: box-shadow 0.7s 0.01s;
+    -webkit-transition-delay: cubic-bezier(0.19, 1, 0.22, 1);
+    -moz-transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+    -o-transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  /* line 42, ../../sass/mixins/_custom-mixins.scss */
+  .card:active:before {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=19);
+    opacity: 0.19;
+    -webkit-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
+  }
+  /* line 59, ../../sass/mixins/_custom-mixins.scss */
+  .card:active:after {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=23);
+    opacity: 0.23;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
+  }
+  /* line 129, ../../sass/screen/_layout-custom.scss */
+  .card p {
+    margin: 0;
+  }
+
+  /* line 134, ../../sass/screen/_layout-custom.scss */
+  .gallery {
+    list-style: none;
+    margin: 0 0 1.5em 0;
+  }
+  /* line 138, ../../sass/screen/_layout-custom.scss */
+  .gallery li {
+    display: inline-block;
+    margin: .8em .8em 0 0;
+  }
+  /* line 142, ../../sass/screen/_layout-custom.scss */
+  .gallery li img {
+    border: 5px #ddd solid;
+  }
+
+  /**
+   * @section Article definition
+   */
+  /* line 152, ../../sass/screen/_layout-custom.scss */
+  h1 {
+    float: left;
+  }
+
+  /* line 156, ../../sass/screen/_layout-custom.scss */
+  a.permalink {
+    font-size: 342.85714%;
+    line-height: 0.875;
+    color: rgba(0, 0, 0, 0.87);
+    opacity: .1;
+    filter: alpha(opacity=0.1);
+    transition: opacity 1s ease-in-out 0;
+  }
+  /* line 165, ../../sass/screen/_layout-custom.scss */
+  a.permalink:hover, a.permalink:focus {
+    opacity: .6;
+    filter: alpha(opacity=0.8);
+    text-decoration: none;
+  }
+
+  /* line 172, ../../sass/screen/_layout-custom.scss */
+  .article-content {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 0 0 1.5em;
+  }
+
+  /* line 178, ../../sass/screen/_layout-custom.scss */
+  .article-meta {
+    margin: 0 0 2.5em;
+    padding: 0;
+    line-height: 1;
+  }
+  /* line 183, ../../sass/screen/_layout-custom.scss */
+  .article-meta dt {
+    display: inline;
+    margin-left: .5em;
+  }
+  /* line 187, ../../sass/screen/_layout-custom.scss */
+  .article-meta dt:first-child {
+    margin-left: 0;
+  }
+  /* line 192, ../../sass/screen/_layout-custom.scss */
+  .article-meta dd {
+    display: inline;
+    margin: 0;
+    margin-left: .5em;
+  }
+
+  /* line 199, ../../sass/screen/_layout-custom.scss */
+  .article-author {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  /* line 202, ../../sass/screen/_layout-custom.scss */
+  .article-author img {
+    border-radius: 50%;
+  }
+
+  /**
+   * @section Comments definition
+   */
+  /* line 212, ../../sass/screen/_layout-custom.scss */
+  #comments img {
+    border-radius: 50%;
+  }
+  /* line 216, ../../sass/screen/_layout-custom.scss */
+  #comments article {
+    margin: 0;
+    padding: .5em;
+  }
+  /* line 220, ../../sass/screen/_layout-custom.scss */
+  #comments article p {
+    margin: 0 1.5em 0 0;
+  }
+  /* line 223, ../../sass/screen/_layout-custom.scss */
+  #comments article blockquote {
+    margin: 1.5em 0 1.5em 1.5em;
+  }
+  /* line 226, ../../sass/screen/_layout-custom.scss */
+  #comments article article {
+    margin: 0;
+    margin-left: 5%;
+  }
+  /* line 233, ../../sass/screen/_layout-custom.scss */
+  #comments .comment-author > blockquote {
+    color: #a94442;
+  }
+}
+@media all {
+  /*
+  * @section global typography settings
+  *
+  * vertical rhythm settings (based on em-unit)
+  * -------------------------------------------
+  * basefont-size:  14px (87.5%)
+  * line-height  :  21px (factor: 1.5) */
+  /* (en) reset font size for all elements to standard (16 Pixel) */
+  /* (de) Alle Schriftgr├Â├ƒen auf Standardgr├Â├ƒe (16 Pixel) zur├╝cksetzen */
+  /* line 17, ../../sass/screen/_typography.scss */
+  html * {
+    font-size: 100%;
+  }
+
+  /**
+  * (en) reset monospaced elements to font size 16px in all browsers
+  * (de) Schriftgr├Â├ƒe von monospaced Elemente in allen Browsern auf 16 Pixel setzen
+  *
+  * @see: http://webkit.org/blog/67/strange-medium/
+  */
+  /* line 32, ../../sass/screen/_typography.scss */
+  textarea,
+  pre,
+  code,
+  kbd,
+  samp,
+  var,
+  tt {
+    font-family: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
+  }
+
+  /* font-size: 14px; */
+  /* line 37, ../../sass/screen/_typography.scss */
+  body {
+    font-family: "RobotoDraft", sans-serif;
+    font-size: 87.5%;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  /*--- Headings | ├£berschriften ------------------------------------------------------------------------*/
+  /* line 50, ../../sass/screen/_typography.scss */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "RobotoDraft", sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.54);
+    margin: 0;
+  }
+
+  /* line 57, ../../sass/screen/_typography.scss */
+  h1 {
+    /* font-size: 48px; */
+    font-size: 342.85714%;
+    line-height: 0.875;
+    margin: 0 0 0.4375em 0;
+  }
+
+  /* line 64, ../../sass/screen/_typography.scss */
+  h2 {
+    /* font-size: 32px; */
+    font-size: 228.57143%;
+    line-height: 1.3125;
+    margin: 0 0 0.65625em 0;
+  }
+
+  /* line 71, ../../sass/screen/_typography.scss */
+  h3 {
+    /* font-size: 24px; */
+    font-size: 171.42857%;
+    line-height: 0.875;
+    margin: 0 0 0.875em 0;
+  }
+
+  /* line 78, ../../sass/screen/_typography.scss */
+  h4 {
+    /* font-size: 21px; */
+    font-size: 150%;
+    line-height: 1;
+    margin: 0 0 1em 0;
+  }
+
+  /* line 85, ../../sass/screen/_typography.scss */
+  h5 {
+    /* font-size: 18px; */
+    font-size: 128.57143%;
+    line-height: 1.16667;
+    margin: 0 0 1.16667em 0;
+  }
+
+  /* line 92, ../../sass/screen/_typography.scss */
+  h6 {
+    /* font-size: 14px; */
+    font-size: 100%;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0 0 1.5em 0;
+  }
+
+  /* --- Lists | Listen  -------------------------------------------------------------------------------- */
+  /* line 104, ../../sass/screen/_typography.scss */
+  ul,
+  ol,
+  dl {
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0 0 1.5em 0;
+  }
+
+  /* line 110, ../../sass/screen/_typography.scss */
+  ul {
+    list-style-type: disc;
+  }
+
+  /* line 114, ../../sass/screen/_typography.scss */
+  ol {
+    list-style-type: decimal;
+  }
+
+  /* line 118, ../../sass/screen/_typography.scss */
+  ul ul {
+    list-style-type: circle;
+    margin-top: 0;
+  }
+
+  /* line 123, ../../sass/screen/_typography.scss */
+  ol ol {
+    list-style-type: lower-latin;
+    margin-top: 0;
+  }
+
+  /* line 128, ../../sass/screen/_typography.scss */
+  ol ul {
+    list-style-type: circle;
+    margin-top: 0;
+  }
+
+  /* line 133, ../../sass/screen/_typography.scss */
+  li {
+    font-size: 100%;
+    line-height: 1.5;
+    margin-left: 1.2em;
+  }
+
+  /* line 139, ../../sass/screen/_typography.scss */
+  dt {
+    font-weight: bold;
+  }
+
+  /* line 143, ../../sass/screen/_typography.scss */
+  dd {
+    margin: 0 0 1.5em 0.8em;
+  }
+
+  /* --- general text formatting | Allgemeine Textauszeichnung ------------------------------------------ */
+  /* line 149, ../../sass/screen/_typography.scss */
+  p {
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0 0 1.5em 0;
+  }
+
+  /* line 157, ../../sass/screen/_typography.scss */
+  blockquote,
+  cite,
+  q {
+    font-family: "Droid Serif", Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+  }
+
+  /* line 162, ../../sass/screen/_typography.scss */
+  blockquote {
+    background: transparent;
+    color: #666666;
+    margin: 1.5em 0 0 1.5em;
+  }
+
+  /* line 169, ../../sass/screen/_typography.scss */
+  strong,
+  b {
+    font-weight: bold;
+  }
+
+  /* line 174, ../../sass/screen/_typography.scss */
+  em,
+  i {
+    font-style: italic;
+  }
+
+  /* line 178, ../../sass/screen/_typography.scss */
+  big {
+    /* font-size: 16px; */
+    font-size: 114.28571%;
+    line-height: 1.3125;
+  }
+
+  /* line 184, ../../sass/screen/_typography.scss */
+  small {
+    /* font-size: 12px; */
+    font-size: 85.71429%;
+    line-height: 1.75;
+  }
+
+  /* line 195, ../../sass/screen/_typography.scss */
+  pre,
+  code,
+  kbd,
+  tt,
+  samp,
+  var {
+    font-size: 100%;
+  }
+
+  /* line 199, ../../sass/screen/_typography.scss */
+  pre {
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0 0 1.5em 0;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* line 208, ../../sass/screen/_typography.scss */
+  pre,
+  code {
+    color: #880000;
+  }
+
+  /* line 215, ../../sass/screen/_typography.scss */
+  kbd,
+  samp,
+  var,
+  tt {
+    color: #666666;
+    font-weight: bold;
+  }
+
+  /* line 221, ../../sass/screen/_typography.scss */
+  var,
+  dfn {
+    font-style: italic;
+  }
+
+  /* line 226, ../../sass/screen/_typography.scss */
+  acronym,
+  abbr {
+    border-bottom: 1px #aaa dotted;
+    font-variant: small-caps;
+    letter-spacing: .07em;
+    cursor: help;
+  }
+
+  /* line 234, ../../sass/screen/_typography.scss */
+  sub,
+  sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  /* line 241, ../../sass/screen/_typography.scss */
+  sup {
+    top: -0.5em;
+  }
+
+  /* line 242, ../../sass/screen/_typography.scss */
+  sub {
+    bottom: -0.25em;
+  }
+
+  /* line 244, ../../sass/screen/_typography.scss */
+  mark {
+    background: yellow;
+    color: black;
+  }
+
+  /* line 249, ../../sass/screen/_typography.scss */
+  hr {
+    color: #fff;
+    background: transparent;
+    margin: 0 0 0.75em 0;
+    padding: 0 0 0.67857em 0;
+    border: 0;
+    border-bottom: 1px rgba(0, 0, 0, 0.12) solid;
+  }
+
+  /*--- Links ----------------------------------------------------------------------------------------- */
+  /* line 260, ../../sass/screen/_typography.scss */
+  a {
+    color: #259b24;
+    background: transparent;
+    text-decoration: none;
+  }
+
+  /* line 266, ../../sass/screen/_typography.scss */
+  a:active {
+    outline: none;
+  }
+
+  /* (en) maximum constrast for tab focus - change with great care */
+  /* (en) Maximaler Kontrast f├╝r Tab Focus - ├ändern Sie diese Regel mit Bedacht */
+  /* line 271, ../../sass/screen/_typography.scss */
+  a:hover,
+  a:focus {
+    background-color: transparent;
+    color: #0a7e07;
+    text-decoration: underline;
+  }
+
+  /* --- images ------------------ */
+  /* line 280, ../../sass/screen/_typography.scss */
+  img,
+  figure {
+    margin: 0;
+  }
+
+  /* line 284, ../../sass/screen/_typography.scss */
+  .flexible {
+    margin-bottom: 1.5em;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* IE6 workaround - 2% space for possible borders */
+  /* line 291, ../../sass/screen/_typography.scss */
+  * html .flexible {
+    width: 98%;
+  }
+
+  /* line 295, ../../sass/screen/_typography.scss */
+  .bordered {
+    margin-bottom: 1.5em;
+    border: 2px #eee solid;
+    border: 2px white solid;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+  }
+
+  /**
+  * ----------------------------------------------------------------------- #
+  *
+  * Generic Content Classes
+  *
+  * (en) standard classes for positioning and highlighting
+  * (de) Standardklassen zur Positionierung und Hervorhebung
+  *
+  * @section content-generic-classes
+  */
+  /* line 312, ../../sass/screen/_typography.scss */
+  .highlight {
+    color: #cc3300;
+  }
+
+  /* line 316, ../../sass/screen/_typography.scss */
+  .dimmed {
+    color: #888888;
+  }
+
+  /* line 320, ../../sass/screen/_typography.scss */
+  .box {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #888;
+    border-color: rgba(0, 0, 0, 0.3);
+    padding: 1.42857em;
+    margin: 0 0 1.5em 0;
+  }
+  /* line 328, ../../sass/screen/_typography.scss */
+  .box > *:last-child {
+    margin-bottom: 0;
+  }
+
+  /* line 333, ../../sass/screen/_typography.scss */
+  .label {
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 1px 6px 2px;
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: normal;
+    white-space: nowrap;
+    border-radius: 3px;
+    background: #0091ea;
+    color: #fff;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  /* line 348, ../../sass/screen/_typography.scss */
+  .label:hover, .label:focus, .label:active {
+    background-color: #0091ea;
+    color: #fff;
+  }
+
+  /* line 354, ../../sass/screen/_typography.scss */
+  .info {
+    background: #d9edf7;
+  }
+
+  /* line 358, ../../sass/screen/_typography.scss */
+  .success {
+    background: #dff0d8;
+  }
+
+  /* line 362, ../../sass/screen/_typography.scss */
+  .warning {
+    background: #f9edbe;
+  }
+
+  /* line 366, ../../sass/screen/_typography.scss */
+  .error {
+    background: #f2dede;
+  }
+
+  /* line 370, ../../sass/screen/_typography.scss */
+  .float-left {
+    float: left;
+    display: inline;
+    margin: 0 1em 1.5em 0;
+  }
+
+  /* line 376, ../../sass/screen/_typography.scss */
+  .float-right {
+    float: right;
+    display: inline;
+    margin: 0 0 1.5em 1em;
+  }
+
+  /* line 382, ../../sass/screen/_typography.scss */
+  .center {
+    display: block;
+    text-align: center;
+    margin: 0 auto 1.5em auto;
+  }
+
+  /**
+  * ------------------------------------------------------------------------------------------------- #
+  *
+  * Tables | Tabellen
+  *
+  * (en) Generic classes for table-width and design definition
+  * (de) Generische Klassen f├╝r die Tabellenbreite und Gestaltungsvorschriften f├╝r Tabellen
+  *
+  * @section content-tables
+  */
+  /* line 399, ../../sass/screen/_typography.scss */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    color: rgba(0, 0, 0, 0.87);
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    margin: 0 0 1.35714em 0;
+  }
+  /* line 407, ../../sass/screen/_typography.scss */
+  table.narrow {
+    margin: 0 0 1.42857em 0;
+  }
+  /* line 411, ../../sass/screen/_typography.scss */
+  table.narrow th,
+  table.narrow td {
+    padding: 0 0.5em;
+    line-height: 1.42857;
+  }
+  /* line 417, ../../sass/screen/_typography.scss */
+  table.fixed {
+    table-layout: fixed;
+  }
+  /* line 421, ../../sass/screen/_typography.scss */
+  table.bordertable {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  /* line 424, ../../sass/screen/_typography.scss */
+  table.bordertable thead th {
+    background: #eee;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  /* line 431, ../../sass/screen/_typography.scss */
+  table.bordertable tbody th[scope="row"] {
+    background: #f0f0f0;
+  }
+  /* line 434, ../../sass/screen/_typography.scss */
+  table.bordertable tbody th {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  /* line 437, ../../sass/screen/_typography.scss */
+  table.bordertable tbody td {
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  /* line 444, ../../sass/screen/_typography.scss */
+  caption {
+    font-variant: small-caps;
+  }
+
+  /* line 449, ../../sass/screen/_typography.scss */
+  th,
+  td {
+    line-height: 1.5em;
+    vertical-align: top;
+    padding: 0.71429em 0.5em;
+  }
+
+  /* line 456, ../../sass/screen/_typography.scss */
+  th *:first-child,
+  td *:first-child {
+    margin-top: 0;
+  }
+
+  /* line 461, ../../sass/screen/_typography.scss */
+  th.nowrap,
+  td.nowrap {
+    white-space: nowrap;
+  }
+
+  /* line 465, ../../sass/screen/_typography.scss */
+  thead th {
+    text-align: left;
+    color: rgba(0, 0, 0, 0.54);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  }
+
+  /* line 471, ../../sass/screen/_typography.scss */
+  tbody {
+    /* highlight row on mouse over */
+  }
+  /* line 472, ../../sass/screen/_typography.scss */
+  tbody th {
+    text-align: left;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  /* line 477, ../../sass/screen/_typography.scss */
+  tbody td {
+    text-align: left;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  /* line 484, ../../sass/screen/_typography.scss */
+  tbody tr:hover th,
+  tbody tr:hover td {
+    background: #eeeeee;
+  }
+}
+/**
  * import add-on styles
  */
+@font-face {
+  font-family: 'Icons';
+  src: url("../fonts/open-iconic.eot");
+  src: url("../fonts/open-iconic.eot?#iconic-sm") format("embedded-opentype"), url("../fonts/open-iconic.woff") format("woff"), url("../fonts/open-iconic.ttf") format("truetype"), url("../fonts/open-iconic.otf") format("opentype"), url("../fonts/open-iconic.svg#iconic-sm") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 11, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph].oi-text-replace {
+  font-size: 0;
+  line-height: 0;
+}
+
+/* line 16, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph].oi-text-replace:before {
+  width: 1em;
+  text-align: center;
+}
+
+/* line 22, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph]:before {
+  position: relative;
+  top: 1px;
+  font-family: 'Icons';
+  display: inline-block;
+  speak: none;
+  line-height: 1;
+  vertical-align: baseline;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 36, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph]:empty:before {
+  width: 1em;
+  text-align: center;
+  box-sizing: content-box;
+}
+/* line 42, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph].oi-align-left:before {
+  text-align: left;
+}
+/* line 45, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph].oi-align-right:before {
+  text-align: right;
+}
+/* line 48, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph].oi-align-center:before {
+  text-align: center;
+}
+/* line 52, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph].oi-flip-horizontal:before {
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+/* line 58, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph].oi-flip-vertical:before {
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(1, -1);
+}
+/* line 64, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph].oi-flip-horizontal-vertical:before {
+  -webkit-transform: scale(-1, -1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, -1);
+}
+
+/* line 71, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=account-login]:before {
+  content: '\e000';
+}
+
+/* line 75, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=account-logout]:before {
+  content: '\e001';
+}
+
+/* line 79, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=action-redo]:before {
+  content: '\e002';
+}
+
+/* line 83, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=action-undo]:before {
+  content: '\e003';
+}
+
+/* line 87, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=align-center]:before {
+  content: '\e004';
+}
+
+/* line 91, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=align-left]:before {
+  content: '\e005';
+}
+
+/* line 95, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=align-right]:before {
+  content: '\e006';
+}
+
+/* line 99, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=aperture]:before {
+  content: '\e007';
+}
+
+/* line 103, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=arrow-bottom]:before {
+  content: '\e008';
+}
+
+/* line 107, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=arrow-circle-bottom]:before {
+  content: '\e009';
+}
+
+/* line 111, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=arrow-circle-left]:before {
+  content: '\e00a';
+}
+
+/* line 115, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=arrow-circle-right]:before {
+  content: '\e00b';
+}
+
+/* line 119, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=arrow-circle-top]:before {
+  content: '\e00c';
+}
+
+/* line 123, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=arrow-left]:before {
+  content: '\e00d';
+}
+
+/* line 127, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=arrow-right]:before {
+  content: '\e00e';
+}
+
+/* line 131, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=arrow-thick-bottom]:before {
+  content: '\e00f';
+}
+
+/* line 135, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=arrow-thick-left]:before {
+  content: '\e010';
+}
+
+/* line 139, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=arrow-thick-right]:before {
+  content: '\e011';
+}
+
+/* line 143, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=arrow-thick-top]:before {
+  content: '\e012';
+}
+
+/* line 147, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=arrow-top]:before {
+  content: '\e013';
+}
+
+/* line 151, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=audio-spectrum]:before {
+  content: '\e014';
+}
+
+/* line 155, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=audio]:before {
+  content: '\e015';
+}
+
+/* line 159, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=badge]:before {
+  content: '\e016';
+}
+
+/* line 163, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=ban]:before {
+  content: '\e017';
+}
+
+/* line 167, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=bar-chart]:before {
+  content: '\e018';
+}
+
+/* line 171, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=basket]:before {
+  content: '\e019';
+}
+
+/* line 175, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=battery-empty]:before {
+  content: '\e01a';
+}
+
+/* line 179, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=battery-full]:before {
+  content: '\e01b';
+}
+
+/* line 183, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=beaker]:before {
+  content: '\e01c';
+}
+
+/* line 187, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=bell]:before {
+  content: '\e01d';
+}
+
+/* line 191, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=bluetooth]:before {
+  content: '\e01e';
+}
+
+/* line 195, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=bold]:before {
+  content: '\e01f';
+}
+
+/* line 199, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=bolt]:before {
+  content: '\e020';
+}
+
+/* line 203, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=book]:before {
+  content: '\e021';
+}
+
+/* line 207, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=bookmark]:before {
+  content: '\e022';
+}
+
+/* line 211, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=box]:before {
+  content: '\e023';
+}
+
+/* line 215, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=briefcase]:before {
+  content: '\e024';
+}
+
+/* line 219, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=british-pound]:before {
+  content: '\e025';
+}
+
+/* line 223, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=browser]:before {
+  content: '\e026';
+}
+
+/* line 227, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=brush]:before {
+  content: '\e027';
+}
+
+/* line 231, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=bug]:before {
+  content: '\e028';
+}
+
+/* line 235, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=bullhorn]:before {
+  content: '\e029';
+}
+
+/* line 239, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=calculator]:before {
+  content: '\e02a';
+}
+
+/* line 243, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=calendar]:before {
+  content: '\e02b';
+}
+
+/* line 247, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=camera-slr]:before {
+  content: '\e02c';
+}
+
+/* line 251, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=caret-bottom]:before {
+  content: '\e02d';
+}
+
+/* line 255, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=caret-left]:before {
+  content: '\e02e';
+}
+
+/* line 259, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=caret-right]:before {
+  content: '\e02f';
+}
+
+/* line 263, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=caret-top]:before {
+  content: '\e030';
+}
+
+/* line 267, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=cart]:before {
+  content: '\e031';
+}
+
+/* line 271, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=chat]:before {
+  content: '\e032';
+}
+
+/* line 275, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=check]:before {
+  content: '\e033';
+}
+
+/* line 279, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=chevron-bottom]:before {
+  content: '\e034';
+}
+
+/* line 283, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=chevron-left]:before {
+  content: '\e035';
+}
+
+/* line 287, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=chevron-right]:before {
+  content: '\e036';
+}
+
+/* line 291, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=chevron-top]:before {
+  content: '\e037';
+}
+
+/* line 295, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=circle-check]:before {
+  content: '\e038';
+}
+
+/* line 299, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=circle-x]:before {
+  content: '\e039';
+}
+
+/* line 303, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=clipboard]:before {
+  content: '\e03a';
+}
+
+/* line 307, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=clock]:before {
+  content: '\e03b';
+}
+
+/* line 311, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=cloud-download]:before {
+  content: '\e03c';
+}
+
+/* line 315, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=cloud-upload]:before {
+  content: '\e03d';
+}
+
+/* line 319, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=cloud]:before {
+  content: '\e03e';
+}
+
+/* line 323, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=cloudy]:before {
+  content: '\e03f';
+}
+
+/* line 327, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=code]:before {
+  content: '\e040';
+}
+
+/* line 331, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=cog]:before {
+  content: '\e041';
+}
+
+/* line 335, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=collapse-down]:before {
+  content: '\e042';
+}
+
+/* line 339, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=collapse-left]:before {
+  content: '\e043';
+}
+
+/* line 343, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=collapse-right]:before {
+  content: '\e044';
+}
+
+/* line 347, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=collapse-up]:before {
+  content: '\e045';
+}
+
+/* line 351, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=command]:before {
+  content: '\e046';
+}
+
+/* line 355, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=comment-square]:before {
+  content: '\e047';
+}
+
+/* line 359, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=compass]:before {
+  content: '\e048';
+}
+
+/* line 363, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=contrast]:before {
+  content: '\e049';
+}
+
+/* line 367, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=copywriting]:before {
+  content: '\e04a';
+}
+
+/* line 371, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=credit-card]:before {
+  content: '\e04b';
+}
+
+/* line 375, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=crop]:before {
+  content: '\e04c';
+}
+
+/* line 379, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=dashboard]:before {
+  content: '\e04d';
+}
+
+/* line 383, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=data-transfer-download]:before {
+  content: '\e04e';
+}
+
+/* line 387, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=data-transfer-upload]:before {
+  content: '\e04f';
+}
+
+/* line 391, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=delete]:before {
+  content: '\e050';
+}
+
+/* line 395, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=dial]:before {
+  content: '\e051';
+}
+
+/* line 399, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=document]:before {
+  content: '\e052';
+}
+
+/* line 403, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=dollar]:before {
+  content: '\e053';
+}
+
+/* line 407, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=double-quote-sans-left]:before {
+  content: '\e054';
+}
+
+/* line 411, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=double-quote-sans-right]:before {
+  content: '\e055';
+}
+
+/* line 415, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=double-quote-serif-left]:before {
+  content: '\e056';
+}
+
+/* line 419, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=double-quote-serif-right]:before {
+  content: '\e057';
+}
+
+/* line 423, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=droplet]:before {
+  content: '\e058';
+}
+
+/* line 427, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=eject]:before {
+  content: '\e059';
+}
+
+/* line 431, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=elevator]:before {
+  content: '\e05a';
+}
+
+/* line 435, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=ellipses]:before {
+  content: '\e05b';
+}
+
+/* line 439, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=envelope-closed]:before {
+  content: '\e05c';
+}
+
+/* line 443, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=envelope-open]:before {
+  content: '\e05d';
+}
+
+/* line 447, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=euro]:before {
+  content: '\e05e';
+}
+
+/* line 451, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=excerpt]:before {
+  content: '\e05f';
+}
+
+/* line 455, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=expand-down]:before {
+  content: '\e060';
+}
+
+/* line 459, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=expand-left]:before {
+  content: '\e061';
+}
+
+/* line 463, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=expand-right]:before {
+  content: '\e062';
+}
+
+/* line 467, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=expand-up]:before {
+  content: '\e063';
+}
+
+/* line 471, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=external-link]:before {
+  content: '\e064';
+}
+
+/* line 475, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=eye]:before {
+  content: '\e065';
+}
+
+/* line 479, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=eyedropper]:before {
+  content: '\e066';
+}
+
+/* line 483, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=file]:before {
+  content: '\e067';
+}
+
+/* line 487, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=fire]:before {
+  content: '\e068';
+}
+
+/* line 491, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=flag]:before {
+  content: '\e069';
+}
+
+/* line 495, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=flash]:before {
+  content: '\e06a';
+}
+
+/* line 499, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=folder]:before {
+  content: '\e06b';
+}
+
+/* line 503, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=fork]:before {
+  content: '\e06c';
+}
+
+/* line 507, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=fullscreen-enter]:before {
+  content: '\e06d';
+}
+
+/* line 511, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=fullscreen-exit]:before {
+  content: '\e06e';
+}
+
+/* line 515, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=globe]:before {
+  content: '\e06f';
+}
+
+/* line 519, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=graph]:before {
+  content: '\e070';
+}
+
+/* line 523, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=grid-four-up]:before {
+  content: '\e071';
+}
+
+/* line 527, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=grid-three-up]:before {
+  content: '\e072';
+}
+
+/* line 531, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=grid-two-up]:before {
+  content: '\e073';
+}
+
+/* line 535, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=hard-drive]:before {
+  content: '\e074';
+}
+
+/* line 539, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=header]:before {
+  content: '\e075';
+}
+
+/* line 543, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=headphones]:before {
+  content: '\e076';
+}
+
+/* line 547, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=heart]:before {
+  content: '\e077';
+}
+
+/* line 551, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=home]:before {
+  content: '\e078';
+}
+
+/* line 555, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=image]:before {
+  content: '\e079';
+}
+
+/* line 559, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=inbox]:before {
+  content: '\e07a';
+}
+
+/* line 563, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=infinity]:before {
+  content: '\e07b';
+}
+
+/* line 567, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=info]:before {
+  content: '\e07c';
+}
+
+/* line 571, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=italic]:before {
+  content: '\e07d';
+}
+
+/* line 575, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=justify-center]:before {
+  content: '\e07e';
+}
+
+/* line 579, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=justify-left]:before {
+  content: '\e07f';
+}
+
+/* line 583, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=justify-right]:before {
+  content: '\e080';
+}
+
+/* line 587, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=key]:before {
+  content: '\e081';
+}
+
+/* line 591, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=laptop]:before {
+  content: '\e082';
+}
+
+/* line 595, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=layers]:before {
+  content: '\e083';
+}
+
+/* line 599, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=lightbulb]:before {
+  content: '\e084';
+}
+
+/* line 603, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=link-broken]:before {
+  content: '\e085';
+}
+
+/* line 607, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=link-intact]:before {
+  content: '\e086';
+}
+
+/* line 611, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=list-rich]:before {
+  content: '\e087';
+}
+
+/* line 615, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=list]:before {
+  content: '\e088';
+}
+
+/* line 619, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=location]:before {
+  content: '\e089';
+}
+
+/* line 623, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=lock-locked]:before {
+  content: '\e08a';
+}
+
+/* line 627, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=lock-unlocked]:before {
+  content: '\e08b';
+}
+
+/* line 631, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=loop-circular]:before {
+  content: '\e08c';
+}
+
+/* line 635, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=loop-square]:before {
+  content: '\e08d';
+}
+
+/* line 639, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=loop]:before {
+  content: '\e08e';
+}
+
+/* line 643, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=magnifying-glass]:before {
+  content: '\e08f';
+}
+
+/* line 647, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=map-marker]:before {
+  content: '\e090';
+}
+
+/* line 651, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=map]:before {
+  content: '\e091';
+}
+
+/* line 655, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=media-pause]:before {
+  content: '\e092';
+}
+
+/* line 659, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=media-play]:before {
+  content: '\e093';
+}
+
+/* line 663, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=media-record]:before {
+  content: '\e094';
+}
+
+/* line 667, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=media-skip-backward]:before {
+  content: '\e095';
+}
+
+/* line 671, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=media-skip-forward]:before {
+  content: '\e096';
+}
+
+/* line 675, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=media-step-backward]:before {
+  content: '\e097';
+}
+
+/* line 679, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=media-step-forward]:before {
+  content: '\e098';
+}
+
+/* line 683, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=media-stop]:before {
+  content: '\e099';
+}
+
+/* line 687, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=medical-cross]:before {
+  content: '\e09a';
+}
+
+/* line 691, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=menu]:before {
+  content: '\e09b';
+}
+
+/* line 695, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=microphone]:before {
+  content: '\e09c';
+}
+
+/* line 699, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=minus]:before {
+  content: '\e09d';
+}
+
+/* line 703, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=monitor]:before {
+  content: '\e09e';
+}
+
+/* line 707, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=moon]:before {
+  content: '\e09f';
+}
+
+/* line 711, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=move]:before {
+  content: '\e0a0';
+}
+
+/* line 715, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=musical-note]:before {
+  content: '\e0a1';
+}
+
+/* line 719, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=paperclip]:before {
+  content: '\e0a2';
+}
+
+/* line 723, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=pencil]:before {
+  content: '\e0a3';
+}
+
+/* line 727, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=people]:before {
+  content: '\e0a4';
+}
+
+/* line 731, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=person]:before {
+  content: '\e0a5';
+}
+
+/* line 735, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=phone]:before {
+  content: '\e0a6';
+}
+
+/* line 739, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=pie-chart]:before {
+  content: '\e0a7';
+}
+
+/* line 743, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=pin]:before {
+  content: '\e0a8';
+}
+
+/* line 747, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=play-circle]:before {
+  content: '\e0a9';
+}
+
+/* line 751, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=plus]:before {
+  content: '\e0aa';
+}
+
+/* line 755, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=power-standby]:before {
+  content: '\e0ab';
+}
+
+/* line 759, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=print]:before {
+  content: '\e0ac';
+}
+
+/* line 763, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=project]:before {
+  content: '\e0ad';
+}
+
+/* line 767, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=pulse]:before {
+  content: '\e0ae';
+}
+
+/* line 771, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=puzzle-piece]:before {
+  content: '\e0af';
+}
+
+/* line 775, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=question-mark]:before {
+  content: '\e0b0';
+}
+
+/* line 779, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=rain]:before {
+  content: '\e0b1';
+}
+
+/* line 783, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=random]:before {
+  content: '\e0b2';
+}
+
+/* line 787, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=reload]:before {
+  content: '\e0b3';
+}
+
+/* line 791, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=resize-both]:before {
+  content: '\e0b4';
+}
+
+/* line 795, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=resize-height]:before {
+  content: '\e0b5';
+}
+
+/* line 799, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=resize-width]:before {
+  content: '\e0b6';
+}
+
+/* line 803, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=rss-alt]:before {
+  content: '\e0b7';
+}
+
+/* line 807, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=rss]:before {
+  content: '\e0b8';
+}
+
+/* line 811, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=script]:before {
+  content: '\e0b9';
+}
+
+/* line 815, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=share-boxed]:before {
+  content: '\e0ba';
+}
+
+/* line 819, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=share]:before {
+  content: '\e0bb';
+}
+
+/* line 823, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=shield]:before {
+  content: '\e0bc';
+}
+
+/* line 827, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=signal]:before {
+  content: '\e0bd';
+}
+
+/* line 831, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=signpost]:before {
+  content: '\e0be';
+}
+
+/* line 835, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=sort-ascending]:before {
+  content: '\e0bf';
+}
+
+/* line 839, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=sort-descending]:before {
+  content: '\e0c0';
+}
+
+/* line 843, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=spreadsheet]:before {
+  content: '\e0c1';
+}
+
+/* line 847, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=star]:before {
+  content: '\e0c2';
+}
+
+/* line 851, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=sun]:before {
+  content: '\e0c3';
+}
+
+/* line 855, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=tablet]:before {
+  content: '\e0c4';
+}
+
+/* line 859, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=tag]:before {
+  content: '\e0c5';
+}
+
+/* line 863, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=tags]:before {
+  content: '\e0c6';
+}
+
+/* line 867, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=target]:before {
+  content: '\e0c7';
+}
+
+/* line 871, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=task]:before {
+  content: '\e0c8';
+}
+
+/* line 875, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=terminal]:before {
+  content: '\e0c9';
+}
+
+/* line 879, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=text]:before {
+  content: '\e0ca';
+}
+
+/* line 883, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=thumb-down]:before {
+  content: '\e0cb';
+}
+
+/* line 887, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=thumb-up]:before {
+  content: '\e0cc';
+}
+
+/* line 891, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=timer]:before {
+  content: '\e0cd';
+}
+
+/* line 895, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=transfer]:before {
+  content: '\e0ce';
+}
+
+/* line 899, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=trash]:before {
+  content: '\e0cf';
+}
+
+/* line 903, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=underline]:before {
+  content: '\e0d0';
+}
+
+/* line 907, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=vertical-align-bottom]:before {
+  content: '\e0d1';
+}
+
+/* line 911, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=vertical-align-center]:before {
+  content: '\e0d2';
+}
+
+/* line 915, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=vertical-align-top]:before {
+  content: '\e0d3';
+}
+
+/* line 919, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=video]:before {
+  content: '\e0d4';
+}
+
+/* line 923, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=volume-high]:before {
+  content: '\e0d5';
+}
+
+/* line 927, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=volume-low]:before {
+  content: '\e0d6';
+}
+
+/* line 931, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=volume-off]:before {
+  content: '\e0d7';
+}
+
+/* line 935, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=warning]:before {
+  content: '\e0d8';
+}
+
+/* line 939, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=wifi]:before {
+  content: '\e0d9';
+}
+
+/* line 943, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=wrench]:before {
+  content: '\e0da';
+}
+
+/* line 947, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=x]:before {
+  content: '\e0db';
+}
+
+/* line 951, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=yen]:before {
+  content: '\e0dc';
+}
+
+/* line 955, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=zoom-in]:before {
+  content: '\e0dd';
+}
+
+/* line 959, ../../sass/add-ons/open-iconic/_open-iconic.scss */
+.oi[data-glyph=zoom-out]:before {
+  content: '\e0de';
+}
+
 /* Magnific Popup CSS */
 /* line 77, ../../sass/add-ons/magnific-popup/_main.scss */
 .mfp-bg {
@@ -2054,15 +4738,15 @@ pre.line-numbers > code {
   }
   /* line 21, ../../sass/add-ons/accessible-tabs/_tabs.scss */
   .jquery_tabs ul.tabs-list li a {
+    color: rgba(0, 0, 0, 0.54);
+    text-transform: uppercase;
     font-size: 1em;
     line-height: 1.5;
     padding: 0.75em;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.54);
     background: transparent;
     display: block;
     float: left;
+    font-weight: 500;
     margin: 0;
   }
   /* line 36, ../../sass/add-ons/accessible-tabs/_tabs.scss */
@@ -2077,26 +4761,26 @@ pre.line-numbers > code {
   .jquery_tabs ul.tabs-list li.current a:hover,
   .jquery_tabs ul.tabs-list li.current a:active {
     color: #0091ea;
-    border-bottom: 2px #0091ea solid;
+    border-bottom: 2px solid #0091ea;
     text-decoration: none;
   }
   /* line 58, ../../sass/add-ons/accessible-tabs/_tabs.scss */
   .jquery_tabs .content {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
     clear: both;
-    padding: 1em 0 0;
-    margin-bottom: 1.5em;
+    padding: 0;
     position: relative;
-    border-top: 1px rgba(0, 0, 0, 0.12) solid;
+    padding-top: 1em;
   }
 
   /* hiding texts visually */
-  /* line 68, ../../sass/add-ons/accessible-tabs/_tabs.scss */
+  /* line 69, ../../sass/add-ons/accessible-tabs/_tabs.scss */
   .jquery_tabs .tabhead {
     position: absolute;
     left: -32768px;
   }
 
-  /* line 73, ../../sass/add-ons/accessible-tabs/_tabs.scss */
+  /* line 74, ../../sass/add-ons/accessible-tabs/_tabs.scss */
   .jquery_tabs .current-info,
   .jquery_tabs .accessibletabsanchor {
     left: -999em;
@@ -2110,8 +4794,10 @@ pre.line-numbers > code {
     * @css-for all browsers
     * @valid yes
 	*/
-  /* line 86, ../../sass/add-ons/accessible-tabs/_tabs.scss */
+  /* line 87, ../../sass/add-ons/accessible-tabs/_tabs.scss */
   .jquery_tabs .tab-content {
+    border-bottom: 1px transparent solid;
+    border-top: 1px transparent solid;
     padding-top: 1.5em;
     *overflow: hidden;
   }
@@ -2123,657 +4809,43 @@ pre.line-numbers > code {
    * @css-for IE 5.x/Win, IE6, IE7
    * @valid no
    */
-  /* line 99, ../../sass/add-ons/accessible-tabs/_tabs.scss */
+  /* line 102, ../../sass/add-ons/accessible-tabs/_tabs.scss */
   * html .jquery_tabs {
     zoom: 1;
     width: auto;
     position: relative;
   }
-  /* line 104, ../../sass/add-ons/accessible-tabs/_tabs.scss */
+  /* line 108, ../../sass/add-ons/accessible-tabs/_tabs.scss */
+  * html .jquery_tabs .tab-content {
+    border-bottom: 1px #fff solid;
+    border-top: 1px #fff solid;
+  }
+  /* line 113, ../../sass/add-ons/accessible-tabs/_tabs.scss */
   * html .jquery_tabs .content {
     z-index: -1;
   }
 
-  /* line 109, ../../sass/add-ons/accessible-tabs/_tabs.scss */
+  /* line 118, ../../sass/add-ons/accessible-tabs/_tabs.scss */
   * + html .jquery_tabs {
     zoom: 1;
     width: auto;
   }
 
-  /* line 110, ../../sass/add-ons/accessible-tabs/_tabs.scss */
+  /* line 119, ../../sass/add-ons/accessible-tabs/_tabs.scss */
   .jquery_tabs * {
     zoom: 1;
   }
 }
 /* Make tabs printable */
 @media print {
-  /* line 116, ../../sass/add-ons/accessible-tabs/_tabs.scss */
+  /* line 125, ../../sass/add-ons/accessible-tabs/_tabs.scss */
   .jquery_tabs .tabs-list {
     display: none !important;
   }
-  /* line 120, ../../sass/add-ons/accessible-tabs/_tabs.scss */
+  /* line 129, ../../sass/add-ons/accessible-tabs/_tabs.scss */
   .jquery_tabs .tabbody,
   .jquery_tabs .tabhead {
     display: block !important;
-  }
-}
-/**
- * import typography and
- * standard content styles
- */
-/**
- * color palette for material design
- * http://www.google.com/design/spec/style/color.html#color-ui-color-palette
- */
-/*
- * Example Usage
-
-	.item {
-		z-index  : 1;
-		position : relative;
-		display  : block;
-
-		margin  : .7em;
-		padding : .7em;
-		background-color : #fff;
-
-		&:before,
-		&:after {
-			z-index  : -1;
-
-			position : absolute;
-			display  : block;
-			content  : ' ';
-
-			width    : 100%;
-			height   : 100%;
-
-			top  : 0;
-			left : 0;
-
-			margin  : 0;
-			padding : 0;
-		}
-
-		@include md-shadow(2);
-		&:hover  { @include md-shadow(1); }
-		&:active { @include md-shadow(3); }
-	}
-*/
-/**
- * Cards
- */
-/**
- * Buttons
- */
-/**
- * layout configuration
- */
-/**
- * typography
- */
-/**
- * color palette
- */
-/**
- * buttons
- */
-/**
- * highlight colors
- */
-/**
- * sprites config
- */
-@media all {
-  /*!
-  * @section global typography settings
-  *
-  * vertical rhythm settings (based on em-unit)
-  * -------------------------------------------
-  * basefont-size:  14px (87.5%)
-  * line-height  :  21px (factor: 1.5) */
-  /* (en) reset font size for all elements to standard (16 Pixel) */
-  /* (de) Alle Schriftgrößen auf Standardgröße (16 Pixel) zurücksetzen */
-  /* line 18, ../../sass/screen/_typography.scss */
-  html * {
-    font-size: 100%;
-  }
-
-  /**
-  * (en) reset monospaced elements to font size 16px in all browsers
-  * (de) Schriftgröße von monospaced Elemente in allen Browsern auf 16 Pixel setzen
-  *
-  * @see: http://webkit.org/blog/67/strange-medium/
-  */
-  /* line 33, ../../sass/screen/_typography.scss */
-  textarea,
-  pre,
-  code,
-  kbd,
-  samp,
-  var,
-  tt {
-    font-family: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
-  }
-
-  /*! font-size: 14px; */
-  /* line 38, ../../sass/screen/_typography.scss */
-  body {
-    font-family: "RobotoDraft", sans-serif;
-    font-size: 87.5%;
-    color: rgba(0, 0, 0, 0.87);
-  }
-
-  /*--- Headings | Überschriften ------------------------------------------------------------------------*/
-  /* line 51, ../../sass/screen/_typography.scss */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "RobotoDraft", sans-serif;
-    font-weight: 400;
-    color: rgba(0, 0, 0, 0.54);
-    margin: 0;
-  }
-
-  /* line 58, ../../sass/screen/_typography.scss */
-  h1 {
-    /*! font-size: 48px; */
-    font-size: 342.85714%;
-    line-height: 0.875;
-    margin: 0 0 0.4375em 0;
-    float: left;
-  }
-
-  /* line 66, ../../sass/screen/_typography.scss */
-  h2 {
-    /*! font-size: 32px; */
-    font-size: 228.57143%;
-    line-height: 1.3125;
-    margin: 0 0 0.65625em 0;
-  }
-
-  /* line 73, ../../sass/screen/_typography.scss */
-  h3 {
-    /*! font-size: 24px; */
-    font-size: 171.42857%;
-    line-height: 0.875;
-    margin: 0 0 0.875em 0;
-  }
-
-  /* line 80, ../../sass/screen/_typography.scss */
-  h4 {
-    /*! font-size: 21px; */
-    font-size: 150%;
-    line-height: 1;
-    margin: 0 0 1em 0;
-  }
-
-  /* line 87, ../../sass/screen/_typography.scss */
-  h5 {
-    /*! font-size: 18px; */
-    font-size: 128.57143%;
-    line-height: 1.16667;
-    margin: 0 0 1.16667em 0;
-  }
-
-  /* line 94, ../../sass/screen/_typography.scss */
-  h6 {
-    /*! font-size: 14px; */
-    font-size: 100%;
-    font-weight: bold;
-    line-height: 1.5;
-    margin: 0 0 1.5em 0;
-  }
-
-  /* --- Lists | Listen  -------------------------------------------------------------------------------- */
-  /* line 106, ../../sass/screen/_typography.scss */
-  ul,
-  ol,
-  dl {
-    font-size: 100%;
-    line-height: 1.5;
-    margin: 0 0 1.5em 0;
-  }
-
-  /* line 112, ../../sass/screen/_typography.scss */
-  ul {
-    list-style-type: disc;
-  }
-
-  /* line 116, ../../sass/screen/_typography.scss */
-  ol {
-    list-style-type: decimal;
-  }
-
-  /* line 120, ../../sass/screen/_typography.scss */
-  ul ul {
-    list-style-type: circle;
-    margin-top: 0;
-  }
-
-  /* line 125, ../../sass/screen/_typography.scss */
-  ol ol {
-    list-style-type: lower-latin;
-    margin-top: 0;
-  }
-
-  /* line 130, ../../sass/screen/_typography.scss */
-  ol ul {
-    list-style-type: circle;
-    margin-top: 0;
-  }
-
-  /* line 135, ../../sass/screen/_typography.scss */
-  li {
-    font-size: 100%;
-    line-height: 1.5;
-    margin-left: 1.2em;
-  }
-
-  /* line 141, ../../sass/screen/_typography.scss */
-  dt {
-    font-weight: bold;
-  }
-
-  /* line 145, ../../sass/screen/_typography.scss */
-  dd {
-    margin: 0 0 1.5em 0.8em;
-  }
-
-  /* --- general text formatting | Allgemeine Textauszeichnung ------------------------------------------ */
-  /* line 151, ../../sass/screen/_typography.scss */
-  p {
-    font-size: 100%;
-    line-height: 1.5;
-    margin: 0 0 1.5em 0;
-    letter-spacing: .1px;
-  }
-
-  /* line 161, ../../sass/screen/_typography.scss */
-  blockquote,
-  cite,
-  q {
-    font-family: "RobotoDraft", sans-serif;
-    font-style: italic;
-  }
-
-  /* line 166, ../../sass/screen/_typography.scss */
-  blockquote {
-    background: transparent;
-    color: rgba(0, 0, 0, 0.87);
-    margin: 1.5em 0 0 1.5em;
-  }
-
-  /* line 173, ../../sass/screen/_typography.scss */
-  strong,
-  b {
-    font-weight: bold;
-  }
-
-  /* line 178, ../../sass/screen/_typography.scss */
-  em,
-  i {
-    font-style: italic;
-  }
-
-  /* line 182, ../../sass/screen/_typography.scss */
-  big {
-    /*! font-size: 16px; */
-    font-size: 114.28571%;
-    line-height: 1.3125;
-  }
-
-  /* line 188, ../../sass/screen/_typography.scss */
-  small {
-    /*! font-size: 12px; */
-    font-size: 85.71429%;
-    line-height: 1.75;
-  }
-
-  /* line 199, ../../sass/screen/_typography.scss */
-  pre,
-  code,
-  kbd,
-  tt,
-  samp,
-  var {
-    font-size: 100%;
-  }
-
-  /* line 203, ../../sass/screen/_typography.scss */
-  pre {
-    font-size: 100%;
-    line-height: 1.5;
-    margin: 0 0 1.5em 0;
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-
-  /* line 212, ../../sass/screen/_typography.scss */
-  pre,
-  code {
-    color: #880000;
-  }
-
-  /* line 219, ../../sass/screen/_typography.scss */
-  kbd,
-  samp,
-  var,
-  tt {
-    color: #666666;
-    font-weight: bold;
-  }
-
-  /* line 225, ../../sass/screen/_typography.scss */
-  var,
-  dfn {
-    font-style: italic;
-  }
-
-  /* line 230, ../../sass/screen/_typography.scss */
-  acronym,
-  abbr {
-    border-bottom: 1px #aaa dotted;
-    font-variant: small-caps;
-    letter-spacing: .07em;
-    cursor: help;
-  }
-
-  /* line 238, ../../sass/screen/_typography.scss */
-  sub,
-  sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-  }
-
-  /* line 245, ../../sass/screen/_typography.scss */
-  sup {
-    top: -0.5em;
-  }
-
-  /* line 246, ../../sass/screen/_typography.scss */
-  sub {
-    bottom: -0.25em;
-  }
-
-  /* line 248, ../../sass/screen/_typography.scss */
-  mark {
-    background: yellow;
-    color: black;
-  }
-
-  /* line 253, ../../sass/screen/_typography.scss */
-  hr {
-    color: #fff;
-    background: transparent;
-    margin: 0 0 0.75em 0;
-    padding: 0 0 0.67857em 0;
-    border: 0;
-    border-bottom: 1px rgba(0, 0, 0, 0.12) solid;
-  }
-
-  /*--- Links ----------------------------------------------------------------------------------------- */
-  /* line 264, ../../sass/screen/_typography.scss */
-  a {
-    color: #259b24;
-    background: transparent;
-    text-decoration: none;
-    /* (en) maximum constrast for tab focus - change with great care */
-    /* (en) Maximaler Kontrast für Tab Focus - Ändern Sie diese Regel mit Bedacht */
-  }
-  /* line 269, ../../sass/screen/_typography.scss */
-  a:active {
-    outline: none;
-  }
-  /* line 274, ../../sass/screen/_typography.scss */
-  a:hover, a:focus {
-    background-color: inherit;
-    color: #0a8f08;
-    text-decoration: underline;
-  }
-
-  /* --- images ------------------ */
-  /* line 284, ../../sass/screen/_typography.scss */
-  img,
-  figure {
-    margin: 0;
-  }
-
-  /* line 288, ../../sass/screen/_typography.scss */
-  .flexible {
-    margin-bottom: 1.5em;
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* IE6 workaround - 2% space for possible borders */
-  /* line 295, ../../sass/screen/_typography.scss */
-  * html .flexible {
-    width: 98%;
-  }
-
-  /* line 299, ../../sass/screen/_typography.scss */
-  .bordered {
-    margin-bottom: 1.5em;
-    border: 2px #eee solid;
-    border: 2px white solid;
-    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
-  }
-
-  /**
-  * ----------------------------------------------------------------------- #
-  *
-  * Generic Content Classes
-  *
-  * (en) standard classes for positioning and highlighting
-  * (de) Standardklassen zur Positionierung und Hervorhebung
-  *
-  * @section content-generic-classes
-  */
-  /* line 316, ../../sass/screen/_typography.scss */
-  .highlight {
-    color: #cc3300;
-  }
-
-  /* line 320, ../../sass/screen/_typography.scss */
-  .dimmed {
-    color: #888888;
-  }
-
-  /* line 324, ../../sass/screen/_typography.scss */
-  .box {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #888;
-    border-color: rgba(0, 0, 0, 0.3);
-    color: #444;
-    color: rgba(0, 0, 0, 0.8);
-    padding: 1.42857em;
-    margin: 0 0 1.5em 0;
-  }
-  /* line 334, ../../sass/screen/_typography.scss */
-  .box > *:last-child {
-    margin-bottom: 0;
-  }
-
-  /* line 339, ../../sass/screen/_typography.scss */
-  .label {
-    font-family: Verdana, Geneva, sans-serif;
-    padding: 1px 6px 2px;
-    display: inline-block;
-    vertical-align: bottom;
-    letter-spacing: normal;
-    white-space: nowrap;
-    border-radius: 3px;
-    background: #0091ea;
-    color: #fff;
-    font-size: 10px;
-    line-height: 12px;
-  }
-  /* line 353, ../../sass/screen/_typography.scss */
-  .label:hover, .label:focus {
-    background-color: #0091ea;
-    color: #fff;
-  }
-
-  /* line 359, ../../sass/screen/_typography.scss */
-  .info {
-    background: #d9edf7;
-    color: #31708f;
-  }
-
-  /* line 364, ../../sass/screen/_typography.scss */
-  .success {
-    background: #dff0d8;
-    color: #3c763d;
-  }
-
-  /* line 369, ../../sass/screen/_typography.scss */
-  .warning {
-    background: #f9edbe;
-    color: #444444;
-  }
-
-  /* line 374, ../../sass/screen/_typography.scss */
-  .error {
-    background: #f2dede;
-    color: #a94442;
-  }
-
-  /* line 379, ../../sass/screen/_typography.scss */
-  .float-left {
-    float: left;
-    display: inline;
-    margin: 0 1em 1.5em 0;
-  }
-
-  /* line 385, ../../sass/screen/_typography.scss */
-  .float-right {
-    float: right;
-    display: inline;
-    margin: 0 0 1.5em 1em;
-  }
-
-  /* line 391, ../../sass/screen/_typography.scss */
-  .center {
-    display: block;
-    text-align: center;
-    margin: 0 auto 1.5em auto;
-  }
-
-  /**
-  * ------------------------------------------------------------------------------------------------- #
-  *
-  * Tables | Tabellen
-  *
-  * (en) Generic classes for table-width and design definition
-  * (de) Generische Klassen für die Tabellenbreite und Gestaltungsvorschriften für Tabellen
-  *
-  * @section content-tables
-  */
-  /* line 408, ../../sass/screen/_typography.scss */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    color: rgba(0, 0, 0, 0.87);
-    border-top: 1px #ccc solid;
-    border-bottom: 1px #ccc solid;
-    margin: 0 0 1.35714em 0;
-  }
-  /* line 416, ../../sass/screen/_typography.scss */
-  table.narrow {
-    margin: 0 0 1.42857em 0;
-  }
-  /* line 420, ../../sass/screen/_typography.scss */
-  table.narrow th,
-  table.narrow td {
-    padding: 0 0.5em;
-    line-height: 1.42857;
-  }
-  /* line 426, ../../sass/screen/_typography.scss */
-  table.fixed {
-    table-layout: fixed;
-  }
-  /* line 430, ../../sass/screen/_typography.scss */
-  table.bordertable {
-    border: 1px #ccc solid;
-  }
-  /* line 433, ../../sass/screen/_typography.scss */
-  table.bordertable thead th {
-    background: #e0e0e0;
-    border-right: 1px #ccc solid;
-    border-bottom: 1px #ccc solid;
-  }
-  /* line 440, ../../sass/screen/_typography.scss */
-  table.bordertable tbody th[scope="row"] {
-    background: #f0f0f0;
-  }
-  /* line 443, ../../sass/screen/_typography.scss */
-  table.bordertable tbody th {
-    border-right: 1px solid #ccc;
-  }
-  /* line 446, ../../sass/screen/_typography.scss */
-  table.bordertable tbody td {
-    border-right: 1px solid #ccc;
-  }
-
-  /* line 453, ../../sass/screen/_typography.scss */
-  caption {
-    font-variant: small-caps;
-  }
-
-  /* line 458, ../../sass/screen/_typography.scss */
-  th,
-  td {
-    line-height: 1.5em;
-    vertical-align: top;
-    padding: 0.71429em 0.5em;
-  }
-
-  /* line 465, ../../sass/screen/_typography.scss */
-  th *:first-child,
-  td *:first-child {
-    margin-top: 0;
-  }
-
-  /* line 470, ../../sass/screen/_typography.scss */
-  th.nowrap,
-  td.nowrap {
-    white-space: nowrap;
-  }
-
-  /* line 474, ../../sass/screen/_typography.scss */
-  thead th {
-    text-align: left;
-    color: rgba(0, 0, 0, 0.54);
-    border-bottom: 2px rgba(0, 0, 0, 0.12) solid;
-  }
-
-  /* line 480, ../../sass/screen/_typography.scss */
-  tbody {
-    /* highlight row on mouse over */
-  }
-  /* line 481, ../../sass/screen/_typography.scss */
-  tbody th {
-    text-align: left;
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
-  }
-  /* line 486, ../../sass/screen/_typography.scss */
-  tbody td {
-    text-align: left;
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
-  }
-  /* line 493, ../../sass/screen/_typography.scss */
-  tbody tr:hover th,
-  tbody tr:hover td {
-    background: #eeeeee;
   }
 }
 /**
@@ -2784,7 +4856,7 @@ pre.line-numbers > code {
   * @section basic layout preparation
   */
   /* (en) change font size unit to [pt] - avoids problems with [px] in Gecko based browsers */
-  /* (de) Wechsel der der Schriftgrößen-Maßheinheit zu [pt] - Probleme mit [px] in Gecko-Browsern vermeiden */
+  /* (de) Wechsel der der Schriftgr├Â├ƒen-Ma├ƒheinheit zu [pt] - Probleme mit [px] in Gecko-Browsern vermeiden */
   /* line 11, ../../sass/print/_print.scss */
   body {
     font-size: 10pt;
@@ -2792,7 +4864,7 @@ pre.line-numbers > code {
   }
 
   /* (en) Hide unneeded container of the screenlayout in print layout */
-  /* (de) Für den Druck nicht benötigte Container des Layouts abschalten */
+  /* (de) F├╝r den Druck nicht ben├Âtigte Container des Layouts abschalten */
   /* line 19, ../../sass/print/_print.scss */
   nav,
   .ym-searchform {
@@ -2801,7 +4873,7 @@ pre.line-numbers > code {
 
   /*------------------------------------------------------------------------------------------------------*/
   /* (en) Avoid page breaks right after headings */
-  /* (de) Vermeidung von Seitenumbrüchen direkt nach einer Überschrift */
+  /* (de) Vermeidung von Seitenumbr├╝chen direkt nach einer ├£berschrift */
   /* line 32, ../../sass/print/_print.scss */
   h1,
   h2,
@@ -2810,901 +4882,5 @@ pre.line-numbers > code {
   h5,
   h6 {
     page-break-after: avoid;
-  }
-}
-/**
- * import layout (incl. responsive layout)
- */
-/**
- * color palette for material design
- * http://www.google.com/design/spec/style/color.html#color-ui-color-palette
- */
-/*
- * Example Usage
-
-	.item {
-		z-index  : 1;
-		position : relative;
-		display  : block;
-
-		margin  : .7em;
-		padding : .7em;
-		background-color : #fff;
-
-		&:before,
-		&:after {
-			z-index  : -1;
-
-			position : absolute;
-			display  : block;
-			content  : ' ';
-
-			width    : 100%;
-			height   : 100%;
-
-			top  : 0;
-			left : 0;
-
-			margin  : 0;
-			padding : 0;
-		}
-
-		@include md-shadow(2);
-		&:hover  { @include md-shadow(1); }
-		&:active { @include md-shadow(3); }
-	}
-*/
-/**
- * Cards
- */
-/**
- * Buttons
- */
-/**
- * layout configuration
- */
-/**
- * typography
- */
-/**
- * color palette
- */
-/**
- * buttons
- */
-/**
- * highlight colors
- */
-/**
- * sprites config
- */
-@media screen {
-  /**
-   * @section Base layout
-   */
-  /* line 12, ../../sass/screen/_layout.scss */
-  body {
-    overflow-y: scroll;
-    background-color: #f9f9f9;
-    padding-top: 42px;
-  }
-  /* line 20, ../../sass/screen/_layout.scss */
-  body > header, body > footer, body > nav {
-    min-width: 760px;
-  }
-  /* line 23, ../../sass/screen/_layout.scss */
-  body > header {
-    background: #259b24;
-    z-index: 1;
-    position: relative;
-    display: block;
-  }
-  /* line 120, ../../sass/mixins/_custom-mixins.scss */
-  body > header:before, body > header:after {
-    z-index: -1;
-    position: absolute;
-    display: block;
-    content: ' ';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-  }
-  /* line 44, ../../sass/mixins/_custom-mixins.scss */
-  body > header:before {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=16);
-    opacity: 0.16;
-    -webkit-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-  }
-  /* line 61, ../../sass/mixins/_custom-mixins.scss */
-  body > header:after {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=23);
-    opacity: 0.23;
-    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-  }
-  /* line 29, ../../sass/screen/_layout.scss */
-  body > header h1 {
-    background: transparent;
-    color: #fff;
-  }
-  /* line 34, ../../sass/screen/_layout.scss */
-  body > header .ym-wbox {
-    padding: 1.5em;
-  }
-  /* line 38, ../../sass/screen/_layout.scss */
-  body > nav {
-    top: 0;
-    position: absolute !important;
-    background-color: #0a7e07;
-  }
-
-  /**
-   * @section Layout module configuration
-   */
-  /* line 49, ../../sass/screen/_layout.scss */
-  .ym-wrapper {
-    max-width: 80em;
-    margin: 0 auto;
-  }
-
-  /* line 54, ../../sass/screen/_layout.scss */
-  .ym-wbox {
-    padding: 1.5em;
-  }
-
-  /* line 61, ../../sass/screen/_layout.scss */
-  .ym-wrapper,
-  .ym-col1,
-  .ym-col2,
-  .ym-col3 {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 10px;
-  }
-
-  /* line 69, ../../sass/screen/_layout.scss */
-  .ym-col1 {
-    float: left;
-    width: 75%;
-  }
-
-  /* line 75, ../../sass/screen/_layout.scss */
-  .ym-col3 {
-    margin: 0 0 0 75%;
-  }
-
-  /* line 79, ../../sass/screen/_layout.scss */
-  .ym-hlist .ym-wrapper {
-    padding: 0;
-  }
-
-  /* line 83, ../../sass/screen/_layout.scss */
-  footer .ym-wrapper {
-    padding: 0;
-  }
-
-  /**
-   * @section Navigation
-   */
-  /* line 92, ../../sass/screen/_layout.scss */
-  #nav-main li.active strong {
-    color: #fff;
-    border-bottom: 2px solid #00b0ff;
-    padding-bottom: 5px;
-  }
-  /* line 100, ../../sass/screen/_layout.scss */
-  #nav-main li a,
-  #nav-main li strong {
-    color: rgba(255, 255, 255, 0.6);
-    border-bottom: 2px solid transparent;
-    text-transform: uppercase;
-  }
-  /* line 108, ../../sass/screen/_layout.scss */
-  #nav-main li a:hover, #nav-main li a:focus, #nav-main li a:active,
-  #nav-main li strong:hover,
-  #nav-main li strong:focus,
-  #nav-main li strong:active {
-    color: #fff;
-  }
-
-  /* line 115, ../../sass/screen/_layout.scss */
-  #nav-meta {
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
-  }
-  /* line 118, ../../sass/screen/_layout.scss */
-  #nav-meta li.active strong {
-    color: #0091ea;
-    border-color: #0091ea;
-  }
-  /* line 125, ../../sass/screen/_layout.scss */
-  #nav-meta li a,
-  #nav-meta li strong {
-    color: rgba(0, 0, 0, 0.54);
-    border-bottom: 2px solid transparent;
-    text-transform: uppercase;
-  }
-  /* line 132, ../../sass/screen/_layout.scss */
-  #nav-meta li a:hover, #nav-meta li a:focus, #nav-meta li a:active,
-  #nav-meta li strong:hover,
-  #nav-meta li strong:focus,
-  #nav-meta li strong:active {
-    color: #0091ea;
-  }
-
-  /* Basic Element Styling */
-  /* line 142, ../../sass/screen/_layout.scss */
-  main {
-    padding: 2em 0;
-  }
-  /* line 145, ../../sass/screen/_layout.scss */
-  main aside .ym-gbox-right {
-    border-left: 1px #ddd solid;
-  }
-
-  /* line 150, ../../sass/screen/_layout.scss */
-  article {
-    margin: 1.5em 0 2em;
-  }
-
-  /* line 155, ../../sass/screen/_layout.scss */
-  footer p {
-    margin: 0;
-  }
-  /* line 159, ../../sass/screen/_layout.scss */
-  footer .ym-wbox {
-    padding: 1.5em;
-  }
-
-  /* line 164, ../../sass/screen/_layout.scss */
-  .slogan {
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 342.85714%;
-    font-weight: 100;
-    color: #fff;
-    margin: 0;
-  }
-
-  /* line 172, ../../sass/screen/_layout.scss */
-  .ym-gbox {
-    padding: 0 1.5em;
-  }
-
-  /* line 173, ../../sass/screen/_layout.scss */
-  .ym-gbox-left {
-    padding: 0 1.5em 0 0;
-  }
-
-  /* line 174, ../../sass/screen/_layout.scss */
-  .ym-gbox-right {
-    padding: 0 0 0 1.5em;
-  }
-
-  /**
-   * skip links
-   */
-  /* line 181, ../../sass/screen/_layout.scss */
-  .ym-skiplinks a.ym-skip:focus,
-  .ym-skiplinks a.ym-skip:active {
-    color: #fff;
-    background: #333;
-    border-bottom: 1px #000 solid;
-    padding: 10px 0;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  /* line 191, ../../sass/screen/_layout.scss */
-  .nav-pages {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-  }
-  /* line 195, ../../sass/screen/_layout.scss */
-  .nav-pages ul {
-    list-style: none;
-    margin: 0;
-  }
-  /* line 199, ../../sass/screen/_layout.scss */
-  .nav-pages ul li {
-    margin: 0;
-  }
-
-  /* line 205, ../../sass/screen/_layout.scss */
-  .btn {
-    color: #fff !important;
-    background-color: #259b24;
-    font-weight: 500;
-    text-decoration: none !important;
-    text-transform: uppercase;
-    padding: .7em;
-    z-index: 1;
-    position: relative;
-    display: block;
-  }
-  /* line 160, ../../sass/mixins/_custom-mixins.scss */
-  .btn:hover, .btn:focus {
-    background-color: #0a8f08;
-  }
-  /* line 161, ../../sass/mixins/_custom-mixins.scss */
-  .btn:active {
-    background-color: #0a7e07;
-  }
-  /* line 163, ../../sass/mixins/_custom-mixins.scss */
-  .btn.disabled {
-    background-color: disabled rgba(204, 204, 204, 0.1);
-  }
-  /* line 120, ../../sass/mixins/_custom-mixins.scss */
-  .btn:before, .btn:after {
-    z-index: -1;
-    position: absolute;
-    display: block;
-    content: ' ';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-  }
-  /* line 44, ../../sass/mixins/_custom-mixins.scss */
-  .btn:before {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=16);
-    opacity: 0.16;
-    -webkit-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-  }
-  /* line 61, ../../sass/mixins/_custom-mixins.scss */
-  .btn:after {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=23);
-    opacity: 0.23;
-    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-  }
-  /* line 44, ../../sass/mixins/_custom-mixins.scss */
-  .btn:hover:before, .btn:focus:before {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=12);
-    opacity: 0.12;
-    -webkit-box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-  }
-  /* line 61, ../../sass/mixins/_custom-mixins.scss */
-  .btn:hover:after, .btn:focus:after {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=24);
-    opacity: 0.24;
-    -webkit-box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-  }
-  /* line 44, ../../sass/mixins/_custom-mixins.scss */
-  .btn:active:before {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=19);
-    opacity: 0.19;
-    -webkit-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-  }
-  /* line 61, ../../sass/mixins/_custom-mixins.scss */
-  .btn:active:after {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=23);
-    opacity: 0.23;
-    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-  }
-  /* line 208, ../../sass/screen/_layout.scss */
-  .btn span {
-    padding: 0 1.5em;
-  }
-
-  /* line 213, ../../sass/screen/_layout.scss */
-  .toTop {
-    position: fixed;
-    right: 0;
-    bottom: 5em;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-  }
-  /* line 221, ../../sass/screen/_layout.scss */
-  .toTop span {
-    display: block;
-    text-indent: -200em;
-    padding: 0;
-  }
-  /* line 228, ../../sass/screen/_layout.scss */
-  .toTop:before, .toTop:after {
-    border-radius: 50%;
-  }
-
-  /* line 232, ../../sass/screen/_layout.scss */
-  .hide {
-    display: none;
-  }
-
-  /**
-   * sprites
-   */
-  /* line 154, icons/*.png */
-  .icons-sprite, .icons-category, .icons-clock, .icons-comment, .icons-facebook, .icons-google, .icons-ico_br_next, .icons-ico_home, .icons-next, .icons-prev, .icons-search, .icons-send, .icons-tag, .icons-twitter, .icons-up, .icons-user, .l-list li {
-    background: url('../img/icons-sdafe13d943.png') no-repeat;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-category {
-    background-position: 0 -246px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-clock {
-    background-position: 0 1px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-comment {
-    background-position: 0 -189px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-facebook {
-    background-position: 0 -227px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-google {
-    background-position: 0 -37px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-ico_br_next {
-    background-position: 0 -18px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-ico_home {
-    background-position: 0 -113px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-next {
-    background-position: 0 -94px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-prev {
-    background-position: 0 -75px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-search {
-    background-position: 0 -56px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-send {
-    background-position: 0 -265px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-tag {
-    background-position: 0 -170px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-twitter {
-    background-position: 0 -208px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-up {
-    background-position: 0 -132px;
-  }
-
-  /* line 60, ../../../../../../../../../Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/gem/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-  .icons-user {
-    background-position: 0 -151px;
-  }
-
-  /* line 243, ../../sass/screen/_layout.scss */
-  .icons-next {
-    background-position: 100% -94px;
-  }
-
-  /**
-   * articles
-   */
-  /* line 252, ../../sass/screen/_layout.scss */
-  h1 + * {
-    clear: left;
-  }
-
-  /* line 256, ../../sass/screen/_layout.scss */
-  .article-content {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-  }
-
-  /* line 261, ../../sass/screen/_layout.scss */
-  .article-meta {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    margin: 1.5em 0 2.5em;
-    padding: 0;
-  }
-  /* line 266, ../../sass/screen/_layout.scss */
-  .article-meta dt {
-    display: inline;
-    float: left;
-    margin-right: .5em;
-    text-indent: -200em;
-    width: 16px;
-    line-height: 1.25em;
-  }
-  /* line 274, ../../sass/screen/_layout.scss */
-  .article-meta dt:not(:first-child) {
-    margin-left: 1em;
-  }
-  /* line 278, ../../sass/screen/_layout.scss */
-  .article-meta dd {
-    display: inline;
-    margin: 0;
-    margin-left: .5em;
-    float: left;
-    line-height: 1.25em;
-  }
-
-  /* line 288, ../../sass/screen/_layout.scss */
-  .ym-col1 > article footer {
-    margin-top: 10px;
-  }
-
-  /* line 293, ../../sass/screen/_layout.scss */
-  a[rel="bookmark"] {
-    font-size: 342.85714%;
-    line-height: 0.875;
-    color: rgba(0, 0, 0, 0.87);
-    opacity: .1;
-    filter: alpha(opacity=0.1);
-    transition: opacity 1s ease-in-out 0;
-  }
-  /* line 302, ../../sass/screen/_layout.scss */
-  a[rel="bookmark"]:hover, a[rel="bookmark"]:focus {
-    opacity: .6;
-    filter: alpha(opacity=0.8);
-    text-decoration: none;
-  }
-
-  /**
-   * Card
-   */
-  /* line 313, ../../sass/screen/_layout.scss */
-  .card {
-    z-index: 1;
-    position: relative;
-    display: block;
-    padding: .7em;
-    margin-bottom: 1.5em;
-  }
-  /* line 120, ../../sass/mixins/_custom-mixins.scss */
-  .card:before, .card:after {
-    z-index: -1;
-    position: absolute;
-    display: block;
-    content: ' ';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-  }
-  /* line 36, ../../sass/mixins/_custom-mixins.scss */
-  .card:before, .card:after {
-    -webkit-transition: box-shadow 0.7s 0.01s;
-    -webkit-transition-delay: cubic-bezier(0.19, 1, 0.22, 1);
-    -moz-transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
-    -o-transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
-    transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  /* line 44, ../../sass/mixins/_custom-mixins.scss */
-  .card:before {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=16);
-    opacity: 0.16;
-    -webkit-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-  }
-  /* line 61, ../../sass/mixins/_custom-mixins.scss */
-  .card:after {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=23);
-    opacity: 0.23;
-    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px black, 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-  }
-  /* line 36, ../../sass/mixins/_custom-mixins.scss */
-  .card:hover:before, .card:hover:after, .card:focus:before, .card:focus:after {
-    -webkit-transition: box-shadow 0.7s 0.01s;
-    -webkit-transition-delay: cubic-bezier(0.19, 1, 0.22, 1);
-    -moz-transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
-    -o-transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
-    transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  /* line 44, ../../sass/mixins/_custom-mixins.scss */
-  .card:hover:before, .card:focus:before {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=12);
-    opacity: 0.12;
-    -webkit-box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1.5px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px rgba(0, 0, 0, 0), 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-  }
-  /* line 61, ../../sass/mixins/_custom-mixins.scss */
-  .card:hover:after, .card:focus:after {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=24);
-    opacity: 0.24;
-    -webkit-box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1px black, 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px rgba(0, 0, 0, 0), 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-  }
-  /* line 36, ../../sass/mixins/_custom-mixins.scss */
-  .card:active:before, .card:active:after {
-    -webkit-transition: box-shadow 0.7s 0.01s;
-    -webkit-transition-delay: cubic-bezier(0.19, 1, 0.22, 1);
-    -moz-transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
-    -o-transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
-    transition: box-shadow 0.7s 0.01s cubic-bezier(0.19, 1, 0.22, 1);
-  }
-  /* line 44, ../../sass/mixins/_custom-mixins.scss */
-  .card:active:before {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=19);
-    opacity: 0.19;
-    -webkit-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1.5px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 10px 10px black, 0px 14px 14px rgba(0, 0, 0, 0), 0px 19px 19px rgba(0, 0, 0, 0);
-  }
-  /* line 61, ../../sass/mixins/_custom-mixins.scss */
-  .card:active:after {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=23);
-    opacity: 0.23;
-    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0), 0px 3px 3px rgba(0, 0, 0, 0), 0px 6px 3px black, 0px 10px 5px rgba(0, 0, 0, 0), 0px 15px 6px rgba(0, 0, 0, 0);
-  }
-  /* line 318, ../../sass/screen/_layout.scss */
-  .card p {
-    margin: 0;
-  }
-
-  /**
-   * author
-   */
-  /* line 327, ../../sass/screen/_layout.scss */
-  .article-author {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-  }
-  /* line 330, ../../sass/screen/_layout.scss */
-  .article-author img {
-    border-radius: 50%;
-  }
-
-  /**
-   * comments
-   */
-  /* line 340, ../../sass/screen/_layout.scss */
-  #comments img {
-    border-radius: 50%;
-  }
-  /* line 343, ../../sass/screen/_layout.scss */
-  #comments article {
-    margin: 0;
-    padding: .5em;
-  }
-  /* line 347, ../../sass/screen/_layout.scss */
-  #comments article p {
-    margin: 0 1.5em 0 0;
-  }
-  /* line 350, ../../sass/screen/_layout.scss */
-  #comments article blockquote {
-    margin: 1.5em 0 1.5em 1.5em;
-  }
-  /* line 353, ../../sass/screen/_layout.scss */
-  #comments article article {
-    margin: 0;
-    margin-left: 5%;
-  }
-  /* line 359, ../../sass/screen/_layout.scss */
-  #comments .comment-author > blockquote {
-    color: #a94442;
-  }
-
-  /**
-   * sidebar
-   */
-  /* line 369, ../../sass/screen/_layout.scss */
-  .c-list {
-    list-style: none;
-    margin: 1.125em 0 1.5em 0;
-  }
-  /* line 373, ../../sass/screen/_layout.scss */
-  .c-list li {
-    display: inline;
-    margin: 0 .8em 0 0;
-  }
-
-  /* line 379, ../../sass/screen/_layout.scss */
-  .l-list {
-    list-style: none;
-  }
-  /* line 382, ../../sass/screen/_layout.scss */
-  .l-list li {
-    background-position: 0 -19px;
-    padding-left: 20px;
-    margin: 0;
-    line-height: 1.25em;
-    margin-bottom: .5em;
-  }
-
-  /**
-   * gallery list style
-   */
-  /* line 395, ../../sass/screen/_layout.scss */
-  .gallery {
-    list-style: none;
-    margin: 0 0 1.5em 0;
-  }
-  /* line 399, ../../sass/screen/_layout.scss */
-  .gallery li {
-    display: inline-block;
-    margin: .8em .8em 0 0;
-  }
-  /* line 403, ../../sass/screen/_layout.scss */
-  .gallery li img {
-    border: 5px #ddd solid;
-  }
-}
-/* reset fallback values in modern browsers */
-@media screen and (min-width: 0px) {
-  /* line 418, ../../sass/screen/_layout.scss */
-  body > header, body > nav, body > main, body > footer {
-    min-width: 0;
-  }
-}
-@media screen and (max-width: 760px) {
-  /* Linearisation for Grid- and Column-Module, based on CSS class .linearize-level-1 */
-  /* line 115, ../../sass/mixins/_yaml-mixins-core.scss */
-  .linearize-level-1, .linearize-level-1 > [class*="ym-c"], .linearize-level-1 > [class*="ym-g"] {
-    /* linearization for grids and columns module */
-    display: block;
-    float: none;
-    padding: 0;
-    margin: 0;
-    width: auto !important;
-  }
-  /* line 125, ../../sass/mixins/_yaml-mixins-core.scss */
-  .linearize-level-1 > [class*="ym-c"] > [class*="ym-cbox"], .linearize-level-1 > [class*="ym-g"] > [class*="ym-gbox"] {
-    /* reset defined gutter values */
-    margin: 0;
-    padding: 0;
-    /* optional for containing floats */
-    overflow: hidden;
-  }
-
-  /* line 431, ../../sass/screen/_layout.scss */
-  .secondary {
-    border-top: 1px #888 solid;
-    margin-top: 1.5em !important;
-    padding-top: 1.5em !important;
-  }
-
-  /* line 437, ../../sass/screen/_layout.scss */
-  body {
-    padding-top: 0;
-  }
-  /* line 440, ../../sass/screen/_layout.scss */
-  body > nav {
-    position: relative !important;
-  }
-
-  /* line 445, ../../sass/screen/_layout.scss */
-  main aside .ym-gbox-right {
-    border: 0 none;
-  }
-
-  /* line 449, ../../sass/screen/_layout.scss */
-  .ym-searchform {
-    display: block;
-    float: none;
-    width: auto;
-  }
-
-  /* line 455, ../../sass/screen/_layout.scss */
-  .ym-searchform input[type="search"] {
-    width: 90% !important;
-    transition: none;
-  }
-
-  /* line 461, ../../sass/screen/_layout.scss */
-  .article-meta dt {
-    clear: left;
-    margin: .5em 0 0 0 !important;
-  }
-  /* line 465, ../../sass/screen/_layout.scss */
-  .article-meta dd {
-    margin: .5em 0 0 .5em !important;
-  }
-}
-@media screen and (max-width: 480px) {
-  /* Linearisation for Grid- and Column-Module, based on CSS class .linearize-level-2 */
-  /* line 115, ../../sass/mixins/_yaml-mixins-core.scss */
-  .linearize-level-2, .linearize-level-2 > [class*="ym-c"], .linearize-level-2 > [class*="ym-g"] {
-    /* linearization for grids and columns module */
-    display: block;
-    float: none;
-    padding: 0;
-    margin: 0;
-    width: auto !important;
-  }
-  /* line 125, ../../sass/mixins/_yaml-mixins-core.scss */
-  .linearize-level-2 > [class*="ym-c"] > [class*="ym-cbox"], .linearize-level-2 > [class*="ym-g"] > [class*="ym-gbox"] {
-    /* reset defined gutter values */
-    margin: 0;
-    padding: 0;
-    /* optional for containing floats */
-    overflow: hidden;
-  }
-
-  /* line 479, ../../sass/screen/_layout.scss */
-  header .ym-wbox {
-    padding: 0.75em 10px;
-  }
-  /* line 485, ../../sass/screen/_layout.scss */
-  header h1,
-  header a[rel="bookmark"],
-  header .slogan {
-    font-size: 1.5em;
-    line-height: 1em;
-  }
-
-  /* line 494, ../../sass/screen/_layout.scss */
-  footer .ym-wbox,
-  .ym-wbox,
-  .ym-searchform,
-  nav.ym-hlist ul {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  /* line 501, ../../sass/screen/_layout.scss */
-  .ym-searchform,
-  nav.ym-hlist ul,
-  nav.ym-hlist li {
-    display: block;
-    float: none;
-    width: auto;
-    text-align: left;
-  }
-
-  /* line 508, ../../sass/screen/_layout.scss */
-  .ym-searchform input[type="search"] {
-    width: 90% !important;
-    transition: none;
-  }
-
-  /* line 513, ../../sass/screen/_layout.scss */
-  .toTop {
-    display: none;
   }
 }

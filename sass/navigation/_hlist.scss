@@ -27,28 +27,36 @@
 				padding:0;
 
 				a, strong {
+					background:transparent;
+					// http://www.google.com/design/spec/components/tabs.html#tabs-specs
+					color:rgba(255, 255, 255, 0.60);
 					display:block;
 					font-size:1em;
 					line-height: 2em;
 					padding: 0 0.5em;
-					font-weight:normal;
+					font-weight:$font-weight-regular;
 					text-decoration:none;
-					width: auto;
+					text-transform: uppercase;
+					width:auto;
 				}
 
 				a:focus,
 				a:hover,
 				a:active  {
+					color: #fff;
 					text-decoration:none;
 					outline: 0 none;
 				}
 
 				&.active {
+					color: #fff;
+					border-bottom: 2px solid $color-accent-400;
 
 					strong,
 					a:focus,
 					a:hover,
 					a:active {
+						color:#fff;
 						text-decoration:none;
 					}
 				}
@@ -65,28 +73,26 @@
 
 		.ym-searchfield {
 			-webkit-appearance: none;
+			background: #fff;
+			line-height: 1;
 			padding: 0.25em;
 			width: 12em;
-			outline: none;
 			border: 0;
-			transition: width 1s;
-
-			&:focus,
-			&:hover {
-				width: 16em;
-			}
+			outline: none;
 		}
 
 		.ym-searchbutton {
 			position: relative;
 			right: 30px;
-			width: 20px;
 			-webkit-appearance: none;
+			background: transparent;
+			color: $color-text;
 			cursor: pointer;
 			display: inline-block;
-			text-indent: -200em;
-			transform: rotate(270deg);
-			border: 0;
+			font-size: 1em;
+			line-height: 1.25;
+			padding: 0.25em;
+			border: solid 1px transparent;
 		}
 	}
 }

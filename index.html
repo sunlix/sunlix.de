@@ -3,16 +3,19 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<title>Startseite | sunlix - personal essay</title>
+		<meta name="description" content="@@" />
+		<meta name="author" content="@@" />
+
+		<!-- mobile viewport optimisation -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=RobotoDraft:100,300,400,500,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
-		<link type="text/css" rel="stylesheet" href="./assets/css/all.css" />
+		<!-- stylesheets -->
+		<link rel="stylesheet" href="./assets/css/all.css" type="text/css" />
 		<!--[if lte IE 7]>
-		<link type="text/css" rel="stylesheet" href="./assets/css/iehacks.css" />
+		<link rel="stylesheet" href="./assets/css/iehacks.css" type="text/css" />
 		<![endif]-->
 		<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="./assets/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 	<body>
@@ -34,7 +37,10 @@
 						<legend class="ym-hideme">Suche</legend>
 
 						<input class="ym-searchfield" type="search" rel="search" placeholder="Search..." />
-						<input class="ym-searchbutton icons-search" type="submit" value="Search" />
+						<button type="submit" class="ym-searchbutton">
+							<i class="oi" data-glyph="magnifying-glass"></i>
+							<span>Search</span>
+						</button>
 					</fieldset>
 				</form>
 				<ul class="linearize-level-2">
@@ -61,18 +67,33 @@
 							</div>
 							<footer>
 								<dl class="article-meta">
-									<dt class="icons-user">Author</dt>
+									<dt>
+										<i class="oi" data-glyph="person"></i>
+										<span>Author</span>
+									</dt>
 									<dd><a href="#" title="Alle Einträge von Sven Schüring anzeigen" rel="author">Sven Schüring</a></dd>
-									<dt class="icons-clock">Datum</dt>
-									<dd><time datetime="2014-04-13T15:33:00+01:00">13.04.2014</time></dd>
-									<dt class="icons-category">Kategorien</dt>
+									<dt>
+										<i class="oi" data-glyph="clock"></i>
+										<span>Datum</span>
+									</dt>
+									<dd><time datetime="2014-04-13T15:33:00+01:00" pubdate="pubdate">13.04.2014</time></dd>
+									<dt>
+										<i class="oi" data-glyph="folder"></i>
+										<span>Kategorien</span>
+									</dt>
 									<dd><a href="#" title="Alle Einträge der Kategorie Relaunch anzeigen" class="label">Relaunch</a></dd>
 									<dd><a href="#" title="Alle Einträge der Kategorie Wordpress anzeigen" class="label">Wordpress</a></dd>
-									<dt class="icons-tag">Tags</dt>
+									<dt>
+										<i class="oi" data-glyph="tag"></i>
+										<span>Tags</span>
+									</dt>
 									<dd><a href="#" title="Alle Einträge mit dem Tag PHP anzeigen" class="label" rel="tag">PHP</a></dd>
 									<dd><a href="#" title="Alle Einträge mit dem Tag Systemtechnik anzeigen" class="label" rel="tag">Systemtechnik</a></dd>
 									<dd><a href="#" title="Alle Einträge mit dem Tag Tipps anzeigen" class="label" rel="tag">Tipps</a></dd>
-									<dt class="icons-comment">Kommentare</dt>
+									<dt>
+										<i class="oi" data-glyph="comment-square"></i>
+										<span>Kommentare</span>
+									</dt>
 									<dd><a href="#" title="Kommentiere Relaunch sunlix.de">1 Kommentar</a></dd>
 								</dl>
 							</footer>
@@ -88,32 +109,46 @@
 							</div>
 							<footer>
 								<dl class="article-meta">
-									<dt class="icons-user">Author</dt>
+									<dt>
+										<i class="oi" data-glyph="person"></i>
+										<span>Author</span>
+									</dt>
 									<dd><a href="#" title="Alle Einträge von Sven Schüring anzeigen" rel="author">Sven Schüring</a></dd>
-									<dt class="icons-clock">Datum</dt>
-									<dd><time datetime="2014-04-13T15:33:00+01:00">13.04.2014</time></dd>
-									<dt class="icons-category">Kategorien</dt>
+									<dt>
+										<i class="oi" data-glyph="clock"></i>
+										<span>Datum</span>
+									</dt>
+									<dd><time datetime="2014-04-13T15:33:00+01:00" pubdate="pubdate">13.04.2014</time></dd>
+									<dt>
+										<i class="oi" data-glyph="folder"></i>
+										<span>Kategorien</span>
+									</dt>
 									<dd><a href="#" title="Alle Einträge der Kategorie Relaunch anzeigen" class="label">Relaunch</a></dd>
 									<dd><a href="#" title="Alle Einträge der Kategorie Wordpress anzeigen" class="label">Wordpress</a></dd>
-									<dt class="icons-tag">Tags</dt>
+									<dt>
+										<i class="oi" data-glyph="tag"></i>
+										<span>Tags</span>
+									</dt>
 									<dd><a href="#" title="Alle Einträge mit dem Tag PHP anzeigen" class="label" rel="tag">PHP</a></dd>
 									<dd><a href="#" title="Alle Einträge mit dem Tag Systemtechnik anzeigen" class="label" rel="tag">Systemtechnik</a></dd>
 									<dd><a href="#" title="Alle Einträge mit dem Tag Tipps anzeigen" class="label" rel="tag">Tipps</a></dd>
-									<dt class="icons-comment">Kommentare</dt>
+									<dt>
+										<i class="oi" data-glyph="comment-square"></i>
+										<span>Kommentare</span>
+									</dt>
 									<dd><a href="#" title="Kommentiere Relaunch sunlix.de">1 Kommentar</a></dd>
 								</dl>
 							</footer>
 						</article>
 					</div>
 					<aside class="ym-col3">
-						<h2 class="ym-hideme">Weitere Informationen</h2>
 						<section class="comments">
 							<header>
 								<h3>Neueste Kommentare</h3>
 							</header>
 							<article>
 								<header>
-									<h4>Sven schrieb am 01.01.2012 um 10:10 Uhr</h4>
+									<h4>Sven schrieb am <time datetime="2014-04-13T15:33:00+01:00" pubdate="pubdate">13.04.2014 um 15:33 Uhr</time></h4>
 								</header>
 								<blockquote>
 									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
@@ -121,7 +156,7 @@
 							</article>
 							<article>
 								<header>
-									<h4>Sven schrieb am 01.01.2012 um 10:10 Uhr</h4>
+									<h4>Sven schrieb am <time datetime="2014-04-13T15:33:00+01:00" pubdate="pubdate">13.04.2014 um 15:33 Uhr</time></h4>
 								</header>
 								<blockquote>
 									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
@@ -129,7 +164,7 @@
 							</article>
 							<article>
 								<header>
-									<h4>Sven schrieb am 01.01.2012 um 10:10 Uhr</h4>
+									<h4>Sven schrieb am <time datetime="2014-04-13T15:33:00+01:00" pubdate="pubdate">13.04.2014 um 15:33 Uhr</time></h4>
 								</header>
 								<blockquote>
 									Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
@@ -144,12 +179,13 @@
 			<nav id="nav-meta" class="ym-hlist">
 				<div class="ym-wrapper ym-clearfix">
 					<ul class="linearize-level-2">
-						<li><a href="#">Impressum</a></li>
-						<li class="active"><strong>FAQ</strong></li>
+						<li><a href="impressum.html">Impressum &amp; Datenschutz</a></li>
+						<li><a href="#">FAQ</a></li>
 						<li><a href="contact.html">Kontakt</a></li>
 					</ul>
 					<a href="#main" class="btn toTop hide">
-						<span class="icons-up">Zum Seitenanfang</span>
+						<i class="oi" data-glyph="chevron-top"></i>
+						<span>Zum Seitenanfang</span>
 					</a>
 				</div>
 			</nav>

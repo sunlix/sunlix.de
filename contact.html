@@ -34,7 +34,10 @@
 						<legend class="ym-hideme">Suche</legend>
 
 						<input class="ym-searchfield" type="search" rel="search" placeholder="Search..." />
-						<input class="ym-searchbutton icons-search" type="submit" value="Search" />
+						<button type="submit" class="ym-searchbutton">
+							<i class="oi" data-glyph="magnifying-glass"></i>
+							<span>Search</span>
+						</button>
 					</fieldset>
 				</form>
 				<ul class="linearize-level-2">
@@ -55,25 +58,25 @@
 				<form action="./" method="post" class="ym-form">
 					<fieldset>
 						<legend>Benutzerdaten</legend>
-						<div class="ym-fbox-text">
+						<div class="ym-fbox ym-fbox-text">
 							<label for="username">Benutzername (erforderlich)</label>
 							<input type="text" name="username" id="username" value="" />
 						</div>
-						<div class="ym-fbox-text">
+						<div class="ym-fbox ym-fbox-text">
 							<label for="email">E-Mail (erforderlich)</label>
 							<input type="email" name="email" id="email" value="" />
 						</div>
 					</fieldset>
 					<fieldset>
 						<legend>Ihre Nachricht</legend>
-						<div class="ym-fbox-text">
+						<div class="ym-fbox ym-fbox-text">
 							<label for="message">Nachricht (erforderlich)</label>
 							<textarea name="message" id="message" cols="30" rows="7" required="required"></textarea>
 						</div>
 					</fieldset>
-					<button type="submit" class="btn">
-						<span class="icons-send">Kommentieren!</span>
-					</button>
+					<div class="ym-fbox-footer ym-fbox-button">
+						<button type="submit" class="btn">Kommentieren!</button>
+					</div>
 				</form>
 			</div>
 		</main>
@@ -81,12 +84,13 @@
 			<nav id="nav-meta" class="ym-hlist">
 				<div class="ym-wrapper ym-clearfix">
 					<ul class="linearize-level-2">
-						<li><a href="#">Impressum</a></li>
+						<li><a href="impressum.html">Impressum &amp; Datenschutz</a></li>
 						<li><a href="contact.html">FAQ</a></li>
 						<li class="active"><strong>Kontakt</strong></li>
 					</ul>
 					<a href="#main" class="btn toTop hide">
-						<span class="icons-up">Zum Seitenanfang</span>
+						<i class="oi" data-glyph="chevron-top"></i>
+						<span>Zum Seitenanfang</span>
 					</a>
 				</div>
 			</nav>

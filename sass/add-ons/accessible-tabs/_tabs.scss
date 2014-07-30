@@ -19,16 +19,16 @@
 				padding:0;
 
 				a {
+					color: $color-text-secondary;
+					text-transform: uppercase;
 					font-size: 1em;
 					line-height: 1.5;
 					padding: 0.75em;
-					font-weight: $font-weight-medium;
-					text-transform: uppercase;
-					color: $color-text-secondary;
 					background: transparent;
 
 					display:block;
 					float:left;
+					font-weight:$font-weight-medium;
 					margin:0;
 
 					&:focus,
@@ -47,7 +47,7 @@
 					a:hover,
 					a:active {
 						color:$color-accent-700;
-						border-bottom: 2px $color-accent-700 solid;
+						border-bottom: 2px solid $color-accent-700;
 
 						text-decoration:none;
 					}
@@ -56,11 +56,12 @@
 		}
 
 		.content {
+			border-top: 1px solid $color-text-divider;
+
 			clear:both;
-			padding: 1em 0 0;
-			margin-bottom: 1.5em;
+			padding: 0;
 			position:relative;
-			border-top: 1px $color-text-divider solid;
+			padding-top: 1em;
 		}
 	}
 
@@ -84,6 +85,8 @@
 	*/
 
 	.jquery_tabs .tab-content {
+		border-bottom: 1px transparent solid;
+		border-top: 1px transparent solid;
 		padding-top: 1.5em;
 		*overflow:hidden;
 	}
@@ -100,6 +103,12 @@
 		zoom:1;
 		width:auto;
 		position:relative;
+
+		// IE < 7 don't support transparent borders
+	 	.tab-content {
+			border-bottom: 1px #fff solid;
+			border-top: 1px #fff solid;
+		}
 
 		.content {
 			z-index:-1;

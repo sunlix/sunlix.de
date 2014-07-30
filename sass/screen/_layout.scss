@@ -1,143 +1,87 @@
-@import "../yaml-var-globals",
-		"../yaml-var-typography",
+@import "../_yaml-var-globals",
 		"../mixins/yaml-mixins-core",
 		"../var-custom";
 
 @media screen {
 
-	/**
-	 * @section Base layout
-	 */
-
+	/* force vertical scrollbar */
 	body {
-		overflow-y: scroll; // force vertical scrollbar
-		background-color: $color-bg-main;
-		padding-top: 42px;
+		overflow-y: scroll;
+	}
 
-		// Fallback for missing media queries support
-		& > header,
-		& > footer,
-		& > nav {
-			min-width: $layout-min-width;
-		}
-		& > header {
-			background: $color-main-500;
-
-			@include md-raise();
-			@include md-shadow(2);
-
-			h1 {
-				background: transparent;
-				color: #fff;
-			}
-
-			.ym-wbox {
-				padding: 1.5em;
-			}
-		}
-		& > nav {
-			top: 0;
-			position : absolute !important;
-			background-color: $color-main-700;
+	/* Layout Module Configuration */
+	@if $box-sizing == border-box {
+		.ym-wrapper,
+		.ym-col1,
+		.ym-col2,
+		.ym-col3 {
+			@include box-sizing($box-sizing);
+			padding: 10px;
 		}
 	}
 
-	/**
-	 * @section Layout module configuration
-	 */
-
-	.ym-wrapper	{
-		max-width: 80em;
+	.ym-wrapper {
+		max-width: $layout-max-width;
 		margin: 0 auto;
-	}
-
-	.ym-wbox {
-		padding: 1.5em;
-	}
-
-	.ym-wrapper,
-	.ym-col1,
-	.ym-col2,
-	.ym-col3 {
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		padding: 10px;
-	}
-
-	// Content
-	.ym-col1 {
-		float: left;
-		width: 100% - $sidebar-width;
-	}
-
-	// Sidebar
-	.ym-col3 {
-		margin: 0 0 0 100% - $sidebar-width;
 	}
 
 	.ym-hlist .ym-wrapper {
 		padding: 0;
 	}
 
-	footer .ym-wrapper {
-		padding: 0;
-	}
-
-	/**
-	 * @section Navigation
-	 */
-
-	#nav-main {
-		li.active strong {
-			color: #fff;
-			border-bottom: 2px solid $color-accent-400;
-			padding-bottom: 5px;
-		}
-
-		li {
-			a,
-			strong {
-				// http://www.google.com/design/spec/components/tabs.html#tabs-specs
-				color: rgba(255, 255, 255, 0.60);
-				border-bottom: 2px solid transparent;
-				text-transform: uppercase;
-
-				&:hover,
-				&:focus,
-				&:active {
-					color: #fff;
-				}
-			}
+	@if $box-sizing == content-box {
+		.ym-wbox {
+			padding: 1.5em;
 		}
 	}
 
-	#nav-meta {
-		border-top: 1px solid $color-text-divider;
+	.ym-col1 {
+		float: left;
+		width: 100% - $sidebar-width;
+	} /* content */
 
-		li.active strong {
-			color: $color-accent-700;
-			border-color: $color-accent-700;
-		}
+	.ym-col3 {
+		margin: 0 0 0 100% - $sidebar-width;
+	} /* sidebar */
 
-		li {
-			a,
-			strong {
-				color: $color-text-secondary;
-				border-bottom: 2px solid transparent;
-				text-transform: uppercase;
-
-				&:hover,
-				&:focus,
-				&:active {
-					color: $color-accent-700;
-				}
-
-			}
+	/* fallback for missing media queries support*/
+	body {
+		& > header,
+		& > nav,
+		& > main,
+		& > footer {
+			min-width: $layout-min-width;
 		}
 	}
 
 	/* Basic Element Styling */
+	body {
+		background-color: $color-bg-main;
+
+		& > header {
+			margin-top: 42px;
+			background-color: $color-main-500;
+
+			@include md-raise();
+			@include md-shadow(2);
+		}
+		& > nav {
+			position: absolute !important;
+			top: 0;
+			background: $color-main-700;
+		}
+		& > footer {
+			border-top: 1px solid $color-text-divider;
+		}
+	}
+
+	header {
+		@if $box-sizing == content-box {
+			.ym-wbox {
+				padding: 1.5em;
+			}
+		}
+	}
 
 	main {
 		padding: 2em 0;
@@ -147,11 +91,8 @@
 		}
 	}
 
-	article {
-		margin: 1.5em 0 2em;
-	}
-
 	footer {
+
 		p {
 			margin: 0;
 		}
@@ -161,21 +102,11 @@
 		}
 	}
 
-	.slogan {
-		font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-		font-size: $ym-h1-font-scale * 100%;
-		font-weight: 100;
-		color: #fff;
-		margin: 0;
-	}
-
 	.ym-gbox { padding: 0 1.5em; }
 	.ym-gbox-left { padding: 0 1.5em 0 0; }
 	.ym-gbox-right { padding: 0 0 0 1.5em; }
 
-	/**
-	 * skip links
-	 */
+	/* skip links styling */
 	.ym-skiplinks {
 		a.ym-skip:focus,
 		a.ym-skip:active {
@@ -187,225 +118,6 @@
 			text-decoration:none;
 		}
 	}
-
-	.nav-pages {
-
-		@include ym-contain(dt);
-
-		ul {
-			list-style: none;
-			margin: 0;
-
-			li {
-				margin: 0;
-			}
-		}
-	}
-
-	.btn {
-		@include md-button();
-
-		span {
-			padding: 0 1.5em;
-		}
-	}
-
-	.toTop {
-		position: fixed;
-		right: 0;
-		bottom: 5em;
-		width: 20px;
-		height: 20px;
-		border-radius: 50%;
-
-		span {
-			display: block;
-			text-indent: -200em;
-			padding: 0;
-		}
-
-		&:before,
-		&:after {
-			border-radius: 50%;
-		}
-	}
-	.hide {
-		display: none;
-	}
-
-	/**
-	 * sprites
-	 */
-
-	@import "icons/*.png";
-	@include all-icons-sprites($offset-y: 1px);
-
-	.icons-next {
-		@include icons-sprite(next, false, 100%, 1px);
-	}
-
-	/**
-	 * articles
-	 */
-
-	// since CSS 2.1 - http://www.w3.org/TR/CSS2/selector.html#pattern-matching
-	h1+* {
-		clear: left;
-	}
-
-	 .article-content {
-		@include ym-contain(dt);
-
-	 }
-
-	.article-meta {
-		@include ym-contain(dt);
-		margin: 1.5em 0 2.5em;
-		padding: 0;
-
-		dt {
-			display: inline;
-			float: left;
-			margin-right: .5em;
-			text-indent: -200em;
-			width: 16px;
-			line-height: 1.25em;
-
-			&:not(:first-child) {
-				margin-left: 1em;
-			}
-		}
-		dd {
-			display: inline;
-			margin: 0;
-			margin-left: .5em;
-			float: left;
-			line-height: 1.25em;
-		}
-	}
-
-	.ym-col1 > article {
-		footer {
-			margin-top: 10px;
-		}
-	}
-
-	a[rel="bookmark"] {
-		font-size: $ym-h1-font-scale * 100%;
-		line-height: 2 * $line-height / $ym-h1-font-scale;
-		color: $ym-text-color;
-		opacity: .1;
-		filter: alpha(opacity=0.1);
-		transition: opacity 1s ease-in-out 0;
-
-		&:hover,
-		&:focus {
-			opacity: .6;
-			filter: alpha(opacity=0.8);
-			text-decoration: none;
-		}
-	}
-
-	/**
-	 * Card
-	 */
-
-	.card {
-		@include md-card();
-		padding: .7em;
-		margin-bottom: 1.5em;
-
-		p {
-			margin: 0;
-		}
-	}
-
-	/**
-	 * author
-	 */
-
-	.article-author {
-		@include ym-contain(dt);
-
-		img {
-			border-radius: 50%;
-		}
-	}
-
-	/**
-	 * comments
-	 */
-
-	#comments {
-		img {
-			border-radius: 50%;
-		}
-		article {
-			margin: 0;
-			padding: .5em;
-
-			p {
-				margin: 0 1.5em 0 0;
-			}
-			blockquote {
-				margin: 1.5em 0 1.5em 1.5em;
-			}
-			article {
-				margin: 0;
-				margin-left: 5%;
-			}
-		}
-		.comment-author {
-			& > blockquote {
-				color: $text-color-error;
-			}
-		}
-	}
-
-	/**
-	 * sidebar
-	 */
-
-	.c-list {
-		list-style: none;
-		margin: 1.125em 0 1.5em 0;
-
-		li {
-			display: inline;
-			margin: 0 .8em 0 0;
-		}
-	}
-
-	.l-list {
-		list-style: none;
-
-		li {
-			@include icons-sprite(ico_br_next);
-			padding-left: 20px;
-			margin: 0;
-			line-height: 1.25em;
-			margin-bottom: .5em;
-		}
-	}
-
-	/**
-	 * gallery list style
-	 */
-
-	.gallery {
-		list-style: none;
-		margin: 0 0 1.5em 0;
-
-		li {
-			display: inline-block;
-			margin: .8em .8em 0 0;
-
-			img {
-				border: 5px #ddd solid;
-			}
-		}
-	}
-
 }
 
 /* reset fallback values in modern browsers */
@@ -434,14 +146,6 @@
 		padding-top: 1.5em !important;
 	}
 
-	body {
-		padding-top: 0;
-
-		& > nav {
-			position: relative !important;
-		}
-	}
-
 	main aside .ym-gbox-right {
 		border: 0 none;
 	}
@@ -450,21 +154,31 @@
 		display:block;
 		float: none;
 		width: auto;
+		text-align: right;
 	}
 
 	.ym-searchform input[type="search"] {
-		width: 90% !important;
-		transition: none;
+		width: 14%;
 	}
+
+	/**
+	 * custom responsive definition
+	 */
 
 	.article-meta {
 		dt {
 			clear: left;
+			display: inline !important;
 			margin: .5em 0 0 0 !important;
 		}
 		dd {
+			display: block !important;
 			margin: .5em 0 0 .5em !important;
 		}
+	}
+
+	.toTop {
+		display: none !important;
 	}
 }
 
@@ -481,24 +195,24 @@
 		}
 
 		h1,
-		a[rel="bookmark"],
-		.slogan {
-			font-size: 1.5em;
-			line-height: 1em;
+		.slogan,
+		.permalink {
+			font-size: 1.5em !important;
+			line-height: 1em !important;
 		}
 	}
 
 	footer .ym-wbox,
 	.ym-wbox,
 	.ym-searchform,
-	nav.ym-hlist ul {
+	nav .ym-hlist ul {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
 
 	.ym-searchform,
-	nav.ym-hlist ul,
-	nav.ym-hlist li {
+	nav .ym-hlist ul,
+	nav .ym-hlist li {
 		display:block;
 		float: none;
 		width: auto;
@@ -506,9 +220,6 @@
 	}
 
 	.ym-searchform input[type="search"] {
-		width: 90% !important;
-		transition: none;
+		width: 75%;
 	}
-
-	.toTop { display: none;}
 }

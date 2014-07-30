@@ -1,35 +1,37 @@
 @charset "UTF-8";
 
 /**
+ * Google font API
+ */
+
+@import "https://fonts.googleapis.com/css?family=Lato:100";
+@import "https://fonts.googleapis.com/css?family=RobotoDraft:100,300,400,500,700,900,400italic,700italic";
+
+/**
  * import core styles
  */
+
 @import "core/base";
 
 /**
  * import screen layout
  */
 @import "navigation/hlist";
-@import "forms/green-theme";
+@import "forms/gray-theme";
+
+@import "screen/layout";
+@import "screen/layout-custom";
+@import "screen/typography";
 
 /**
  * import add-on styles
  */
+@import "add-ons/open-iconic/open-iconic";
 @import "add-ons/magnific-popup/main";
 @import "add-ons/prism/prism";
 @import "add-ons/accessible-tabs/tabs";
 
 /**
- * import typography and
- * standard content styles
- */
-@import "screen/typography";
-
-/**
  * import print layout
  */
 @import "print/print";
-
-/**
- * import layout (incl. responsive layout)
- */
-@import "screen/layout";

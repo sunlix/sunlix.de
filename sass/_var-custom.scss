@@ -2,90 +2,90 @@
 		"./mixins/custom-mixins";
 
 /**
- * layout configuration
+ * Base configuration
  */
 
-$layout-min-width : 760px;
-$sidebar-width    : 25%;
-
-$color-bg-main: #f9f9f9;
+$box-sizing                  : border-box;
 
 /**
- * typography
+ * Layout configuration
  */
 
-$font-family         : 'RobotoDraft', sans-serif;
-$font-weight-thin    : 100;
-$font-weight-light   : 300;
-$font-weight-regular : 400;
-$font-weight-medium  : 500;
-$font-weight-bold    : 700;
-$font-weight-black   : 900;
+$layout-min-width            : 760px;
+$layout-max-width            : 80em;
+$sidebar-width               : 25%;
 
-$color-text           : rgba(0, 0, 0, 0.87);
-$color-text-secondary : rgba(0, 0, 0, 0.54);
-$color-text-hint      : rgba(0, 0, 0, 0.26);
-$color-text-divider   : rgba(0, 0, 0, 0.12);
+$color-bg-main               : #f9f9f9;
 
 /**
- * color palette
+ * Typography
  */
 
-$color-main-050 : $color-green-050;
-$color-main-100 : $color-green-100;
-$color-main-200 : $color-green-200;
-$color-main-300 : $color-green-300;
-$color-main-400 : $color-green-400;
-$color-main-500 : $color-green-500;
-$color-main-600 : $color-green-600;
-$color-main-700 : $color-green-700;
-$color-main-800 : $color-green-800;
-$color-main-900 : $color-green-900;
+$font-family                 : 'RobotoDraft', sans-serif;
+$font-weight-thin            : 100;
+$font-weight-light           : 300;
+$font-weight-regular         : 400;
+$font-weight-medium          : 500;
+$font-weight-bold            : 700;
+$font-weight-black           : 900;
 
-$color-accent-100 : $color-lightBlue-a100;
-$color-accent-200 : $color-lightBlue-a200;
-$color-accent-400 : $color-lightBlue-a400;
-$color-accent-700 : $color-lightBlue-a700;
+$color-text                  : rgba(0, 0, 0, 0.87);
+$color-text-secondary        : rgba(0, 0, 0, 0.54);
+$color-text-hint             : rgba(0, 0, 0, 0.26);
+$color-text-divider          : rgba(0, 0, 0, 0.12);
 
 /**
- * buttons
+ * Color palette
  */
 
-$color-flat-light-hover:    rgba(153, 153, 153, 0.20);
-$color-flat-light-active:   rgba(153, 153, 153, 0.40);
-$color-flat-light-disabled: rgba(153, 153, 153, 0.10);
+$color-main-050              : $color-green-050;
+$color-main-100              : $color-green-100;
+$color-main-200              : $color-green-200;
+$color-main-300              : $color-green-300;
+$color-main-400              : $color-green-400;
+$color-main-500              : $color-green-500;
+$color-main-600              : $color-green-600;
+$color-main-700              : $color-green-700;
+$color-main-800              : $color-green-800;
+$color-main-900              : $color-green-900;
 
-$color-flat-dark-hover:    rgba(204, 204, 204, 0.15);
-$color-flat-dark-active:   rgba(204, 204, 204, 0.25);
-$color-flat-dark-disabled: rgba(204, 204, 204, 0.10);
-
-$color-raised-light-normal:   rgba(153, 153, 153, 0.10);
-$color-raised-light-hover:    $color-flat-light-hover;
-$color-raised-light-active:   $color-flat-light-active;
-$color-raised-light-disabled: $color-flat-light-disabled;
-
-$color-raised-dark-normal:   $color-main-500;
-$color-raised-dark-hover:    $color-main-600;
-$color-raised-dark-active:   $color-main-700;
-$color-raised-dark-disabled: rgba(204, 204, 204, 0.10);
+$color-accent-100            : $color-lightBlue-a100;
+$color-accent-200            : $color-lightBlue-a200;
+$color-accent-400            : $color-lightBlue-a400;
+$color-accent-700            : $color-lightBlue-a700;
 
 /**
- * highlight colors
+ * Buttons
  */
 
-$bg-color-error:   #f2dede;
-$bg-color-warning: #f9edbe;
-$bg-color-success: #dff0d8;
-$bg-color-info:    #d9edf7;
+$color-flat-light-hover      : rgba(153, 153, 153, 0.20);
+$color-flat-light-active     : rgba(153, 153, 153, 0.40);
+$color-flat-light-disabled   : rgba(153, 153, 153, 0.10);
 
-$text-color-error:   #a94442;
-$text-color-warning: #444;
-$text-color-success: #3c763d;
-$text-color-info:    #31708f;
+$color-flat-dark-hover       : rgba(204, 204, 204, 0.15);
+$color-flat-dark-active      : rgba(204, 204, 204, 0.25);
+$color-flat-dark-disabled    : rgba(204, 204, 204, 0.10);
+
+$color-raised-light-normal   : rgba(153, 153, 153, 0.10);
+$color-raised-light-hover    : $color-flat-light-hover;
+$color-raised-light-active   : $color-flat-light-active;
+$color-raised-light-disabled : $color-flat-light-disabled;
+
+$color-raised-dark-normal    : $color-main-500;
+$color-raised-dark-hover     : $color-main-600;
+$color-raised-dark-active    : $color-main-700;
+$color-raised-dark-disabled  : rgba(204, 204, 204, 0.10);
 
 /**
- * sprites config
+ * Highlight colors
  */
 
-$icons-spacing:       3px;
-$icons-next-position: 100%;
+$color-bg-error              : #f2dede;
+$color-bg-warning            : #f9edbe;
+$color-bg-success            : #dff0d8;
+$color-bg-info               : #d9edf7;
+
+$color-text-error            : #a94442;
+$color-text-warning          : #444;
+$color-text-success          : #3c763d;
+$color-text-info             : #31708f;

@@ -1,9 +1,9 @@
 @charset "UTF-8";
-@import "https://fonts.googleapis.com/css?family=Lato:100";
-@import "https://fonts.googleapis.com/css?family=RobotoDraft:100,300,400,500,700,900,400italic,700italic";
 /**
  * Google font API
  */
+@import "https://fonts.googleapis.com/css?family=Lato:100";
+@import "https://fonts.googleapis.com/css?family=RobotoDraft:100,300,400,500,700,900,400italic,700italic";
 /**
  * import core styles
  */
@@ -12,7 +12,7 @@
    *  @section Normalisation Module
    */
   /* (en) Global reset of paddings and margins for all HTML elements */
-  /* (de) Globales Zur├╝cksetzen der Innen- und Au├ƒenabst├ñnde f├╝r alle HTML-Elemente */
+  /* (de) Globales Zurücksetzen der Innen- und Außenabstände für alle HTML-Elemente */
   /* line 8, ../../sass/core/base-modules/_normalization.scss */
   * {
     margin: 0;
@@ -20,7 +20,7 @@
   }
 
   /* (en) Correction: margin/padding reset caused too small select boxes. */
-  /* (de) Korrektur: Das Zur├╝cksetzen der Abst├ñnde verursacht zu kleine Selectboxen. */
+  /* (de) Korrektur: Das Zurücksetzen der Abstände verursacht zu kleine Selectboxen. */
   /* line 12, ../../sass/core/base-modules/_normalization.scss */
   option {
     padding-left: 0.4em;
@@ -49,7 +49,7 @@
   * (en) Fix for rounding errors when scaling font sizes in older versions of Opera browser
   *      Standard values for colors and text alignment
   *
-  * (de) Beseitigung von Rundungsfehler beim Skalieren von Schriftgr├Â├ƒen in ├ñlteren Opera Versionen
+  * (de) Beseitigung von Rundungsfehler beim Skalieren von Schriftgrößen in älteren Opera Versionen
   *      Vorgabe der Standardfarben und Textausrichtung
   */
   /* line 34, ../../sass/core/base-modules/_normalization.scss */
@@ -91,7 +91,7 @@
   }
 
   /* (en) HTML5 - default media element styles */
-  /* (de) HTML5 - Standard Eigenschaften f├╝r Media-Elemente */
+  /* (de) HTML5 - Standard Eigenschaften für Media-Elemente */
   /* line 74, ../../sass/core/base-modules/_normalization.scss */
   audio,
   canvas,
@@ -107,7 +107,7 @@
   }
 
   /* (en) HTML5 - add missing styling in IE & old FF for hidden attribute */
-  /* (de) HTML5 - Eigenschaften f├╝r das hidden-Attribut in ├ñlteren IEs und FF nachr├╝sten */
+  /* (de) HTML5 - Eigenschaften für das hidden-Attribut in älteren IEs und FF nachrüsten */
   /* line 86, ../../sass/core/base-modules/_normalization.scss */
   [hidden] {
     display: none;
@@ -122,7 +122,7 @@
   }
 
   /* (en) set correct box-modell in IE8/9 plus remove padding */
-  /* (de) Setze das richtige Box-Modell im IE8/9 und entferne unn├Âtiges Padding */
+  /* (de) Setze das richtige Box-Modell im IE8/9 und entferne unnötiges Padding */
   /* line 100, ../../sass/core/base-modules/_normalization.scss */
   input[type="checkbox"],
   input[type="radio"] {
@@ -131,7 +131,7 @@
   }
 
   /* (en) force consistant appearance of input[type="search"] elements in all browser */
-  /* (de) Einheitliches Erscheinungsbild f├╝r input[type="search"] Elemente erzwingen */
+  /* (de) Einheitliches Erscheinungsbild für input[type="search"] Elemente erzwingen */
   /* line 107, ../../sass/core/base-modules/_normalization.scss */
   input[type="search"] {
     -webkit-appearance: textfield;
@@ -154,14 +154,14 @@
   }
 
   /* (en) Address margin not present in IE 8/9 and Safari 5 */
-  /* (en) Erg├ñnzt fehlenden Margin in IE 8/9 und Safari 5 */
+  /* (en) Ergänzt fehlenden Margin in IE 8/9 und Safari 5 */
   /* line 127, ../../sass/core/base-modules/_normalization.scss */
   figure {
     margin: 0;
   }
 
   /* (en) Clear borders for <fieldset> and <img> elements */
-  /* (de) Rahmen f├╝r <fieldset> und <img> Elemente l├Âschen */
+  /* (de) Rahmen für <fieldset> und <img> Elemente löschen */
   /* line 134, ../../sass/core/base-modules/_normalization.scss */
   fieldset,
   img {
@@ -169,7 +169,7 @@
   }
 
   /* (en) new standard values for lists, blockquote, cite and tables */
-  /* (de) Neue Standardwerte f├╝r Listen, Zitate und Tabellen */
+  /* (de) Neue Standardwerte für Listen, Zitate und Tabellen */
   /* line 140, ../../sass/core/base-modules/_normalization.scss */
   ul,
   ol,
@@ -240,7 +240,7 @@
   }
 
   /* (en) alternative solutions to contain floats */
-  /* (de) Alternative Methoden zum Einschlie├ƒen von Float-Umgebungen */
+  /* (de) Alternative Methoden zum Einschließen von Float-Umgebungen */
   /* line 23, ../../sass/core/base-modules/_float-handling.scss */
   .ym-contain-dt {
     display: table;
@@ -311,7 +311,7 @@
   }
 
   /* (en) IE-Clearing: Only used in Internet Explorer, switched on in iehacks.css */
-  /* (de) IE-Clearing: Ben├Âtigt nur der Internet Explorer und ├╝ber iehacks.css zugeschaltet */
+  /* (de) IE-Clearing: Benötigt nur der Internet Explorer und über iehacks.css zugeschaltet */
   /* line 26, ../../sass/core/base-modules/_columns.scss */
   .ym-ie-clearing {
     display: none;
@@ -641,7 +641,7 @@
   *  |-------------------------------------------|
   *
   *  (en) Styling of forms where label floats left of form-elements
-  *  (de) Formulargestaltung, bei der die label-Elemente nach links flie├ƒen
+  *  (de) Formulargestaltung, bei der die label-Elemente nach links fließen
   */
   /* line 224, ../../sass/core/base-modules/_forms-core.scss */
   .ym-columnar input,
@@ -722,7 +722,7 @@
   * (de) Skip-Links und versteckte Inhalte
   */
   /* (en) classes for invisible elements in the base layout */
-  /* (de) Klassen f├╝r unsichtbare Elemente im Basislayout */
+  /* (de) Klassen für unsichtbare Elemente im Basislayout */
   /* line 14, ../../sass/core/base-modules/_accessibility.scss */
   .ym-skip,
   .ym-hideme,
@@ -733,7 +733,7 @@
   }
 
   /* (en) make skip links visible when using tab navigation */
-  /* (de) Skip-Links f├╝r Tab-Navigation sichtbar schalten */
+  /* (de) Skip-Links für Tab-Navigation sichtbar schalten */
   /* line 23, ../../sass/core/base-modules/_accessibility.scss */
   .ym-skip:focus,
   .ym-skip:active {
@@ -768,7 +768,7 @@
   * @section print adjustments for core modules
   *
   * (en) float containment for grids. Uses display:table to avoid bugs in FF & IE
-  * (de) Floats in Grids einschlie├ƒen. Verwendet display:table, um Darstellungsprobleme im FF & IE zu vermeiden
+  * (de) Floats in Grids einschließen. Verwendet display:table, um Darstellungsprobleme im FF & IE zu vermeiden
   *
   * @bugfix
   * @since     3.0
@@ -2184,6 +2184,11 @@
   }
 
   /* line 156, ../../sass/screen/_layout-custom.scss */
+  h1 + * {
+    clear: left;
+  }
+
+  /* line 160, ../../sass/screen/_layout-custom.scss */
   a.permalink {
     font-size: 342.85714%;
     line-height: 0.875;
@@ -2192,14 +2197,14 @@
     filter: alpha(opacity=0.1);
     transition: opacity 1s ease-in-out 0;
   }
-  /* line 165, ../../sass/screen/_layout-custom.scss */
+  /* line 169, ../../sass/screen/_layout-custom.scss */
   a.permalink:hover, a.permalink:focus {
     opacity: .6;
     filter: alpha(opacity=0.8);
     text-decoration: none;
   }
 
-  /* line 172, ../../sass/screen/_layout-custom.scss */
+  /* line 176, ../../sass/screen/_layout-custom.scss */
   .article-content {
     display: table;
     table-layout: fixed;
@@ -2207,35 +2212,35 @@
     margin: 0 0 1.5em;
   }
 
-  /* line 178, ../../sass/screen/_layout-custom.scss */
+  /* line 182, ../../sass/screen/_layout-custom.scss */
   .article-meta {
     margin: 0 0 2.5em;
     padding: 0;
     line-height: 1;
   }
-  /* line 183, ../../sass/screen/_layout-custom.scss */
+  /* line 187, ../../sass/screen/_layout-custom.scss */
   .article-meta dt {
     display: inline;
     margin-left: .5em;
   }
-  /* line 187, ../../sass/screen/_layout-custom.scss */
+  /* line 191, ../../sass/screen/_layout-custom.scss */
   .article-meta dt:first-child {
     margin-left: 0;
   }
-  /* line 192, ../../sass/screen/_layout-custom.scss */
+  /* line 196, ../../sass/screen/_layout-custom.scss */
   .article-meta dd {
     display: inline;
     margin: 0;
     margin-left: .5em;
   }
 
-  /* line 199, ../../sass/screen/_layout-custom.scss */
+  /* line 203, ../../sass/screen/_layout-custom.scss */
   .article-author {
     display: table;
     table-layout: fixed;
     width: 100%;
   }
-  /* line 202, ../../sass/screen/_layout-custom.scss */
+  /* line 206, ../../sass/screen/_layout-custom.scss */
   .article-author img {
     border-radius: 50%;
   }
@@ -2243,35 +2248,35 @@
   /**
    * @section Comments definition
    */
-  /* line 212, ../../sass/screen/_layout-custom.scss */
+  /* line 216, ../../sass/screen/_layout-custom.scss */
   #comments img {
     border-radius: 50%;
   }
-  /* line 216, ../../sass/screen/_layout-custom.scss */
+  /* line 220, ../../sass/screen/_layout-custom.scss */
   #comments article {
     margin: 0;
     padding: .5em;
   }
-  /* line 220, ../../sass/screen/_layout-custom.scss */
+  /* line 224, ../../sass/screen/_layout-custom.scss */
   #comments article p {
     margin: 0 1.5em 0 0;
   }
-  /* line 223, ../../sass/screen/_layout-custom.scss */
+  /* line 227, ../../sass/screen/_layout-custom.scss */
   #comments article blockquote {
     margin: 1.5em 0 1.5em 1.5em;
   }
-  /* line 226, ../../sass/screen/_layout-custom.scss */
+  /* line 230, ../../sass/screen/_layout-custom.scss */
   #comments article article {
     margin: 0;
     margin-left: 5%;
   }
-  /* line 233, ../../sass/screen/_layout-custom.scss */
+  /* line 237, ../../sass/screen/_layout-custom.scss */
   #comments .comment-author > blockquote {
     color: #a94442;
   }
 }
 @media all {
-  /*
+  /*!
   * @section global typography settings
   *
   * vertical rhythm settings (based on em-unit)
@@ -2279,7 +2284,7 @@
   * basefont-size:  14px (87.5%)
   * line-height  :  21px (factor: 1.5) */
   /* (en) reset font size for all elements to standard (16 Pixel) */
-  /* (de) Alle Schriftgr├Â├ƒen auf Standardgr├Â├ƒe (16 Pixel) zur├╝cksetzen */
+  /* (de) Alle Schriftgrößen auf Standardgröße (16 Pixel) zurücksetzen */
   /* line 17, ../../sass/screen/_typography.scss */
   html * {
     font-size: 100%;
@@ -2287,7 +2292,7 @@
 
   /**
   * (en) reset monospaced elements to font size 16px in all browsers
-  * (de) Schriftgr├Â├ƒe von monospaced Elemente in allen Browsern auf 16 Pixel setzen
+  * (de) Schriftgröße von monospaced Elemente in allen Browsern auf 16 Pixel setzen
   *
   * @see: http://webkit.org/blog/67/strange-medium/
   */
@@ -2302,7 +2307,7 @@
     font-family: Consolas, "Lucida Console", "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier;
   }
 
-  /* font-size: 14px; */
+  /*! font-size: 14px; */
   /* line 37, ../../sass/screen/_typography.scss */
   body {
     font-family: "RobotoDraft", sans-serif;
@@ -2310,7 +2315,7 @@
     color: rgba(0, 0, 0, 0.87);
   }
 
-  /*--- Headings | ├£berschriften ------------------------------------------------------------------------*/
+  /*--- Headings | Überschriften ------------------------------------------------------------------------*/
   /* line 50, ../../sass/screen/_typography.scss */
   h1,
   h2,
@@ -2326,7 +2331,7 @@
 
   /* line 57, ../../sass/screen/_typography.scss */
   h1 {
-    /* font-size: 48px; */
+    /*! font-size: 48px; */
     font-size: 342.85714%;
     line-height: 0.875;
     margin: 0 0 0.4375em 0;
@@ -2334,7 +2339,7 @@
 
   /* line 64, ../../sass/screen/_typography.scss */
   h2 {
-    /* font-size: 32px; */
+    /*! font-size: 32px; */
     font-size: 228.57143%;
     line-height: 1.3125;
     margin: 0 0 0.65625em 0;
@@ -2342,7 +2347,7 @@
 
   /* line 71, ../../sass/screen/_typography.scss */
   h3 {
-    /* font-size: 24px; */
+    /*! font-size: 24px; */
     font-size: 171.42857%;
     line-height: 0.875;
     margin: 0 0 0.875em 0;
@@ -2350,7 +2355,7 @@
 
   /* line 78, ../../sass/screen/_typography.scss */
   h4 {
-    /* font-size: 21px; */
+    /*! font-size: 21px; */
     font-size: 150%;
     line-height: 1;
     margin: 0 0 1em 0;
@@ -2358,7 +2363,7 @@
 
   /* line 85, ../../sass/screen/_typography.scss */
   h5 {
-    /* font-size: 18px; */
+    /*! font-size: 18px; */
     font-size: 128.57143%;
     line-height: 1.16667;
     margin: 0 0 1.16667em 0;
@@ -2366,7 +2371,7 @@
 
   /* line 92, ../../sass/screen/_typography.scss */
   h6 {
-    /* font-size: 14px; */
+    /*! font-size: 14px; */
     font-size: 100%;
     font-weight: bold;
     line-height: 1.5;
@@ -2465,14 +2470,14 @@
 
   /* line 178, ../../sass/screen/_typography.scss */
   big {
-    /* font-size: 16px; */
+    /*! font-size: 16px; */
     font-size: 114.28571%;
     line-height: 1.3125;
   }
 
   /* line 184, ../../sass/screen/_typography.scss */
   small {
-    /* font-size: 12px; */
+    /*! font-size: 12px; */
     font-size: 85.71429%;
     line-height: 1.75;
   }
@@ -2576,7 +2581,7 @@
   }
 
   /* (en) maximum constrast for tab focus - change with great care */
-  /* (en) Maximaler Kontrast f├╝r Tab Focus - ├ändern Sie diese Regel mit Bedacht */
+  /* (en) Maximaler Kontrast für Tab Focus - Ändern Sie diese Regel mit Bedacht */
   /* line 271, ../../sass/screen/_typography.scss */
   a:hover,
   a:focus {
@@ -2715,7 +2720,7 @@
   * Tables | Tabellen
   *
   * (en) Generic classes for table-width and design definition
-  * (de) Generische Klassen f├╝r die Tabellenbreite und Gestaltungsvorschriften f├╝r Tabellen
+  * (de) Generische Klassen für die Tabellenbreite und Gestaltungsvorschriften für Tabellen
   *
   * @section content-tables
   */
@@ -4856,7 +4861,7 @@ pre.line-numbers > code {
   * @section basic layout preparation
   */
   /* (en) change font size unit to [pt] - avoids problems with [px] in Gecko based browsers */
-  /* (de) Wechsel der der Schriftgr├Â├ƒen-Ma├ƒheinheit zu [pt] - Probleme mit [px] in Gecko-Browsern vermeiden */
+  /* (de) Wechsel der der Schriftgrößen-Maßheinheit zu [pt] - Probleme mit [px] in Gecko-Browsern vermeiden */
   /* line 11, ../../sass/print/_print.scss */
   body {
     font-size: 10pt;
@@ -4864,7 +4869,7 @@ pre.line-numbers > code {
   }
 
   /* (en) Hide unneeded container of the screenlayout in print layout */
-  /* (de) F├╝r den Druck nicht ben├Âtigte Container des Layouts abschalten */
+  /* (de) Für den Druck nicht benötigte Container des Layouts abschalten */
   /* line 19, ../../sass/print/_print.scss */
   nav,
   .ym-searchform {
@@ -4873,7 +4878,7 @@ pre.line-numbers > code {
 
   /*------------------------------------------------------------------------------------------------------*/
   /* (en) Avoid page breaks right after headings */
-  /* (de) Vermeidung von Seitenumbr├╝chen direkt nach einer ├£berschrift */
+  /* (de) Vermeidung von Seitenumbrüchen direkt nach einer Überschrift */
   /* line 32, ../../sass/print/_print.scss */
   h1,
   h2,

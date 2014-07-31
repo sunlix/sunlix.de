@@ -153,6 +153,10 @@
 		float: left;
 	}
 
+	h1 + * {
+		clear: left;
+	}
+
 	a.permalink {
 		font-size: $ym-h1-font-scale * 100%;
 		line-height: 2 * $line-height / $ym-h1-font-scale;

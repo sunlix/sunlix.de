@@ -3,16 +3,19 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<title>Kontakt | sunlix - personal essay</title>
+		<meta name="description" content="@@" />
+		<meta name="author" content="@@" />
+
+		<!-- mobile viewport optimisation -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=RobotoDraft:100,300,400,500,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
-		<link type="text/css" rel="stylesheet" href="./assets/css/all.css" />
+		<!-- stylesheets -->
+		<link rel="stylesheet" href="./assets/css/all.css" type="text/css" />
 		<!--[if lte IE 7]>
-		<link type="text/css" rel="stylesheet" href="./assets/css/iehacks.css" />
+		<link rel="stylesheet" href="./assets/css/iehacks.css" type="text/css" />
 		<![endif]-->
 		<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="./assets/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 	<body>
@@ -50,34 +53,65 @@
 		</nav>
 		<main id="main">
 			<div class="ym-wrapper ym-clearfix">
-				<h1>Kontakt</h1>
-				<p>
-					Fragen, Ideen oder Beschwerden?<br />
-					Kontaktieren Sie mich über meine vielreichen social media Netzwerke oder benutzen Sie das Formular.
-				</p>
-				<form action="./" method="post" class="ym-form">
-					<fieldset>
-						<legend>Benutzerdaten</legend>
-						<div class="ym-fbox ym-fbox-text">
-							<label for="username">Benutzername (erforderlich)</label>
-							<input type="text" name="username" id="username" value="" />
-						</div>
-						<div class="ym-fbox ym-fbox-text">
-							<label for="email">E-Mail (erforderlich)</label>
-							<input type="email" name="email" id="email" value="" />
-						</div>
-					</fieldset>
-					<fieldset>
-						<legend>Ihre Nachricht</legend>
-						<div class="ym-fbox ym-fbox-text">
-							<label for="message">Nachricht (erforderlich)</label>
-							<textarea name="message" id="message" cols="30" rows="7" required="required"></textarea>
-						</div>
-					</fieldset>
-					<div class="ym-fbox-footer ym-fbox-button">
-						<button type="submit" class="btn">Kommentieren!</button>
+				<article>
+					<header>
+						<h1>Kontakt</h1>
+					</header>
+					<div class="article-content">
+						<p>
+							Fragen, Ideen oder Beschwerden?<br />
+							Kontaktieren Sie mich über meine vielreichen social media Netzwerke oder benutzen Sie das Formular.
+						</p>
+						<form action="./" method="post" class="ym-form">
+							<fieldset>
+								<legend>Benutzerdaten</legend>
+								<div class="ym-fbox">
+									<label for="anrede">Anrede</label>
+									<select name="anrede" id="anrede" size="1">
+										<option value="0" selected="selected" disabled="disabled">Bitte auswählen</option>
+										<option>Herr</option>
+										<option>Frau</option>
+									</select>
+								</div>
+								<div class="ym-fbox">
+									<label for="username">Benutzername (erforderlich)</label>
+									<input type="text" name="username" id="username" value="" />
+								</div>
+								<div class="ym-fbox">
+									<label for="email">E-Mail (erforderlich)</label>
+									<input type="email" name="email" id="email" value="" />
+								</div>
+							</fieldset>
+							<fieldset>
+								<legend>Ihre Nachricht</legend>
+								<div class="ym-fbox">
+									<span class="ym-label">Wie haben Sie ich gefunden?</span>
+									<div class="ym-fbox-wrap">
+										<div>
+											<input type="radio" name="vote" id="your-id1" />
+											<label for="your-id1">Suchmaschine</label>
+										</div>
+										<div>
+											<input type="radio" name="vote" id="your-id2" />
+											<label for="your-id2">Soziale Medien</label>
+										</div>
+										<div>
+											<input type="radio" name="vote" id="your-id3" />
+											<label for="your-id3">Empfehlung</label>
+										</div>
+									</div>
+								</div>
+								<div class="ym-fbox">
+									<label for="message">Nachricht (erforderlich)</label>
+									<textarea name="message" id="message" cols="30" rows="7" required="required"></textarea>
+								</div>
+							</fieldset>
+							<div class="ym-fbox-footer">
+								<button type="submit">Absenden</button>
+							</div>
+						</form>
 					</div>
-				</form>
+				</article>
 			</div>
 		</main>
 		<footer>

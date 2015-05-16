@@ -1,16 +1,14 @@
 @import "./var-colors",
-		"./mixins/custom-mixins";
+        "./mixins/custom-mixins";
 
 /**
  * Base configuration
  */
-
 $box-sizing                  : border-box;
 
 /**
  * Layout configuration
  */
-
 $layout-min-width            : 760px;
 $layout-max-width            : 80em;
 $sidebar-width               : 25%;
@@ -20,7 +18,6 @@ $color-bg-main               : #f9f9f9;
 /**
  * Typography
  */
-
 $font-family                 : 'RobotoDraft', sans-serif;
 $font-weight-thin            : 100;
 $font-weight-light           : 300;
@@ -37,7 +34,6 @@ $color-text-divider          : rgba(0, 0, 0, 0.12);
 /**
  * Color palette
  */
-
 $color-main-050              : $color-green-050;
 $color-main-100              : $color-green-100;
 $color-main-200              : $color-green-200;
@@ -57,7 +53,6 @@ $color-accent-700            : $color-lightBlue-a700;
 /**
  * Buttons
  */
-
 $color-flat-light-hover      : rgba(153, 153, 153, 0.20);
 $color-flat-light-active     : rgba(153, 153, 153, 0.40);
 $color-flat-light-disabled   : rgba(153, 153, 153, 0.10);
@@ -79,7 +74,6 @@ $color-raised-dark-disabled  : rgba(204, 204, 204, 0.10);
 /**
  * Highlight colors
  */
-
 $color-bg-error              : #f2dede;
 $color-bg-warning            : #f9edbe;
 $color-bg-success            : #dff0d8;

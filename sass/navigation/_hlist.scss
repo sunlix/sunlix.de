@@ -1,98 +1,98 @@
 @import "../yaml-var-globals",
-		"../mixins/yaml-mixins-core",
-		"../var-custom";
+        "../mixins/yaml-mixins-core",
+        "../var-custom";
 
 @media all {
-	.ym-hlist {
-		/* (en) containing floats in IE */
-		/* (de) Einfassen der Floats im IE */
-		width:100%;
-		overflow:hidden;
-		position:relative;	//(en|de) Bugfix:IE - collapsing horizontal margins
-		line-height:1em;
+    .ym-hlist {
+        /* (en) containing floats in IE */
+        /* (de) Einfassen der Floats im IE */
+        width:100%;
+        overflow:hidden;
+        position:relative;  //(en|de) Bugfix:IE - collapsing horizontal margins
+        line-height:1em;
 
-		ul {
-			margin:0;
-			padding: 0.5em 1.5em;
-			display:inline; // (en|de) Bugfix:IE - Doubled Float Margin Bug
-			float:left; // LTR
+        ul {
+            margin:0;
+            padding: 0.5em 1.5em;
+            display:inline; // (en|de) Bugfix:IE - Doubled Float Margin Bug
+            float:left; // LTR
 
-			li {
-				display:inline; // (en|de) Bugfix:IE - Doubled Float Margin Bug
-				float:left; // LTR
-				font-size:1.0em;
-				line-height:1;
-				list-style-type:none;
-				margin: 0 .25em 0 0;
-				padding:0;
+            li {
+                display:inline; // (en|de) Bugfix:IE - Doubled Float Margin Bug
+                float:left; // LTR
+                font-size:1.0em;
+                line-height:1;
+                list-style-type:none;
+                margin: 0 .25em 0 0;
+                padding:0;
 
-				a, strong {
-					background:transparent;
-					// http://www.google.com/design/spec/components/tabs.html#tabs-specs
-					color:rgba(255, 255, 255, 0.60);
-					display:block;
-					font-size:1em;
-					line-height: 2em;
-					padding: 0 0.5em;
-					font-weight:$font-weight-regular;
-					text-decoration:none;
-					text-transform: uppercase;
-					width:auto;
-				}
+                a, strong {
+                    background:transparent;
+                    // http://www.google.com/design/spec/components/tabs.html#tabs-specs
+                    color:rgba(255, 255, 255, 0.60);
+                    display:block;
+                    font-size:1em;
+                    line-height: 2em;
+                    padding: 0 0.5em;
+                    font-weight:$font-weight-regular;
+                    text-decoration:none;
+                    text-transform: uppercase;
+                    width:auto;
+                }
 
-				a:focus,
-				a:hover,
-				a:active  {
-					color: #fff;
-					text-decoration:none;
-					outline: 0 none;
-				}
+                a:focus,
+                a:hover,
+                a:active  {
+                    color: #fff;
+                    text-decoration:none;
+                    outline: 0 none;
+                }
 
-				&.active {
-					color: #fff;
-					border-bottom: 2px solid $color-accent-400;
+                &.active {
+                    color: #fff;
+                    border-bottom: 2px solid $color-accent-400;
 
-					strong,
-					a:focus,
-					a:hover,
-					a:active {
-						color:#fff;
-						text-decoration:none;
-					}
-				}
-			}
-		}
-	}
+                    strong,
+                    a:focus,
+                    a:hover,
+                    a:active {
+                        color:#fff;
+                        text-decoration:none;
+                    }
+                }
+            }
+        }
+    }
 
-	/* ------- search form -------- */
-	.ym-searchform {
-		float:right;
-		display: inline;
-		line-height: 2;
-		padding: 0.5em 1.5em;
+    /* ------- search form -------- */
+    .ym-searchform {
+        float:right;
+        display: inline;
+        line-height: 2;
+        padding: 0.5em 1.5em;
 
-		.ym-searchfield {
-			-webkit-appearance: none;
-			background: #fff;
-			line-height: 1;
-			padding: 0.25em;
-			width: 12em;
-			border: 0;
-			outline: none;
-		}
+        .ym-searchfield {
+            -webkit-appearance: none;
+            background: #fff;
+            line-height: 1;
+            padding: 0.25em;
+            width: 12em;
+            border: 0;
+            outline: none;
+        }
 
-		.ym-searchbutton {
-			position: relative;
-			right: 30px;
-			-webkit-appearance: none;
-			background: transparent;
-			color: $color-text;
-			cursor: pointer;
-			display: inline-block;
-			font-size: 1em;
-			line-height: 1.25;
-			padding: 0.25em;
-			border: solid 1px transparent;
-		}
-	}
+        .ym-searchbutton {
+            position: relative;
+            right: 30px;
+            -webkit-appearance: none;
+            background: transparent;
+            color: $color-text;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 1em;
+            line-height: 1.25;
+            padding: 0.25em;
+            border: solid 1px transparent;
+        }
+    }
 }

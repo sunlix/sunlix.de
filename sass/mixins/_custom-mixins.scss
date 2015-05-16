@@ -18,99 +18,99 @@ $easeInExpo    : cubic-bezier(0.950, 0.050, 0.795, 0.035);
 $easeInOutExpo : cubic-bezier(1.000, 0.000, 0.000, 1.000);
 
 @mixin md-shadow($depth, $animate: false) {
-	$z1 : 0;
-	$z2 : 0;
-	$z3 : 0;
-	$z4 : 0;
-	$z5 : 0;
-	@if $depth == 1 { $z1 : 1; }
-	@if $depth == 2 { $z2 : 1; }
-	@if $depth == 3 { $z3 : 1; }
-	@if $depth == 4 { $z4 : 1; }
-	@if $depth == 5 { $z5 : 1; }
+    $z1 : 0;
+    $z2 : 0;
+    $z3 : 0;
+    $z4 : 0;
+    $z5 : 0;
+    @if $depth == 1 { $z1 : 1; }
+    @if $depth == 2 { $z2 : 1; }
+    @if $depth == 3 { $z3 : 1; }
+    @if $depth == 4 { $z4 : 1; }
+    @if $depth == 5 { $z5 : 1; }
 
-		@if $animate == true {
-			&:before,
-			&:after {
-				@include transition(
-					box-shadow 0.7s 0.01s $easeOutExpo
-				);
-			}
-	}
+        @if $animate == true {
+            &:before,
+            &:after {
+                @include transition(
+                    box-shadow 0.7s 0.01s $easeOutExpo
+                );
+            }
+    }
 
-	// Top Shadow
-	&:before{
-		@if $depth == 1 { @include opacity(0.12); }
-		@if $depth == 2 { @include opacity(0.16); }
-		@if $depth == 3 { @include opacity(0.19); }
-		@if $depth == 4 { @include opacity(0.25); }
-		@if $depth == 5 { @include opacity(0.30); }
+    // Top Shadow
+    &:before{
+        @if $depth == 1 { @include opacity(0.12); }
+        @if $depth == 2 { @include opacity(0.16); }
+        @if $depth == 3 { @include opacity(0.19); }
+        @if $depth == 4 { @include opacity(0.25); }
+        @if $depth == 5 { @include opacity(0.30); }
 
-		@include box-shadow(
-			0px 1px 1.5px rgba(#000, $z1),
-			0px 3px 3px rgba(#000, $z2),
-			0px 10px 10px rgba(#000, $z3),
-			0px 14px 14px rgba(#000, $z4),
-			0px 19px 19px rgba(#000, $z5)
-		);
-	}
+        @include box-shadow(
+            0px 1px 1.5px rgba(#000, $z1),
+            0px 3px 3px rgba(#000, $z2),
+            0px 10px 10px rgba(#000, $z3),
+            0px 14px 14px rgba(#000, $z4),
+            0px 19px 19px rgba(#000, $z5)
+        );
+    }
 
-	// Bottom Shadow
-	&:after{
-		@if $depth == 1 { @include opacity(0.24); }
-		@if $depth == 2 { @include opacity(0.23); }
-		@if $depth == 3 { @include opacity(0.23); }
-		@if $depth == 4 { @include opacity(0.22); }
-		@if $depth == 5 { @include opacity(0.22); }
+    // Bottom Shadow
+    &:after{
+        @if $depth == 1 { @include opacity(0.24); }
+        @if $depth == 2 { @include opacity(0.23); }
+        @if $depth == 3 { @include opacity(0.23); }
+        @if $depth == 4 { @include opacity(0.22); }
+        @if $depth == 5 { @include opacity(0.22); }
 
-		@include box-shadow(
-			0px 1px 1px rgba(#000, $z1),
-			0px 3px 3px rgba(#000, $z2),
-			0px 6px 3px rgba(#000, $z3),
-			0px 10px 5px rgba(#000, $z4),
-			0px 15px 6px rgba(#000, $z5)
-		);
-	}
+        @include box-shadow(
+            0px 1px 1px rgba(#000, $z1),
+            0px 3px 3px rgba(#000, $z2),
+            0px 6px 3px rgba(#000, $z3),
+            0px 10px 5px rgba(#000, $z4),
+            0px 15px 6px rgba(#000, $z5)
+        );
+    }
 }
 
 /*
  * Example Usage
 
-	.item {
-		margin  : .7em;
-		padding : .7em;
-		background-color : #fff;
+    .item {
+        margin  : .7em;
+        padding : .7em;
+        background-color : #fff;
 
-		@include md-raise();
+        @include md-raise();
 
-		@include md-shadow(2);
-		&:hover  { @include md-shadow(1); }
-		&:active { @include md-shadow(3); }
-	}
+        @include md-shadow(2);
+        &:hover  { @include md-shadow(1); }
+        &:active { @include md-shadow(3); }
+    }
 */
 
 @mixin md-raise() {
-	z-index  : 1;
-	position : relative;
-	display  : block;
+    z-index  : 1;
+    position : relative;
+    display  : block;
 
-	&:before,
-	&:after {
-		z-index  : -1;
+    &:before,
+    &:after {
+        z-index  : -1;
 
-		position : absolute;
-		display  : block;
-		content  : ' ';
+        position : absolute;
+        display  : block;
+        content  : ' ';
 
-		width    : 100%;
-		height   : 100%;
+        width    : 100%;
+        height   : 100%;
 
-		top  : 0;
-		left : 0;
+        top  : 0;
+        left : 0;
 
-		margin  : 0;
-		padding : 0;
-	}
+        margin  : 0;
+        padding : 0;
+    }
 }
 
 /**
@@ -118,12 +118,12 @@ $easeInOutExpo : cubic-bezier(1.000, 0.000, 0.000, 1.000);
  */
 
 @mixin md-card() {
-	@include md-raise();
+    @include md-raise();
 
-	@include md-shadow(2, true);
-	&:hover,
-	&:focus { @include md-shadow(1, true); }
-	&:active { @include md-shadow(3, true); }
+    @include md-shadow(2, true);
+    &:hover,
+    &:focus { @include md-shadow(1, true); }
+    &:active { @include md-shadow(3, true); }
 }
 
 /**
@@ -131,45 +131,45 @@ $easeInOutExpo : cubic-bezier(1.000, 0.000, 0.000, 1.000);
  */
 
 @mixin md-button-raised-dark() {
-	color: #fff !important;
-	background-color: $color-main-500;
+    color: #fff !important;
+    background-color: $color-main-500;
 
-	&:hover,
-	&:focus { background-color: $color-main-600; }
-	&:active { background-color: $color-main-700; }
+    &:hover,
+    &:focus { background-color: $color-main-600; }
+    &:active { background-color: $color-main-700; }
 
-	&.disabled {
-		background-color: disabled rgba(204, 204, 204, 0.10);
-	}
+    &.disabled {
+        background-color: disabled rgba(204, 204, 204, 0.10);
+    }
 }
 
 @mixin md-button-flat-light() {
-	color: $color-text;
-	background-color: transparent;
+    color: $color-text;
+    background-color: transparent;
 
-	&:hover,
-	&:focus { background-color: $color-flat-light-hover; }
-	&:active { background-color: $color-flat-light-active; }
+    &:hover,
+    &:focus { background-color: $color-flat-light-hover; }
+    &:active { background-color: $color-flat-light-active; }
 
-	&.disabled {
-		color: $color-text-secondary;
-		background-color: rgba(153, 153, 153, 0.10);
-	}
+    &.disabled {
+        color: $color-text-secondary;
+        background-color: rgba(153, 153, 153, 0.10);
+    }
 }
 
 @mixin md-button($type: raised, $theme: dark) {
-	@if $type == raised and $theme == dark  { @include md-button-raised-dark(); }
-	@if $type == flat   and $theme == light { @include md-button-flat-light(); }
+    @if $type == raised and $theme == dark  { @include md-button-raised-dark(); }
+    @if $type == flat   and $theme == light { @include md-button-flat-light(); }
 
-	font-weight: 500;
-	text-decoration: none !important;
-	text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none !important;
+    text-transform: uppercase;
 
-	padding : .7em;
+    padding : .7em;
 
-	@include md-raise();
+    @include md-raise();
 
-	@if $type == raised { @include md-shadow(2); }
-	@if $type == raised { &:hover, &:focus  { @include md-shadow(1); } }
-	@if $type == raised { &:active { @include md-shadow(3); } }
+    @if $type == raised { @include md-shadow(2); }
+    @if $type == raised { &:hover, &:focus  { @include md-shadow(1); } }
+    @if $type == raised { &:active { @include md-shadow(3); } }
 }

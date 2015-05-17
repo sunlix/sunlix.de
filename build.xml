@@ -27,9 +27,12 @@
     <condition property="compass-exec" value="compass.bat" else="compass">
         <os family="windows" />
     </condition>
+    <property name="sass" value="${basedir}/sass" />
     <property name="assets" value="${basedir}/assets" />
     <property name="assets.js" value="${assets}/js" />
     <property name="assets.css" value="${assets}/css" />
+    <property name="assets.img" value="${assets}/img" />
+    <property name="assets.fonts" value="${assets}/fonts" />
     <property name="stage-preview-path" value="${basedir}/../prev" />
     <property name="stage-production-path" value="${basedir}/../prod" />
 
@@ -39,16 +42,20 @@
         <include name="**/*.html" />
         <include name="**/*.css" />
         <include name="**/*.js" />
-        <!-- image related -->
-        <include name="**/*.png" />
-        <include name="**/*.gif" />
-        <include name="**/*.jpg" />
-        <!-- web font related -->
-        <include name="**/*.eot" />
-        <include name="**/*.otf" />
-        <include name="**/*.svg" />
-        <include name="**/*.ttf" />
-        <include name="**/*.woff" />
+        <patternset id="img">
+            <!-- image related -->
+            <include name="**/*.png" />
+            <include name="**/*.gif" />
+            <include name="**/*.jpg" />
+        </patternset>
+        <patternset id="fonts">
+            <!-- web font related -->
+            <include name="**/*.eot" />
+            <include name="**/*.otf" />
+            <include name="**/*.svg" />
+            <include name="**/*.ttf" />
+            <include name="**/*.woff" />
+        </patternset>
     </fileset>
 
     <!--
@@ -60,18 +67,28 @@
     </target>
 
     <!-- get all javascript files in YAML framework directories -->
-    <target name="copyToJs">
+    <target name="findAssets">
         <copy todir="${assets.js}" flatten="true" overwrite="true">
-            <fileset dir="${basedir}/sass" includes="**/*.js" excludes="**/jquery.*.js" />
+            <fileset dir="${sass}" includes="**/*.js" excludes="**/jquery.*.js" />
         </copy>
         <copy todir="${assets.js}/libs" flatten="true" overwrite="true">
-            <fileset dir="${basedir}/sass" includes="**/jquery.*.js" />
+            <fileset dir="${sass}" includes="**/jquery.*.js" />
         </copy>
-        <available file="${assets.js}/libs" type="dir" property="js.libs" />
+        <copy todir="${assets.img}" flatten="true" overwrite="true">
+            <fileset dir="${sass}">
+                <patternset refid="img" />
+            </fileset>
+        </copy>
+        <copy todir="${assets.fonts}" flatten="true" overwrite="true">
+            <fileset dir="${sass}">
+                <patternset refid="fonts" />
+            </fileset>
+        </copy>
+        <available file="${assets.js}/libs" type="dir" property="assets.js.libs" />
     </target>
 
     <!-- concat javascript libraries -->
-    <target name="concat" depends="copyToJs" if="${js.libs}" description="concatenate the javascript files">
+    <target name="concat" depends="findAssets" if="${assets.js.libs}" description="concatenate the javascript files">
         <echo message="concatenate js libs..." />
         <concat destfile="${assets.js}/jquery.libs.js">
             <fileset dir="${assets.js}/libs" includes="*.js" />
@@ -117,7 +134,6 @@
 
     <target name="deploy-production" depends="compile-production" description="deploy files to production">
         <delete dir="${stage-production-path}" />
-        <mkdir dir="${stage-production-path}" />
         <copy todir="${stage-production-path}">
             <fileset refid="deployable" />
         </copy>
@@ -126,7 +142,6 @@
 
     <target name="deploy-preview" depends="compile-preview" description="deploy files to preview">
         <delete dir="${stage-preview-path}" />
-        <mkdir dir="${stage-preview-path}" />
         <copy todir="${stage-preview-path}">
             <fileset refid="deployable" />
         </copy>
@@ -141,8 +156,7 @@
         <exec executable="${compass-exec}" output="${basedir}/../compass-output.txt">
             <arg line="clean" />
         </exec>
-        <delete dir="${assets.js}" />
-        <delete dir="${assets.css}" />
+        <delete dir="${assets}" />
     </target>
 
     <target name="clear" depends="clear-cache" description="delete all deployed files">

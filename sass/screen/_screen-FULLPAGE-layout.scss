@@ -227,11 +227,7 @@
 
     /* article cascade */
     h1 {
-        float: left;
-    }
-
-    h1 + * {
-        clear: left;
+        display: inline-block;
     }
 
     a.permalink {
@@ -282,6 +278,16 @@
 
         img {
             border-radius: 50%;
+        }
+    }
+
+    article {
+        figure {
+            margin: 0 0 1.5em 0;
+        }
+
+        figcaption {
+            padding: 1em;
         }
     }
 

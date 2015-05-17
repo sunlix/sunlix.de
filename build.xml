@@ -52,7 +52,7 @@
     </fileset>
 
     <!--
-        [Preperation] helper targets
+        [Preperation] helper tasks
     -->
     <target name="usage" description="Display usage information">
         <echo message="Execute 'ant -projecthelp' for build file help." />

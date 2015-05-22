@@ -25,10 +25,6 @@
         padding: 1.5em;
     }
 
-    .ym-hlist .ym-wrapper {
-        padding: 0;
-    }
-
     .ym-col1 {
         float: left;
         width: 100% - $sidebar-width;
@@ -53,7 +49,7 @@
         background-color: $color-bg-main;
 
         & > header {
-            margin-top: 42px;
+            margin-top: 45px;
             background-color: $color-main-500;
 
             @include md-raise();
@@ -63,9 +59,36 @@
             position: absolute !important;
             top: 0;
             background: $color-main-700;
+
+            .ym-wrapper {
+                padding: 0;
+            }
         }
         & > footer {
             border-top: 1px solid $color-text-divider;
+
+            .ym-wrapper{
+                padding: 0;
+            }
+
+            nav {
+                display: table !important;
+                width: auto !important;
+            }
+        }
+    }
+
+    .credits {
+        font-size: 1.25em;
+        color: $color-text-secondary;
+        line-height: 1.5;
+        position: absolute;
+        top: .5em;
+        right: 0;
+
+        .oi > span {
+            text-indent: -200em;
+            display: inline-block;
         }
     }
 
@@ -405,5 +428,9 @@
 
     .ym-searchform input[type="search"] {
         width: 75%;
+    }
+
+    .credits {
+        display: none;
     }
 }

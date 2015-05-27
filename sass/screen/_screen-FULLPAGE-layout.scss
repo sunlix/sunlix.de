@@ -78,20 +78,6 @@
         }
     }
 
-    .credits {
-        font-size: 1.25em;
-        color: $color-text-secondary;
-        line-height: 1.5;
-        position: absolute;
-        top: .5em;
-        right: 0;
-
-        .oi > span {
-            text-indent: -200em;
-            display: inline-block;
-        }
-    }
-
     main {
         padding: 2em 0;
     }
@@ -128,10 +114,27 @@
         margin: 0;
     }
 
-    /* sidebar cascade */
-    .comments {
-        blockquote {
-            margin: 0 0 1.5em 1.5em;
+    .site-author {
+        img {
+            @include border-radius(50%);
+        }
+
+        figure {
+            margin-bottom: 1.5em;
+        }
+    }
+
+    .site-credits {
+        font-size: 1.25em;
+        color: $color-text-secondary;
+        line-height: 1.5;
+        position: absolute;
+        top: .5em;
+        right: 0;
+
+        .oi > span {
+            text-indent: -200em;
+            display: inline-block;
         }
     }
 

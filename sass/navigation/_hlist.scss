@@ -64,6 +64,25 @@
         }
     }
 
+    #nav-breadcrumb {
+        list-style: none;
+
+        li {
+            display: inline;
+
+            &:first-child {
+                margin: 0;
+            }
+
+            &:not(:first-of-type):before {
+                font-family: 'Icons';
+                content: '\e036';
+                color: $color-text-secondary;
+                margin-right: 1em;
+            }
+        }
+    }
+
     /* ------- search form -------- */
     .ym-searchform {
         float:right;

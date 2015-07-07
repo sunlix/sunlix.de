@@ -3,8 +3,16 @@ $(document).ready(function() {
      * magnific popup
      */
     $('.gallery').magnificPopup({
-        type    : 'image',
-        gallery : 'true'
+        delegate : 'a',
+        type     : 'image',
+        gallery  : {
+            enabled : true
+        },
+        image    : {
+            titleSrc : function(item) {
+                return item.el.children('img').attr('alt');
+            }
+        }
     });
 
     /**

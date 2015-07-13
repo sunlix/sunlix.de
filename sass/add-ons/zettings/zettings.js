@@ -37,8 +37,19 @@ $(document).ready(function() {
     /**
      * scrollTo
      */
-    $(".toTop").on("click", function() {
+    $(".toTop").on("click", function(event) {
+        // prevent default behavior of <a>
+        // view would jump to #main an then animate the scrolling
+        event.preventDefault();
+
         $.scrollTo("#main", 500);
+        // add #main to browser history to not break the back button
+        history.pushState({
+                top: window.location.href
+            },
+            $('title').text(),
+            '#main'
+        );
     });
 
     /**

@@ -25,6 +25,23 @@ $(document).ready(function() {
     });
 
     /**
+     * waypoints
+     */
+    var waypoints = $('#main').waypoint({
+        handler: function(direction) {
+            $('.toTop').toggleClass('hide');
+        },
+        offset: '-25%'
+    })
+
+    /**
+     * scrollTo
+     */
+    $(".toTop").on("click", function() {
+        $.scrollTo("#main", 500);
+    });
+
+    /**
      * prism line numbers
      */
     $('pre > code[class^=language-]').parent().attr('class', 'line-numbers');

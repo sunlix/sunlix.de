@@ -133,9 +133,11 @@
         right: 0;
     }
 
-    .fa > span {
-        text-indent: -200em;
-        display: inline-block;
+    .fa {
+        & > span {
+            text-indent: -200em;
+            display: inline-block;
+        }
     }
 
     /* navigation cascade */
@@ -209,8 +211,8 @@
     .toTop {
         display: block;
         position: fixed;
-        right: 0;
-        bottom: 5em;
+        right: 1.5em;
+        bottom: 1.5em;
         width: 20px;
         height: 20px;
         border-radius: 50%;
@@ -289,9 +291,14 @@
                 margin: 0;
             }
 
+            a {
+                color: $color-text;
+            }
+
             a:hover,
             a:focus {
                 text-decoration: none;
+                color: $ym-link-text-color;
             }
         }
     }

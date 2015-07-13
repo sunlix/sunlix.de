@@ -55,6 +55,7 @@
             <include name="**/*.svg" />
             <include name="**/*.ttf" />
             <include name="**/*.woff" />
+            <include name="**/*.woff2" />
         </patternset>
     </fileset>
 

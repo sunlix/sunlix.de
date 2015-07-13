@@ -15,6 +15,15 @@ $(document).ready(function() {
         }
     });
 
+    $('a[href$=".jpg"], a[href$=".png"]').magnificPopup({
+        type  : 'image',
+        image : {
+            titleSrc : function(item) {
+                return item.el.children('img').attr('alt');
+            }
+        }
+    });
+
     /**
      * prism line numbers
      */

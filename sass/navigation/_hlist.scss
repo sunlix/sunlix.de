@@ -75,10 +75,14 @@
             }
 
             &:not(:first-of-type):before {
-                font-family: 'Icons';
-                content: '\e036';
-                color: $color-text-secondary;
+                font-family: 'FontAwesome';
+                content: '\f054';
+                color: $color-text-hint;
                 margin-right: 1em;
+            }
+
+            strong {
+                color: $color-text-secondary;
             }
         }
     }

@@ -353,18 +353,22 @@
 
     .info {
         background: $ym-highlight-info-color;
+        color: $color-text-info;
     }
 
     .success {
         background: $ym-highlight-success-color;
+        color: $color-text-success;
     }
 
     .warning {
         background: $ym-highlight-warning-color;
+        color: $color-text-warning;
     }
 
     .error {
         background: $ym-highlight-error-color;
+        color: $color-text-error;
     }
 
     .float-left {

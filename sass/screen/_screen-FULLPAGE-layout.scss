@@ -93,8 +93,8 @@
         a.ym-skip:focus,
         a.ym-skip:active {
             color:#fff;
-            background:#333;
-            border-bottom:1px #000 solid;
+            background: $color-main-500;
+            border-bottom:1px $color-text-divider solid;
             padding:10px 0;
             text-align: center;
             text-decoration:none;
@@ -137,6 +137,7 @@
         & > span {
             text-indent: -200em;
             display: inline-block;
+            width: 0;
         }
     }
 
@@ -249,16 +250,6 @@
             text-indent: 100%;
             overflow: hidden;
             width: 0;
-        }
-    }
-
-    .card {
-        @include md-card();
-        padding: .7em;
-        margin-bottom: 1.5em;
-
-        p {
-            margin: 0;
         }
     }
 

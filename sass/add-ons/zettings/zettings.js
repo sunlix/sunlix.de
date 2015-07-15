@@ -34,6 +34,17 @@ $(document).ready(function() {
         offset: '-25%'
     })
 
+    var infinite = new Waypoint.Infinite({
+        element: $('.article-container').first(),
+        items: 'article',
+        more: '.article-load-more',
+        onAfterPageLoad: function() {
+            if($('.article-load').length < 1){
+                $('.article-load').remove();
+            }
+        }
+    })
+
     /**
      * scrollTo
      */
@@ -43,13 +54,8 @@ $(document).ready(function() {
         event.preventDefault();
 
         $.scrollTo("#main", 500);
-        // add #main to browser history to not break the back button
-        history.pushState({
-                top: window.location.href
-            },
-            $('title').text(),
-            '#main'
-        );
+        // set the browser history to #main to not break the back button
+        window.location = '#main';
     });
 
     /**

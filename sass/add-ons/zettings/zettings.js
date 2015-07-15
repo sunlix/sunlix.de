@@ -39,7 +39,7 @@ $(document).ready(function() {
         items: 'article',
         more: '.article-load-more',
         onAfterPageLoad: function() {
-            if($('.article-load').length < 1){
+            if($('.article-load-more').length < 1){
                 $('.article-load').remove();
             }
         }

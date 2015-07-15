@@ -21,20 +21,22 @@
         <![endif]-->
     </head>
     <body>
-        <ul class="ym-skiplinks">
-            <li><a class="ym-skip" href="#nav-main">Zur Hauptnavigation springen</a></li>
-            <li><a class="ym-skip" href="#nav-meta">Zur Hilfsnavigation springen</a></li>
-            <li><a class="ym-skip" href="#main">Zum Inhalt springen</a></li>
-        </ul>
-        <header>
+        <nav class="ym-skiplinks" role="navigation" aria-label="Sprungmarken">
+            <ul>
+                <li><a class="ym-skip" href="#nav-main">Zur Hauptnavigation springen</a></li>
+                <li><a class="ym-skip" href="#nav-meta">Zur Hilfsnavigation springen</a></li>
+                <li><a class="ym-skip" href="#main">Zum Inhalt springen</a></li>
+            </ul>
+        </nav>
+        <header role="banner">
             <div class="ym-wrapper ym-clearfix">
                 <p class="site-title">sunlix.de - personal essay</p>
             </div>
         </header>
-        <nav id="nav-main" class="ym-hlist">
+        <nav id="nav-main" class="ym-hlist" role="navigation">
             <div class="ym-wrapper ym-clearfix">
                 <!-- optional search form -->
-                <form class="ym-searchform">
+                <form class="ym-searchform" role="search">
                     <fieldset>
                         <legend class="ym-hideme">Suche</legend>
                         <input class="ym-searchfield" type="search" placeholder="Search..." />
@@ -52,7 +54,7 @@
                 </ul>
             </div>
         </nav>
-        <main id="main">
+        <main id="main" role="role">
             <div class="ym-wrapper ym-clearfix">
                 <div class="ym-column linearize-level-1">
                     <div class="ym-col1">
@@ -170,7 +172,7 @@
         </main>
         <footer>
             <div class="ym-wrapper ym-clearfix">
-                <nav id="nav-meta" class="ym-hlist">
+                <nav id="nav-meta" class="ym-hlist" role="navigation" aria-label="Hilfsnavigation">
                     <ul class="linearize-level-2">
                         <li><a href="impressum.html">Impressum &amp; Datenschutz</a></li>
                         <li><a href="#">FAQ</a></li>

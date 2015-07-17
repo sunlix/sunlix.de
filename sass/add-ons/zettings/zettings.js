@@ -32,18 +32,46 @@ $(document).ready(function() {
             $('.toTop').toggleClass('hide');
         },
         offset: '-25%'
-    })
+    });
 
-    var infinite = new Waypoint.Infinite({
-        element: $('.article-container').first(),
-        items: 'article',
-        more: '.article-load-more',
-        onAfterPageLoad: function() {
-            if($('.article-load-more').length < 1){
-                $('.article-load').remove();
+    /**
+     * infinite scroll on click
+     */
+    (function(){
+        'use strict';
+
+        var container = '.article-container';
+        var items     = 'article';
+        var more      = '.article-load-more';
+
+        $(more).on({
+            click: function(event) {
+                event.preventDefault();
+
+                var url = $(this).attr('href');
+
+                $.ajax({
+                    url: url,
+                    success: function(data) {
+                        var html      = $($.parseHTML(data));
+                        var htmlItems = html.find(items);
+                        var htmlMore  = html.find(more);
+
+                        if(htmlMore.length) {
+                            var newUrl = htmlMore.attr('href');
+                            $(more).attr('href', newUrl);
+                        } else {
+                            $(more).parent().remove();
+                        }
+
+                        if(htmlItems.length) {
+                            $(container).append(htmlItems);
+                        }
+                    }
+                });
             }
-        }
-    })
+        })
+    }());
 
     /**
      * scrollTo
@@ -53,9 +81,12 @@ $(document).ready(function() {
         // view would jump to #main an then animate the scrolling
         event.preventDefault();
 
-        $.scrollTo("#main", 500);
-        // set the browser history to #main to not break the back button
-        window.location = '#main';
+        $.scrollTo("#main", 500, {
+            onAfter: function() {
+                // set the browser history to #main to not break the back button
+                window.location = '#main';
+            }
+        });
     });
 
     /**

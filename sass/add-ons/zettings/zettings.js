@@ -54,8 +54,8 @@ $(document).ready(function() {
                     url: url,
                     success: function(data) {
                         var html      = $($.parseHTML(data));
-                        var htmlItems = html.find(items);
-                        var htmlMore  = html.find(more);
+                        var htmlItems = html.find(container).first().children(items);
+                        var htmlMore  = html.find(more).first();
 
                         if(htmlMore.length) {
                             var newUrl = htmlMore.attr('href');
@@ -65,8 +65,16 @@ $(document).ready(function() {
                         }
 
                         if(htmlItems.length) {
-                            $(container).append(htmlItems);
+                            $(container).first().append(htmlItems);
                         }
+
+                        var id = htmlItems.first().attr('id');
+                        $.scrollTo('#' + id, 500, {
+                            onAfter: function() {
+                                // set the browser history to #main to not break the back button
+                                window.location = '#' + id;
+                            }
+                        });
                     }
                 });
             }

@@ -59,6 +59,7 @@
         font-size: $ym-h1-font-scale * 100%;
         line-height: 2 * $line-height / $ym-h1-font-scale;
         margin: 0 0 $line-height / $ym-h1-font-scale*1em 0;
+        font-weight: 300;
     }
 
     h2 {
@@ -92,7 +93,7 @@
     h6 {
         /*! font-size: #{$ym-base-font-size * $ym-h6-font-scale}px; */
         font-size: $ym-h6-font-scale * 100%;
-        font-weight: bold;
+        font-weight: 500;
         line-height: 1 * $line-height / $ym-h6-font-scale;
         margin: 0 0 $line-height / $ym-h6-font-scale*1em 0;
     }
@@ -269,7 +270,7 @@
     /* (en) Maximaler Kontrast für Tab Focus - Ändern Sie diese Regel mit Bedacht */
     a:hover,
     a:focus {
-        background-color: $ym-link-focus-bg-color;
+        //background-color: $ym-link-focus-bg-color;
         color: $ym-link-focus-text-color;
         text-decoration: underline;
     }

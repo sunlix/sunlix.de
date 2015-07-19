@@ -49,12 +49,10 @@
         background-color: $color-bg-main;
 
         & > header {
-            margin-top: 44px;
+            margin-top: 42px;
             background-color: $color-main-500;
-
-            @include md-raise();
-            @include md-shadow(2);
         }
+
         & > nav {
             position: absolute !important;
             top: 0;
@@ -64,6 +62,7 @@
                 padding: 0;
             }
         }
+
         & > footer {
             border-top: 1px solid $color-text-divider;
 
@@ -173,6 +172,23 @@
 
             li {
                 margin: 0;
+
+                a {
+                    @include md-button(raised, colored);
+
+                    .fa-chevron-left:before,
+                    .fa-chevron-right:after {
+                        margin: 0 .2em;
+                    }
+
+                    .fa-chevron-right:before {
+                        content: none;
+                    }
+
+                    .fa-chevron-right:after {
+                        content: '\f054';
+                    }
+                }
             }
         }
     }
@@ -188,49 +204,27 @@
 
                 a {
                     @include md-button();
-                    border-radius: 50%;
+                    @include border-radius(50%);
+
                     display: inline;
                     padding: 1em;
 
                     &:after,
                     &:before {
-                        border-radius: 50%;}
+                        @include border-radius(50%);
+                    }
                 }
             }
         }
     }
 
     /* module cascade */
-    .btn {
-        @include md-button();
-
-        span {
-            padding: 0 1.5em;
-        }
-    }
-
     .toTop {
-        display: block;
-        position: fixed;
-        right: 1.5em;
-        bottom: 1.5em;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        text-align: center;
+        position: fixed !important;
+        right: .8em;
+        bottom: .8em;
 
-        span {
-            display: inline-block;
-            text-indent: 100%;
-            overflow: hidden;
-            width: 0;
-
-        }
-
-        &:before,
-        &:after {
-            border-radius: 50%;
-        }
+        @include md-button(fab, colored);
     }
 
     .hide { display: none; }
@@ -239,17 +233,6 @@
         li {
             display: inline;
             margin: 0 .8em 0 0;
-        }
-    }
-
-    .ym-searchbutton,
-    .article-meta,
-    .toTop {
-        span {
-            display: inline-block;
-            text-indent: 100%;
-            overflow: hidden;
-            width: 0;
         }
     }
 
@@ -357,7 +340,7 @@
         @include ym-contain(dt);
 
         img {
-            border-radius: 50%;
+            @include border-radius(50%);
         }
     }
 
@@ -381,7 +364,7 @@
     /* comments cascade */
     #comments {
         img {
-            border-radius: 50%;
+            @include border-radius(50%);
         }
 
         article {

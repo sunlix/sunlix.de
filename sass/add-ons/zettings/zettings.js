@@ -68,11 +68,11 @@ $(document).ready(function() {
                             $(container).first().append(htmlItems);
                         }
 
-                        var id = htmlItems.first().attr('id');
-                        $.scrollTo('#' + id, 500, {
+                        var id = '#' + htmlItems.first().attr('id');
+                        $.scrollTo(id, 500, {
                             onAfter: function() {
-                                // set the browser history to #main to not break the back button
-                                window.location = '#' + id;
+                                // set the browser history to given id to not break the back button
+                                window.location = id;
                             }
                         });
                     }

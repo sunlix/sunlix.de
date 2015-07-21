@@ -49,13 +49,10 @@
         background-color: $color-bg-main;
 
         & > header {
-            margin-top: 42px;
             background-color: $color-main-500;
         }
 
         & > nav {
-            position: absolute !important;
-            top: 0;
             background: $color-main-700;
 
             .ym-wrapper {
@@ -449,26 +446,28 @@
         @include ym-linearize-grids-and-columns();
     }
 
-    header {
-        h1,
-        .site-title,
-        .permalink {
-            font-size: 1.5em !important;
-            line-height: 1em !important;
-        }
+    h1,
+    .site-title,
+    .permalink {
+        font-size: 1.5em !important;
+        line-height: 1em !important;
+    }
+
+    .site-title {
+        font-weight: 300;
     }
 
     .ym-searchform,
-    nav .ym-hlist ul {
+    .ym-hlist ul {
         padding-left: 10px;
         padding-right: 10px;
     }
 
     .ym-searchform,
-    nav .ym-hlist ul,
-    nav .ym-hlist li {
-        display:block;
-        float: none;
+    .ym-hlist ul,
+    .ym-hlist li {
+        display:block !important;
+        float: none !important;
         width: auto;
         text-align: left;
     }
@@ -477,7 +476,7 @@
         width: 75%;
     }
 
-    .credits {
+    .site-credits {
         display: none;
     }
 }

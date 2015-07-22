@@ -100,5 +100,8 @@ $(document).ready(function() {
     /**
      * prism line numbers
      */
-    $('pre > code[class^=language-]').parent().attr('class', 'line-numbers');
+    $('pre > code[class^=language-]')
+        .parent()
+        .attr('class', 'line-numbers')
+        .wrap('<figure class="article-content-code"></figure>');
 });

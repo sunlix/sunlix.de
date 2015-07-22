@@ -74,16 +74,6 @@
         }
     }
 
-    main {
-        padding: 2em 0;
-    }
-
-    footer {
-        p {
-            margin: 0;
-        }
-    }
-
     /* skip links styling */
     .ym-skiplinks {
         a.ym-skip:focus,
@@ -199,6 +189,10 @@
             li {
                 display: inline-block;
 
+                &:first-child {
+                    margin: 0;
+                }
+
                 a {
                     @include md-button();
                     @include border-radius(50%);
@@ -310,12 +304,15 @@
         @include ym-contain(dt);
         margin: 0 0 1.5em;
 
+        pre {
+            display: table;
+            width: 100%;
+            @include ym-box-sizing();
+        }
      }
 
     .article-meta {
-        margin: 0 0 2.5em;
         padding: 0;
-        line-height: 1;
 
         dt {
             display: inline;
@@ -342,8 +339,8 @@
     }
 
     article {
-        & > header {
-            margin-bottom: 1.75em;
+        header {
+            margin: 0 0 1.5em 0;
 
             h1 {
                 display: inline;
@@ -419,21 +416,6 @@
         width: 14%;
     }
 
-    /**
-     * custom responsive definition
-     */
-    .article-meta {
-        dt {
-            clear: left;
-            display: inline !important;
-            margin: .5em 0 0 0 !important;
-        }
-        dd {
-            display: block !important;
-            margin: .5em 0 0 .5em !important;
-        }
-    }
-
     .toTop {
         display: none !important;
     }
@@ -474,6 +456,29 @@
 
     .ym-searchform input[type="search"] {
         width: 75%;
+    }
+
+    .article-meta {
+        @include ym-contain(dt);
+
+        dt {
+            display: inherit;
+            min-width: 15%;
+            float: left;
+            clear: left;
+            margin: 0 0 .5em;
+            line-height: inherit;
+        }
+
+        dd {
+            display: inherit;
+            float: left;
+            margin: 0 .5em .5em 0;
+        }
+    }
+
+    .article-content-code {
+        overflow: auto;
     }
 
     .site-credits {

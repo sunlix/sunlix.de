@@ -212,8 +212,8 @@
     /* module cascade */
     .toTop {
         position: fixed !important;
-        right: .8em;
-        bottom: .8em;
+        right: 1em;
+        bottom: 2em;
 
         @include md-button(fab, colored);
     }

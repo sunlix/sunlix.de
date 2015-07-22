@@ -100,12 +100,17 @@
 
         .ym-searchfield {
             -webkit-appearance: none;
-            background: #fff;
+            background: transparent;
             line-height: 1;
             padding: 0.25em 1.75em .25em .25em;
             width: 12em;
             border: 0;
+            border-bottom: $color-accent-400 1px solid;
             outline: none;
+            color: #fff;
+            @include input-placeholder {
+                color: rgba(255, 255, 255, 0.60);
+            }
         }
 
         .ym-searchbutton {
@@ -114,7 +119,7 @@
             right: 0;
             -webkit-appearance: none;
             background: transparent;
-            color: $color-text;
+            color: rgba(255, 255, 255, 0.60);
             cursor: pointer;
             display: inline-block;
             font-size: 1em;

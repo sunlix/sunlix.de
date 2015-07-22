@@ -161,7 +161,7 @@
                 margin: 0;
 
                 a {
-                    @include md-button(raised, colored);
+                    @include md-button(raised, $color-main-500);
 
                     .fa-chevron-left:before,
                     .fa-chevron-right:after {
@@ -215,7 +215,7 @@
         right: 1em;
         bottom: 2em;
 
-        @include md-button(fab, colored);
+        @include md-button(fab, $color-main-500);
     }
 
     .hide { display: none; }

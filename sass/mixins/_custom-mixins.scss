@@ -57,7 +57,7 @@
         @if $theme == plain {
             background: rgba(158,158,158,.2);
         } @else {
-            background: $color-main-500;
+            background: $theme;
         }
         box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
         position: relative;
@@ -68,7 +68,7 @@
             @if $theme == plain {
                 background-color: rgba(158,158,158,.4);
             } @else {
-                background: $color-main-500;
+                background: $theme;
             }
         }
 
@@ -77,7 +77,7 @@
             @if $theme == plain {
                 background-color: rgba(158,158,158,.4);
             } @else {
-                background: $color-main-500;
+                background: $theme;
             }
         }
 
@@ -97,7 +97,7 @@
         @if $theme == plain {
             background: rgba(158,158,158,.2);
         } @else {
-            background: $color-main-500;
+            background: $theme;
         }
         box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 
@@ -106,7 +106,7 @@
             @if $theme == plain {
                 background-color: rgba(158,158,158,.4);
             } @else {
-                background: $color-main-500;
+                background: $theme;
             }
         }
 
@@ -115,7 +115,7 @@
             @if $theme == plain {
                 background-color: rgba(158,158,158,.4);
             } @else {
-                background: $color-main-500;
+                background: $theme;
             }
         }
     }

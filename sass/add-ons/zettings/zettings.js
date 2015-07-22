@@ -103,5 +103,12 @@ $(document).ready(function() {
     $('pre > code[class^=language-]')
         .parent()
         .attr('class', 'line-numbers')
-        .wrap('<figure class="article-content-code"></figure>');
+        .wrap('<figure class="article-content-overflow"></figure>');
+
+    /**
+     * table overflow
+     */
+    $('.article-content > table')
+        .wrap('<figure class="article-content-overflow"></figure>');
+
 });

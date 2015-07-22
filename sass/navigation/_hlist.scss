@@ -94,19 +94,24 @@
         line-height: 2;
         padding: 0.5em 1.5em;
 
+        fieldset {
+            position: relative;
+        }
+
         .ym-searchfield {
             -webkit-appearance: none;
             background: #fff;
             line-height: 1;
-            padding: 0.25em;
+            padding: 0.25em 1.75em .25em .25em;
             width: 12em;
             border: 0;
             outline: none;
         }
 
         .ym-searchbutton {
-            position: relative;
-            right: 30px;
+            position: absolute;
+            top: 0;
+            right: 0;
             -webkit-appearance: none;
             background: transparent;
             color: $color-text;

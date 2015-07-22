@@ -455,7 +455,8 @@
     }
 
     .ym-searchform input[type="search"] {
-        width: 75%;
+        width: 100%;
+        @include ym-box-sizing();
     }
 
     .article-meta {

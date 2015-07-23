@@ -1,15 +1,10 @@
 @charset "UTF-8";
 
 /**
- * compass libraries
+ * libraries
  */
 @import "compass/css3";
-
-/**
- * Google font API
- */
-@import "https://fonts.googleapis.com/css?family=Lato:100,300";
-@import "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
+@import "mixins/custom-mixins";
 
 /**
  * import core styles

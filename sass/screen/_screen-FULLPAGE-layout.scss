@@ -454,6 +454,11 @@
         text-align: left;
     }
 
+    .ym-hlist ul li a,
+    .ym-hlist ul li strong {
+        padding: .5em;
+    }
+
     .ym-searchform input[type="search"] {
         width: 100%;
         @include ym-box-sizing();

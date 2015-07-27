@@ -8,9 +8,12 @@ $box-sizing                  : border-box;
 /**
  * Layout configuration
  */
-$layout-min-width            : 760px;
-$layout-max-width            : 80em;
+$layout-width_min            : 760px;
+$layout-width_max            : 80em;
 $sidebar-width               : 25%;
+
+$layout-breakpoint_mid       : 760px;
+$layout-breakpoint_small     : 480px;
 
 $color-bg-main               : #f9f9f9;
 

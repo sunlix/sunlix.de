@@ -12,7 +12,7 @@
 
     /* Layout Module Configuration */
     .ym-wrapper {
-        max-width: $layout-max-width;
+        max-width: $layout-width_max;
         margin: 0 auto;
         position: relative;
     }
@@ -40,7 +40,7 @@
         & > nav,
         & > main,
         & > footer {
-            min-width: $layout-min-width;
+            min-width: $layout-width_min;
         }
     }
 
@@ -284,7 +284,7 @@
     }
 
     /* article cascade */
-    a.permalink {
+    .permalink {
         font-size: $ym-h1-font-scale * 100%;
         line-height: 2 * $line-height / $ym-h1-font-scale;
         color: $ym-text-color;
@@ -398,7 +398,7 @@
     }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: $layout-breakpoint_mid) {
 
     /* Linearisation for Grid- and Column-Module, based on CSS class .linearize-level-1 */
     .linearize-level-1 {
@@ -421,22 +421,11 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: $layout-breakpoint_small) {
 
     /* Linearisation for Grid- and Column-Module, based on CSS class .linearize-level-2 */
     .linearize-level-2 {
         @include ym-linearize-grids-and-columns();
-    }
-
-    h1,
-    .site-title,
-    .permalink {
-        font-size: 1.5em !important;
-        line-height: 1em !important;
-    }
-
-    .site-title {
-        font-weight: 300;
     }
 
     .ym-searchform,

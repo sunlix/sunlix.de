@@ -491,3 +491,22 @@
         }
     }
 }
+
+@media screen and (max-width: $layout-breakpoint_mid) {
+}
+
+@media screen and (max-width: $layout-breakpoint_small) {
+    h1,
+    .permalink,
+    .site-title {
+        font-size: 210%
+    }
+
+    h2 {
+        font-size: 195%;
+    }
+
+    .site-title {
+        font-weight: 300;
+    }
+}

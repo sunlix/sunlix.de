@@ -47,14 +47,16 @@
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    .permalink {
         font-family: $ym-font-sans;
         font-weight: 400;
         color: $ym-headings-color;
         margin: 0;
     }
 
-    h1 {
+    h1,
+    .permalink {
         /*! font-size: #{$ym-base-font-size * $ym-h1-font-scale}px; */
         font-size: $ym-h1-font-scale * 100%;
         line-height: 2 * $line-height / $ym-h1-font-scale;

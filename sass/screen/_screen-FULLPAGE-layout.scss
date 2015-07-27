@@ -285,12 +285,8 @@
 
     /* article cascade */
     .permalink {
-        font-size: $ym-h1-font-scale * 100%;
-        line-height: 2 * $line-height / $ym-h1-font-scale;
-        color: $ym-text-color;
         opacity: .1;
         filter: alpha(opacity=0.1);
-        transition: opacity 1s ease-in-out 0;
 
         &:hover,
         &:focus {

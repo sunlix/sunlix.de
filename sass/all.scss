@@ -7,6 +7,12 @@
 @import "mixins/custom-mixins";
 
 /**
+ * fonts
+ */
+@import "add-ons/lato/lato";
+@import "add-ons/roboto/roboto";
+
+/**
  * import core styles
  */
 @import "core/base";

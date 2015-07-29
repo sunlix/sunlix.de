@@ -156,12 +156,7 @@
 
             li {
                 @include md-button(raised, $color-main-500);
-                float: right;
                 margin: 0;
-
-                &:first-child {
-                    float: left;
-                }
 
                 a {
                     display: inline-block;
@@ -169,6 +164,14 @@
                     text-decoration: none;
                 }
             }
+        }
+
+        .prev {
+            float: left;
+        }
+
+        .next {
+            float: right;
         }
     }
 

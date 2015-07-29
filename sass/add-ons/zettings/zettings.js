@@ -2,6 +2,15 @@ $(document).ready(function() {
     /**
      * magnific popup
      */
+    $(' p > a[href$=".jpg"], p > a[href$=".png"]').magnificPopup({
+        type  : 'image',
+        image : {
+            titleSrc : function(item) {
+                return item.el.children('img').attr('alt');
+            }
+        }
+    });
+
     $('.gallery').magnificPopup({
         delegate : 'a',
         type     : 'image',
@@ -9,15 +18,6 @@ $(document).ready(function() {
             enabled : true
         },
         image    : {
-            titleSrc : function(item) {
-                return item.el.children('img').attr('alt');
-            }
-        }
-    });
-
-    $('a[href$=".jpg"], a[href$=".png"]').magnificPopup({
-        type  : 'image',
-        image : {
             titleSrc : function(item) {
                 return item.el.children('img').attr('alt');
             }
@@ -84,12 +84,12 @@ $(document).ready(function() {
     /**
      * scrollTo
      */
-    $(".toTop").on("click", function(event) {
+    $('.toTop').on('click', function(event) {
         // prevent default behavior of <a>
         // view would jump to #main an then animate the scrolling
         event.preventDefault();
 
-        $.scrollTo("#main", 500, {
+        $.scrollTo('#main', 500, {
             onAfter: function() {
                 // set the browser history to #main to not break the back button
                 window.location = '#main';
@@ -106,7 +106,7 @@ $(document).ready(function() {
         .wrap('<figure class="article-content-overflow"></figure>');
 
     /**
-     * table overflow
+     * content overflow
      */
     $('.article-content > table')
         .wrap('<figure class="article-content-overflow"></figure>');

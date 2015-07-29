@@ -501,14 +501,24 @@
     h1,
     .permalink,
     .site-title {
-        font-size: 210%
+        font-size: $ym-h1-font-scale * 54%;
     }
 
     h2 {
-        font-size: 195%;
+        font-size: $ym-h2-font-scale * 75%;
+    }
+
+    h3 {
+        font-size: $ym-h3-font-scale * 94%;
     }
 
     .site-title {
         font-weight: 300;
+    }
+
+    .float-left,
+    .float-right {
+        float: none;
+        margin: 0 0 1.5em 0;
     }
 }

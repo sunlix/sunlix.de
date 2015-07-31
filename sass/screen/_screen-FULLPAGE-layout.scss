@@ -125,7 +125,7 @@
 
     /* navigation cascade */
     #nav-meta {
-        li.active strong {
+        .active strong {
             color: $color-accent-700;
             border-color: $color-accent-700;
         }

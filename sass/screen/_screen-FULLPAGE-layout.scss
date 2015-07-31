@@ -17,24 +17,26 @@
         position: relative;
     }
 
-    .ym-wrapper,
     .ym-col1,
     .ym-col2,
-    .ym-col3 {
-        @include ym-box-sizing();
+    .ym-col3,
+    .ym-wrapper {
+        @include ym-box-sizing($box-sizing);
         padding: 1.5em;
     }
 
+    // content
     .ym-col1 {
         float: left;
-        width: 100% - $sidebar-width;
-    } /* content */
+        width: $sidebar-width;
+    }
 
+    // sidebar
     .ym-col3 {
-        margin: 0 0 0 100% - $sidebar-width;
-    } /* sidebar */
+        margin: 0 0 0 $sidebar-width;
+    }
 
-    /* fallback for missing media queries support*/
+    /* fallback for missing media queries support */
     body {
         & > header,
         & > nav,
@@ -46,30 +48,24 @@
 
     /* Basic Element Styling */
     body {
-        background-color: $color-bg-main;
+        background: $color-bg-main;
 
         & > header {
-            background-color: $color-main-500;
+            background: $color-main-500;
         }
 
         & > nav {
             background: $color-main-700;
-
-            .ym-wrapper {
-                padding: 0;
-            }
         }
 
         & > footer {
             border-top: 1px solid $color-text-divider;
+        }
 
+        & > nav,
+        & > footer {
             .ym-wrapper{
                 padding: 0;
-            }
-
-            nav {
-                display: table !important;
-                width: auto !important;
             }
         }
     }
@@ -78,12 +74,12 @@
     .ym-skiplinks {
         a.ym-skip:focus,
         a.ym-skip:active {
-            color:#fff;
-            background: $color-main-500;
-            border-bottom:1px $color-text-divider solid;
-            padding:10px 0;
+            color: #fff;
+            background: $color-accent-700;
+            border-bottom: 1px $color-text-divider solid;
+            padding: 10px 0;
             text-align: center;
-            text-decoration:none;
+            text-decoration: none;
         }
     }
 
@@ -212,8 +208,6 @@
 
         @include md-button(fab, $color-main-500);
     }
-
-    .hide { display: none; }
 
     .c-list {
         li {

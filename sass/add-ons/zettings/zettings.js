@@ -29,7 +29,7 @@ $(document).ready(function() {
      */
     var waypoints = $('#main').waypoint({
         handler: function(direction) {
-            $('.toTop').toggleClass('hide');
+            $('.toTop').toggleClass('ym-hideme');
         },
         offset: '-25%'
     });

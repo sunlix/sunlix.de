@@ -108,15 +108,15 @@ gulp.task('compile:production', ['assets:concat'], function() {
     exec('compass compile -e production --force')
 
     return gulp
-                .src([
-                    '**/*.js',
-                    '!/**/*.min.js'
-                ], {cwd: assets_js})
-                .pipe(uglify())
-                .pipe(rename({
-                    extname: '.min.js'
-                }))
-                .pipe(gulp.dest(assets_js));
+            .src(
+                '**/*.js',
+                '!/**/*.min.js'
+            ], {cwd: assets_js})
+            .pipe(uglify())
+            .pipe(rename({
+                extname: '.min.js'
+            }))
+            .pipe(gulp.dest(assets_js));
 });
 
 /**

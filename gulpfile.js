@@ -54,8 +54,8 @@ var base                  = '.',
     };
 
 gulp.task('default', function() {
-  console.log('Execute "gulp deploy:preview|deploy:production" to deploy the specified version');
-  console.log('Execute "gulp compile:preview|compile:production" to only compile the source files');
+    console.log('Execute "gulp deploy:preview|deploy:production" to deploy the specified version');
+    console.log('Execute "gulp compile:preview|compile:production" to only compile the source files');
 });
 
 /**

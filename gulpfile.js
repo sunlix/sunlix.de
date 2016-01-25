@@ -108,7 +108,7 @@ gulp.task('compile:production', ['assets:concat'], function() {
     exec('compass compile -e production --force')
 
     return gulp
-            .src(
+            .src([
                 '**/*.js',
                 '!/**/*.min.js'
             ], {cwd: assets_js})

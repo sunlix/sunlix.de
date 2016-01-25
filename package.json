@@ -27,10 +27,7 @@
     "yaml"
   ],
   "author": "Sven Schüring",
-  "license": {
-	"type": "MIT",
-	"url": "http://www.opensource.org/licenses/mit"
-  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sunlix/sunlix.de/issues"
   },

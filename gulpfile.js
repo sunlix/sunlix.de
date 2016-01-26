@@ -3,10 +3,7 @@
  */
 
 var gulp       = require('gulp'),
-    concat     = require('gulp-concat'),
-    uglify     = require('gulp-uglify'),
-    rename     = require('gulp-rename'),
-    flatten    = require('gulp-flatten'),
+    plugins    = require('gulp-load-plugins')();
     del        = require('del'),
     vinylPaths = require('vinyl-paths'),
     merge      = require('merge-stream'),
@@ -69,22 +66,22 @@ gulp.task('assets:find', ['clean'], function() {
                     '**/*.js',
                     '!**/jquery.*.js'
                 ], {cwd: sass})
-                .pipe(flatten())
+                .pipe(plugins.flatten())
                 .pipe(gulp.dest(assets_js))
 
     var l = gulp
                 .src('**/jquery.*.js', {cwd: sass})
-                .pipe(flatten())
+                .pipe(plugins.flatten())
                 .pipe(gulp.dest(assets_js_libs));
 
     var i = gulp
                 .src(fileset.img, {cwd: sass})
-                .pipe(flatten())
+                .pipe(plugins.flatten())
                 .pipe(gulp.dest(assets_img));
 
     var f = gulp
                 .src(fileset.fonts, {cwd: sass})
-                .pipe(flatten())
+                .pipe(plugins.flatten())
                 .pipe(gulp.dest(assets_fonts));
 
     return merge(j, l, i, f);
@@ -93,7 +90,7 @@ gulp.task('assets:find', ['clean'], function() {
 gulp.task('assets:concat', ['assets:find'], function() {
     return gulp
             .src('*', {cwd: assets_js_libs})
-            .pipe(concat('jquery.libs.js'))
+            .pipe(plugins.concat('jquery.libs.js'))
             .pipe(gulp.dest(assets_js));
 });
 
@@ -113,8 +110,8 @@ gulp.task('compile:production', ['assets:concat'], function() {
                 '**/*.js',
                 '!/**/*.min.js'
             ], {cwd: assets_js})
-            .pipe(uglify())
-            .pipe(rename({
+            .pipe(plugins.uglify())
+            .pipe(plugins.rename({
                 extname: '.min.js'
             }))
             .pipe(gulp.dest(assets_js));

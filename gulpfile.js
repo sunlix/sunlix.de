@@ -17,7 +17,7 @@ var gulp       = require('gulp'),
  */
 
 var base                  = '.',
-    sass                  = base + '/sass',
+    sass                  = base + '/src',
     assets                = base + '/assets',
     assets_js             = assets + '/js',
     assets_js_libs        = assets_js + '/libs',

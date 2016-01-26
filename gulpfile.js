@@ -30,6 +30,7 @@ var base                  = '.',
         base: [
             '!' + sass + '/**',
             '!' + base + '/node_modules/**',
+            '!' + base + '/bower_components/**',
             '!gulpfile.js',
             '**/*.html',
             '**/*.css',

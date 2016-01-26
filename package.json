@@ -16,7 +16,8 @@
     "vinyl-paths": "^2.1.0"
   },
   "scripts": {
-    "test": "gulp"
+    "test": "gulp",
+    "postinstall": "bower install"
   },
   "repository": {
     "type": "git",

@@ -33,7 +33,7 @@
                 <p class="site-title">sunlix.de - personal essay</p>
             </div>
         </header>
-        <nav id="nav-main" class="ym-hlist">
+        <nav class="nav-main ym-hlist">
             <div class="ym-wrapper ym-clearfix">
                 <!-- optional search form -->
                 <form class="ym-searchform">
@@ -41,7 +41,7 @@
                         <legend class="ym-hideme">Suche</legend>
                         <input class="ym-searchfield" type="search" placeholder="Search..." />
                         <button type="submit" class="ym-searchbutton fa fa-search">
-                            <span>Search</span>
+                            <span class="ym-hideme">Search</span>
                         </button>
                     </fieldset>
                 </form>
@@ -55,7 +55,7 @@
         </nav>
         <main id="main">
             <div class="ym-wrapper ym-clearfix">
-                <nav id="nav-breadcrumb" aria-label="Pfadangabe">
+                <nav class="nav-breadcrumb" aria-label="Pfadangabe">
                     <ul>
                         <li><a href="#">Startseite</a></li>
                         <li><a href="#">Weblog</a></li>
@@ -221,8 +221,33 @@ abstract class Zend_Uri {
     }
 }</code></pre>
                         <h2>H2. Headline</h2>
-                        <p>Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.</p>
-                        <p>Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege, und näher an der Erde tausend mannigfaltige Gräschen mir merkwürdig werden; wenn ich das Wimmeln der kleinen Welt zwischen Halmen, die unzähligen, unergründlichen Gestalten der Würmchen, der Mückchen näher an meinem Herzen fühle, und fühle die Gegenwart des Allmächtigen</p>
+                        <p>Eine wunderbare Heiterkeit - <code>inline Code</code> - hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet.</p>
+                        <blockquote>Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege, und näher an der Erde tausend mannigfaltige Gräschen mir merkwürdig werden; wenn ich das Wimmeln der kleinen Welt zwischen Halmen, die unzähligen, unergründlichen Gestalten der Würmchen, der Mückchen näher an meinem Herzen fühle, und fühle die Gegenwart des Allmächtigen</blockquote>
+                        <h2>H2. Lists</h2>
+                        <ul>
+                            <li>Eintrag 1</li>
+                            <li>Eintrag 2
+                                <ul>
+                                    <li>Eintrag 1.1</li>
+                                    <li>Eintrag 1.2</li>
+                                    <li>Eintrag 1.3</li>
+                                </ul>
+                            </li>
+                            <li>Eintrag 3</li>
+                            <li>Eintrag 4</li>
+                        </ul>
+                        <ol>
+                            <li>Eintrag 1</li>
+                            <li>Eintrag 2
+                                <ol>
+                                    <li>Eintrag 1.1</li>
+                                    <li>Eintrag 1.2</li>
+                                    <li>Eintrag 1.3</li>
+                                </ol>
+                            </li>
+                            <li>Eintrag 3</li>
+                            <li>Eintrag 4</li>
+                        </ol>
                     </div>
                     <footer>
                         <dl class="article-meta">
@@ -251,48 +276,48 @@ abstract class Zend_Uri {
                             <dd><a href="#" title="Kommentiere Relaunch sunlix.de">1 Kommentar</a></dd>
                         </dl>
                     </footer>
-                    <section id="comments">
+                    <section class="comments">
                         <header>
                             <h2>6 Kommentare</h2>
                         </header>
                         <article>
-                            <p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" width="80" height="80" alt="" /></p>
                             <header>
                                 <h3>Sven schrieb am <time datetime="2014-04-13T15:33:00+01:00">13.04.2014 um 15:33 Uhr</time></h3>
                             </header>
+                            <p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" width="80" height="80" alt="" /></p>
                             <blockquote>
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
                             </blockquote>
                         </article>
                         <article>
-                            <p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" width="80" height="80" alt="" /></p>
                             <header>
                                 <h3>Sven schrieb am <time datetime="2014-04-13T15:33:00+01:00">13.04.2014 um 15:33 Uhr</time></h3>
                             </header>
+                            <p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" width="80" height="80" alt="" /></p>
                             <blockquote>
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
                             </blockquote>
                             <article class="comment-author">
-                                <p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" width="80" height="80" alt="" /></p>
                                 <header>
                                     <h3>Sven schrieb am <time datetime="2014-04-13T15:33:00+01:00">13.04.2014 um 15:33 Uhr</time></h3>
                                 </header>
+                                <p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" width="80" height="80" alt="" /></p>
                                 <blockquote>
                                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
                                 </blockquote>
                                 <article>
-                                    <p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" width="80" height="80" alt="" /></p>
                                     <header>
                                         <h3>Sven schrieb am <time datetime="2014-04-13T15:33:00+01:00">13.04.2014 um 15:33 Uhr</time></h3>
                                     </header>
+                                    <p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" width="80" height="80" alt="" /></p>
                                     <blockquote>
                                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
                                     </blockquote>
                                     <article>
-                                        <p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" width="80" height="80" alt="" /></p>
                                         <header>
                                             <h3>Sven schrieb am <time datetime="2014-04-13T15:33:00+01:00">13.04.2014 um 15:33 Uhr</time></h3>
                                         </header>
+                                        <p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" width="80" height="80" alt="" /></p>
                                         <blockquote>
                                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
                                         </blockquote>
@@ -301,10 +326,10 @@ abstract class Zend_Uri {
                             </article>
                         </article>
                         <article>
-                            <p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" width="80" height="80" alt="" /></p>
                             <header>
                                 <h3>Sven schrieb am <time datetime="2014-04-13T15:33:00+01:00">13.04.2014 um 15:33 Uhr</time></h3>
                             </header>
+                            <p class="float-left"><img src="http://dummyimage.com/80x80/cccccc/fff.png" width="80" height="80" alt="" /></p>
                             <blockquote>
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec qu
                             </blockquote>
@@ -348,7 +373,7 @@ abstract class Zend_Uri {
         </main>
         <footer>
             <div class="ym-wrapper ym-clearfix">
-                <nav id="nav-meta" class="ym-hlist" aria-label="Hilfsnavigation">
+                <nav class="nav-meta ym-hlist" aria-label="Hilfsnavigation">
                     <ul class="linearize-level-2">
                         <li><a href="impressum.html">Impressum &amp; Datenschutz</a></li>
                         <li><a href="#">FAQ</a></li>

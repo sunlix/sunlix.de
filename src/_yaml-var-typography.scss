@@ -27,9 +27,9 @@ $ym-font-monospace          : Consolas, "Lucida Console", "Andale Mono", "Bitstr
 // standard typography colors
 $ym-text-color              : $color-text;
 $ym-headings-color          : $color-text-secondary;
-$ym-blockquote-text-color   : #666;
-$ym-blockquote-bg-color     : transparent;
-$ym-pre-text-color          : #800;
+$ym-blockquote-text-color   : $color-text-secondary;
+$ym-blockquote-bg-color     : #eee;
+$ym-pre-text-color          : $color-text;
 $ym-kbd-text-color          : #666;
 $ym-mark-text-color         : #000;
 $ym-mark-bg-color           : #ff0;
@@ -54,7 +54,7 @@ $ym-dimmed-text-color       : #888;
 // Vertical Rhythm
 // ---------------------------------------------------
 // font values have to be defined in [px] without unit
-$ym-default-font-size       : 16;
+$ym-default-font-size       : 14;
 $ym-base-font-size          : 14;
 $ym-base-line-height        : 21;
 

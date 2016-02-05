@@ -165,7 +165,9 @@
     blockquote {
         background: $ym-blockquote-bg-color;
         color: $ym-blockquote-text-color;
-        margin: $line-height * 1em 0 0 1.5em;
+        margin: 0 0 $line-height * 1em 1.5em;
+        padding: 1rem;
+        border-left: 5px solid $color-main-500;
     }
 
     strong,
@@ -210,6 +212,12 @@
     pre,
     code {
         color: $ym-pre-text-color;
+    }
+
+    p code {
+        background-color: #eee;
+        border: 1px solid #333;
+        padding: 0 .3rem;
     }
 
     kbd,
@@ -501,7 +509,7 @@
     h1,
     .permalink,
     .site-title {
-        font-size: $ym-h1-font-scale * 54%;
+        font-size: $ym-h1-font-scale * 50%;
     }
 
     h2 {

@@ -124,7 +124,7 @@
     }
 
     /* navigation cascade */
-    #nav-meta {
+    .nav-meta {
         .active strong {
             color: $color-accent-700;
             border-color: $color-accent-700;
@@ -155,7 +155,7 @@
                 margin: 0;
 
                 a {
-                    display: inline-block;
+                    display: block;
                     color: #fff;
                     text-decoration: none;
                 }
@@ -341,19 +341,19 @@
     }
 
     /* comments cascade */
-    #comments {
+    .comments {
         img {
             @include border-radius(50%);
         }
 
         article {
-            margin: 0;
-            padding: .5em;
+            display: table;
 
             p {
                 margin: 0 1.5em 0 0;
             }
             blockquote {
+                display: table;
                 margin: 1.5em 0 1.5em 1.5em;
             }
             article {
@@ -433,6 +433,10 @@
         padding: .5em;
     }
 
+    .nav-breadcrumb {
+        display: none;
+    }
+
     .ym-searchform input[type="search"] {
         width: 100%;
         @include ym-box-sizing();
@@ -471,7 +475,7 @@
         }
     }
 
-    #comments {
+    .comments {
         .float-left {
             display: none;
         }

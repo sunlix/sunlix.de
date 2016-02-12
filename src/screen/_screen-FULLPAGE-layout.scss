@@ -133,12 +133,12 @@
         li {
             a,
             strong {
-                color: $color-text-secondary;
+                color: $color-text-secondary !important;
 
                 &:hover,
                 &:focus,
                 &:active {
-                    color: $color-accent-700;
+                    color: $color-accent-700 !important;
                 }
 
             }

@@ -13,7 +13,7 @@
     /* Layout Module Configuration */
     .ym-wrapper {
         max-width: $layout-width_max;
-        margin: 0 auto;
+        margin: 0;
         position: relative;
     }
 
@@ -98,7 +98,7 @@
 
     .site-author {
         img {
-            @include border-radius(50%);
+            border-radius: 50%;
         }
 
         figure {
@@ -191,14 +191,14 @@
 
                 a {
                     @include md-button();
-                    @include border-radius(50%);
+                    border-radius: 50%;
 
                     display: inline;
                     padding: 1em;
 
                     &:after,
                     &:before {
-                        @include border-radius(50%);
+                        border-radius: 50%;
                     }
                 }
             }
@@ -329,7 +329,7 @@
         @include ym-contain(dt);
 
         img {
-            @include border-radius(50%);
+            border-radius: 50%;
         }
     }
 
@@ -360,7 +360,7 @@
     /* comments cascade */
     .comments {
         img {
-            @include border-radius(50%);
+            border-radius: 50%;
         }
 
         article {

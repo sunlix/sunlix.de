@@ -14,7 +14,7 @@ var gulp       = require('gulp'),
  */
 
 var base                  = '.',
-    sass                  = base + '/src',
+    src                   = base + '/src',
     assets                = base + '/assets',
     assets_js             = assets + '/js',
     assets_js_libs        = assets_js + '/libs',
@@ -25,7 +25,7 @@ var base                  = '.',
     stage_production_path = base + '/../prod',
     fileset = {
         base: [
-            '!' + sass + '/**',
+            '!' + src + '/**',
             '!' + base + '/node_modules/**',
             '!' + base + '/bower_components/**',
             '!gulpfile.js',
@@ -65,22 +65,22 @@ gulp.task('assets:find', ['clean'], function() {
                 .src([
                     '**/*.js',
                     '!**/jquery.*.js'
-                ], {cwd: sass})
+                ], {cwd: src})
                 .pipe(plugins.flatten())
                 .pipe(gulp.dest(assets_js))
 
     var l = gulp
-                .src('**/jquery.*.js', {cwd: sass})
+                .src('**/jquery.*.js', {cwd: src})
                 .pipe(plugins.flatten())
                 .pipe(gulp.dest(assets_js_libs));
 
     var i = gulp
-                .src(fileset.img, {cwd: sass})
+                .src(fileset.img, {cwd: src})
                 .pipe(plugins.flatten())
                 .pipe(gulp.dest(assets_img));
 
     var f = gulp
-                .src(fileset.fonts, {cwd: sass})
+                .src(fileset.fonts, {cwd: src})
                 .pipe(plugins.flatten())
                 .pipe(gulp.dest(assets_fonts));
 
@@ -98,13 +98,32 @@ gulp.task('assets:concat', ['assets:find'], function() {
  * Compile tasks
  */
 
-gulp.task('compile:preview', ['assets:concat'], function() {
-    return exec('compass compile -e development --force');
+gulp.task('compile:watch', function () {
+    plugins.livereload.listen();
+    return gulp
+            .watch(['**/*.scss', '**/*.js'], {cwd: src}, ['compile:preview']);
 });
 
-gulp.task('compile:production', ['assets:concat'], function() {
-    exec('compass compile -e production --force')
+gulp.task('compile:preview', ['assets:concat'], function () {
+    return gulp
+            .src('**/*.scss', {cwd: src})
+            .pipe(plugins.sourcemaps.init())
+            .pipe(plugins.sass().on('error', plugins.sass.logError))
+            .pipe(plugins.cssnano({
+                discardComments: {
+                    removeAll: true
+                },
+                autoprefixer: {
+                    browsers: ['last 2 versions'],
+                    cascade: false
+                }
+            }))
+            .pipe(plugins.sourcemaps.write('.'))
+            .pipe(gulp.dest(assets_css))
+            .pipe(plugins.livereload());;
+});
 
+gulp.task('compile:production', ['compile:preview'], function() {
     return gulp
             .src([
                 '**/*.js',

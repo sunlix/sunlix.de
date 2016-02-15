@@ -169,6 +169,11 @@
         .next {
             float: right;
         }
+
+        svg {
+            vertical-align: middle;
+            fill: currentColor;
+        }
     }
 
     .paging {
@@ -207,6 +212,10 @@
         bottom: 2em;
 
         @include md-button(fab, $color-main-500);
+
+        svg {
+            padding: 25%;
+        }
     }
 
     .c-list {

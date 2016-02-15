@@ -40,8 +40,12 @@
                     <fieldset>
                         <legend class="ym-hideme">Suche</legend>
                         <input class="ym-searchfield" type="search" placeholder="Search..." />
-                        <button type="submit" class="ym-searchbutton fa fa-search">
-                            <span class="ym-hideme">Search</span>
+                        <button type="submit" class="ym-searchbutton">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 1792 1792" aria-labelledby="search-title search-desc" role="img" xmlns="http://www.w3.org/2000/svg">
+                                <title id="search-title">Suchen</title>
+                                <desc id="search-desc">Ein schwarzes stilisiertes Lupensymbol</desc>
+                                <path role="presentation" d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/>
+                            </svg>
                         </button>
                     </fieldset>
                 </form>
@@ -66,14 +70,18 @@
                     <ul>
                         <li class="prev">
                             <a href="#" rel="prev">
-                                <span class="fa fa-chevron-left"></span>
+                            <svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1427 301l-531 531 531 531q19 19 19 45t-19 45l-166 166q-19 19-45 19t-45-19l-742-742q-19-19-19-45t19-45l742-742q19-19 45-19t45 19l166 166q19 19 19 45t-19 45z"/>
+                            </svg>
                                 <span>Relaunch geschafft!</span>
                             </a>
                         </li>
                         <li class="next">
                             <a href="#" rel="next">
                                 <span>Mein HQ!</span>
-                                <span class="fa fa-chevron-right"></span>
+                                <svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1363 877l-742 742q-19 19-45 19t-45-19l-166-166q-19-19-19-45t19-45l531-531-531-531q-19-19-19-45t19-45l166-166q19-19 45-19t45 19l742 742q19 19 19 45t-19 45z"/>
+                                </svg>
                             </a>
                         </li>
                     </ul>
@@ -250,31 +258,51 @@ abstract class Zend_Uri {
                         </ol>
                     </div>
                     <footer>
-                        <dl class="article-meta">
-                            <dt class="fa fa-user">
-                                <span>Author</span>
-                            </dt>
-                            <dd><a href="#" title="Alle Einträge von Sven Schüring anzeigen" rel="author">Sven Schüring</a></dd>
-                            <dt class="fa fa-clock-o">
-                                <span>Datum</span>
-                            </dt>
-                            <dd><time datetime="2014-04-13T15:33:00+01:00">13.04.2014</time></dd>
-                            <dt class="fa fa-folder">
-                                <span>Kategorien</span>
-                            </dt>
-                            <dd><a href="#" title="Alle Einträge der Kategorie Relaunch anzeigen" class="label">Relaunch</a></dd>
-                            <dd><a href="#" title="Alle Einträge der Kategorie Wordpress anzeigen" class="label">Wordpress</a></dd>
-                            <dt class="fa fa-tag">
-                                <span>Tags</span>
-                            </dt>
-                            <dd><a href="#" title="Alle Einträge mit dem Tag PHP anzeigen" class="label" rel="tag">PHP</a></dd>
-                            <dd><a href="#" title="Alle Einträge mit dem Tag Systemtechnik anzeigen" class="label" rel="tag">Systemtechnik</a></dd>
-                            <dd><a href="#" title="Alle Einträge mit dem Tag Tipps anzeigen" class="label" rel="tag">Tipps</a></dd>
-                            <dt class="fa fa-comment">
-                                <span>Kommentare</span>
-                            </dt>
-                            <dd><a href="#" title="Kommentiere Relaunch sunlix.de">1 Kommentar</a></dd>
-                        </dl>
+                                <dl class="article-meta">
+                                    <dt>
+                                        <svg width="16" height="16" viewBox="0 0 1792 1792" aria-labelledby="author-title-1 author-desc-1" role="img" xmlns="http://www.w3.org/2000/svg">
+                                            <title id="author-title-1">Author</title>
+                                            <desc id="author-desc-1">Ein schwarzes stilisiertes Benutzersymbol</desc>
+                                            <path role="presentation" d="M1600 1405q0 120-73 189.5t-194 69.5h-874q-121 0-194-69.5t-73-189.5q0-53 3.5-103.5t14-109 26.5-108.5 43-97.5 62-81 85.5-53.5 111.5-20q9 0 42 21.5t74.5 48 108 48 133.5 21.5 133.5-21.5 108-48 74.5-48 42-21.5q61 0 111.5 20t85.5 53.5 62 81 43 97.5 26.5 108.5 14 109 3.5 103.5zm-320-893q0 159-112.5 271.5t-271.5 112.5-271.5-112.5-112.5-271.5 112.5-271.5 271.5-112.5 271.5 112.5 112.5 271.5z"/>
+                                        </svg>
+                                    </dt>
+                                    <dd><a href="#" title="Alle Einträge von Sven Schüring anzeigen" rel="author">Sven Schüring</a></dd>
+                                    <dt>
+                                        <svg width="16" height="16" viewBox="0 0 1792 1792" aria-labelledby="date-title-1 date-desc-1" role="img" xmlns="http://www.w3.org/2000/svg">
+                                            <title id="date-title-1">Datum</title>
+                                            <desc id="date-desc-1">Ein schwarzes stilisiertes Uhrensymbol</desc>
+                                            <path role="presentation" d="M1024 544v448q0 14-9 23t-23 9h-320q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h224v-352q0-14 9-23t23-9h64q14 0 23 9t9 23zm416 352q0-148-73-273t-198-198-273-73-273 73-198 198-73 273 73 273 198 198 273 73 273-73 198-198 73-273zm224 0q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/>
+                                        </svg>
+                                    </dt>
+                                    <dd><time datetime="2014-04-13T15:33:00+01:00">13.04.2014</time></dd>
+                                    <dt>
+                                        <svg width="16" height="16" viewBox="0 0 1792 1792" aria-labelledby="category-title-1 category-desc-1" role="img" xmlns="http://www.w3.org/2000/svg">
+                                            <title id="category-title-1">Kategorien</title>
+                                            <desc id="category-desc-1">Ein schwarzes stilisiertes Ordnersymbol</desc>
+                                            <path role="presentation" d="M1728 608v704q0 92-66 158t-158 66h-1216q-92 0-158-66t-66-158v-960q0-92 66-158t158-66h320q92 0 158 66t66 158v32h672q92 0 158 66t66 158z"/>
+                                        </svg>
+                                    </dt>
+                                    <dd><a href="#" title="Alle Einträge der Kategorie Relaunch anzeigen" class="label">Relaunch</a></dd>
+                                    <dd><a href="#" title="Alle Einträge der Kategorie Wordpress anzeigen" class="label">Wordpress</a></dd>
+                                    <dt>
+                                        <svg width="16" height="16" viewBox="0 0 1792 1792" aria-labelledby="tag-title-1 tag-desc-1" role="img" xmlns="http://www.w3.org/2000/svg">
+                                            <title id="tag-title-1">Schlagwörter</title>
+                                            <desc id="tag-desc-1">Ein schwarzes stilisiertes Etikettensymbol</desc>
+                                            <path role="presentation" d="M576 448q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm1067 576q0 53-37 90l-491 492q-39 37-91 37-53 0-90-37l-715-716q-38-37-64.5-101t-26.5-117v-416q0-52 38-90t90-38h416q53 0 117 26.5t102 64.5l715 714q37 39 37 91z"/>
+                                        </svg>
+                                    </dt>
+                                    <dd><a href="#" title="Alle Einträge mit dem Tag PHP anzeigen" class="label" rel="tag">PHP</a></dd>
+                                    <dd><a href="#" title="Alle Einträge mit dem Tag Systemtechnik anzeigen" class="label" rel="tag">Systemtechnik</a></dd>
+                                    <dd><a href="#" title="Alle Einträge mit dem Tag Tipps anzeigen" class="label" rel="tag">Tipps</a></dd>
+                                    <dt>
+                                        <svg width="16" height="16" viewBox="0 0 1792 1792" aria-labelledby="comment-title-1 comment-desc-1" role="img" xmlns="http://www.w3.org/2000/svg">
+                                            <title id="comment-title-1">Kommentare</title>
+                                            <desc id="comment-desc-1">Ein schwarzes stilisiertes Sprechblasensymbol</desc>
+                                            <path role="presentation" d="M1792 896q0 174-120 321.5t-326 233-450 85.5q-70 0-145-8-198 175-460 242-49 14-114 22-17 2-30.5-9t-17.5-29v-1q-3-4-.5-12t2-10 4.5-9.5l6-9 7-8.5 8-9q7-8 31-34.5t34.5-38 31-39.5 32.5-51 27-59 26-76q-157-89-247.5-220t-90.5-281q0-130 71-248.5t191-204.5 286-136.5 348-50.5q244 0 450 85.5t326 233 120 321.5z"/>
+                                        </svg>
+                                    </dt>
+                                    <dd><a href="#" title="Kommentiere Relaunch sunlix.de">1 Kommentar</a></dd>
+                                </dl>
                     </footer>
                     <section class="comments">
                         <header>
@@ -380,21 +408,29 @@ abstract class Zend_Uri {
                         <li><a href="contact.html">Kontakt</a></li>
                     </ul>
                     <a href="#main" class="toTop ym-hideme">
-                        <span class="fa fa-chevron-up">
-                            <span class="ym-hideme">Zum Seitenanfang</span>
-                        </span>
+                        <svg width="25" height="25" fill="currentColor" viewBox="0 0 1792 1792" aria-labelledby="top-title top-desc" role="img" xmlns="http://www.w3.org/2000/svg">
+                            <title id="top-title">Zum Seitenanfang</title>
+                            <desc id="top-desc">Ein schwarzes stilisiertes Pfeilsymbol nörlicher Ausrichtung</desc>
+                            <path role="presentation" d="M1683 1331l-166 165q-19 19-45 19t-45-19l-531-531-531 531q-19 19-45 19t-45-19l-166-165q-19-19-19-45.5t19-45.5l742-741q19-19 45-19t45 19l742 741q19 19 19 45.5t-19 45.5z"/>
+                        </svg>
                     </a>
                 </nav>
                 <div class="site-credits">
-                    <span class="fa fa-code">
-                        <span>coded</span>
-                    </span>
-                    <span class="fa fa-plus">
-                        <span>with</span>
-                    </span>
-                    <span class="fa fa-heart">
-                        <span>love</span>
-                    </span>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 1792 1792" aria-labelledby="code-title code-desc" role="img" xmlns="http://www.w3.org/2000/svg">
+                        <title id="code-title">coded</title>
+                        <desc id="code-desc">Ein schwarzes stilisiertes Quellcodesymbol</desc>
+                        <path role="presentation" d="M553 1399l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23t-10 23l-393 393 393 393q10 10 10 23t-10 23zm591-1067l-373 1291q-4 13-15.5 19.5t-23.5 2.5l-62-17q-13-4-19.5-15.5t-2.5-24.5l373-1291q4-13 15.5-19.5t23.5-2.5l62 17q13 4 19.5 15.5t2.5 24.5zm657 651l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23t-10 23z"/>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 1792 1792" aria-labelledby="plus-title plus-desc" role="img" xmlns="http://www.w3.org/2000/svg">
+                        <title id="plus-title">with</title>
+                        <desc id="plus-desc">Ein schwarzes stilisiertes Plussymbol</desc>
+                        <path role="presentation" d="M1600 736v192q0 40-28 68t-68 28h-416v416q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-416h-416q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h416v-416q0-40 28-68t68-28h192q40 0 68 28t28 68v416h416q40 0 68 28t28 68z"/>
+                    </svg>
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 1792 1792" aria-labelledby="heart-title heart-desc" role="img" xmlns="http://www.w3.org/2000/svg">
+                        <title id="heart-title">love</title>
+                        <desc id="heart-desc">Ein schwarzes stilisiertes Herzsymbol</desc>
+                        <path role="presentation" d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26t-55.5-65.5-68-97.5-53.5-121-23.5-138q0-220 127-344t351-124q62 0 126.5 21.5t120 58 95.5 68.5 76 68q36-36 76-68t95.5-68.5 120-58 126.5-21.5q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z"/>
+                    </svg>
                 </div>
             </div>
         </footer>

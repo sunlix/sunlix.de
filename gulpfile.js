@@ -106,7 +106,7 @@ gulp.task('compile:watch', function () {
 
 gulp.task('compile:preview', ['assets:concat'], function () {
     return gulp
-            .src(src + '**/*.scss')
+            .src(src + '**/*.scss', {base: src})
             .pipe(plugins.sourcemaps.init())
             .pipe(plugins.sass().on('error', plugins.sass.logError))
             .pipe(plugins.cssnano({

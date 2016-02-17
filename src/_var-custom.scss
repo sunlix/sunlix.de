@@ -20,7 +20,7 @@ $color-bg-main               : #fafafa;
 /**
  * Typography
  */
-$font-family                 : 'Roboto','Helvetica','Arial',sans-serif;
+$font-family                 : "Roboto", "Helvetica", "Arial", sans-serif;
 $font-weight-thin            : 100;
 $font-weight-light           : 300;
 $font-weight-regular         : 400;
@@ -55,15 +55,15 @@ $color-accent-700            : $color-lightBlue-a700;
 /**
  * Buttons
  */
-$color-flat-light-hover      : rgba(153, 153, 153, 0.20);
-$color-flat-light-active     : rgba(153, 153, 153, 0.40);
-$color-flat-light-disabled   : rgba(153, 153, 153, 0.10);
+$color-flat-light-hover      : rgba(153, 153, 153, 0.2);
+$color-flat-light-active     : rgba(153, 153, 153, 0.4);
+$color-flat-light-disabled   : rgba(153, 153, 153, 0.1);
 
 $color-flat-dark-hover       : rgba(204, 204, 204, 0.15);
 $color-flat-dark-active      : rgba(204, 204, 204, 0.25);
-$color-flat-dark-disabled    : rgba(204, 204, 204, 0.10);
+$color-flat-dark-disabled    : rgba(204, 204, 204, 0.1);
 
-$color-raised-light-normal   : rgba(153, 153, 153, 0.10);
+$color-raised-light-normal   : rgba(153, 153, 153, 0.1);
 $color-raised-light-hover    : $color-flat-light-hover;
 $color-raised-light-active   : $color-flat-light-active;
 $color-raised-light-disabled : $color-flat-light-disabled;
@@ -71,7 +71,7 @@ $color-raised-light-disabled : $color-flat-light-disabled;
 $color-raised-dark-normal    : $color-main-500;
 $color-raised-dark-hover     : $color-main-600;
 $color-raised-dark-active    : $color-main-700;
-$color-raised-dark-disabled  : rgba(204, 204, 204, 0.10);
+$color-raised-dark-disabled  : rgba(204, 204, 204, 0.1);
 
 /**
  * Highlight colors

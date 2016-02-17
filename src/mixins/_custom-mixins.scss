@@ -9,121 +9,138 @@
  * Buttons
  */
 @mixin md-button($type: raised, $theme: plain) {
-    background: 0 0;
-    border: none;
-    border-radius: 2px;
-    @if $theme == plain {
-        color: $color-text-secondary !important;
-    } @else {
-        color: #fff !important;
-        font-weight: 400 !important;
-    }
-    display: block;
-    position: relative;
-    height: 36px;
-    min-width: 64px;
-    padding: 0 8px;
-    display: inline-block;
-    font-family: 'Roboto','Helvetica','Arial',sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0;
-    overflow: hidden;
-    will-change: box-shadow,transform;
-    -webkit-transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
-    transition: box-shadow .2s cubic-bezier(.4,0,1,1),background-color .2s cubic-bezier(.4,0,.2,1),color .2s cubic-bezier(.4,0,.2,1);
-    outline: none;
-    cursor: pointer;
+  background: 0 0;
+  border: none;
+  border-radius: 2px;
+
+  @if $theme == plain {
+    color: $color-text-secondary !important;
+  } @else {
+    color: #fff !important;
+    font-weight: 400 !important;
+  }
+  display: block;
+  position: relative;
+  height: 36px;
+  min-width: 64px;
+  padding: 0 8px;
+  display: inline-block;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  overflow: hidden;
+  will-change: box-shadow, transform;
+  -webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: 36px;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus {
     text-decoration: none;
-    text-align: center;
-    line-height: 36px;
-    vertical-align: middle;
+  }
 
-    &:hover,
+  @if $type == fab {
+    border-radius: 50%;
+    font-size: 24px;
+    height: 56px;
+    margin: auto;
+    min-width: 56px;
+    width: 56px;
+    padding: 0;
+    overflow: hidden;
+
+    @if $theme == plain {
+      background: rgba(158, 158, 158, 0.2);
+    } @else {
+      background: $theme;
+    }
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    position: relative;
+    line-height: normal;
+
+    &:active {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+
+      @if $theme == plain {
+        background-color: rgba(158, 158, 158, 0.4);
+      } @else {
+        background: $theme;
+      }
+    }
+
     &:focus {
-        text-decoration: none;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+
+      @if $theme == plain {
+        background-color: rgba(158, 158, 158, 0.4);
+      } @else {
+        background: $theme;
+      }
     }
 
-    @if $type == fab {
-        border-radius: 50%;
-        font-size: 24px;
-        height: 56px;
-        margin: auto;
-        min-width: 56px;
-        width: 56px;
-        padding: 0;
-        overflow: hidden;
-        @if $theme == plain {
-            background: rgba(158,158,158,.2);
-        } @else {
-            background: $theme;
-        }
-        box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
-        position: relative;
-        line-height: normal;
+    & > span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-12px, -12px);
+      -ms-transform: translate(-12px, -12px);
+      transform: translate(-12px, -12px);
+      line-height: 24px;
+      width: 24px;
+    }
+  }
 
-        &:active {
-            box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-            @if $theme == plain {
-                background-color: rgba(158,158,158,.4);
-            } @else {
-                background: $theme;
-            }
-        }
+  @if $type == raised {
+    @if $theme == plain {
+      background: rgba(158, 158, 158, 0.2);
+    } @else {
+      background: $theme;
+    }
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
-        &:focus {
-            box-shadow: 0 0 8px rgba(0,0,0,.18),0 8px 16px rgba(0,0,0,.36);
-            @if $theme == plain {
-                background-color: rgba(158,158,158,.4);
-            } @else {
-                background: $theme;
-            }
-        }
+    &:active {
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 
-        & > span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-12px,-12px);
-            -ms-transform: translate(-12px,-12px);
-            transform: translate(-12px,-12px);
-            line-height: 24px;
-            width: 24px;
-        }
+      @if $theme == plain {
+        background-color: rgba(158, 158, 158, 0.4);
+      } @else {
+        background: $theme;
+      }
     }
 
-    @if $type == raised {
-        @if $theme == plain {
-            background: rgba(158,158,158,.2);
-        } @else {
-            background: $theme;
-        }
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    &:focus {
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
 
-        &:active {
-            box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12),0 2px 4px -1px rgba(0,0,0,.2);
-            @if $theme == plain {
-                background-color: rgba(158,158,158,.4);
-            } @else {
-                background: $theme;
-            }
-        }
-
-        &:focus {
-            box-shadow: 0 0 8px rgba(0,0,0,.18),0 8px 16px rgba(0,0,0,.36);
-            @if $theme == plain {
-                background-color: rgba(158,158,158,.4);
-            } @else {
-                background: $theme;
-            }
-        }
+      @if $theme == plain {
+        background-color: rgba(158, 158, 158, 0.4);
+      } @else {
+        background: $theme;
+      }
     }
+  }
 }
 
 @mixin input-placeholder {
-    &::-webkit-input-placeholder {@content}
-    &:-moz-placeholder           {@content}
-    &::-moz-placeholder          {@content}
-    &:-ms-input-placeholder      {@content}
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
 }

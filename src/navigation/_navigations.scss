@@ -64,37 +64,32 @@
   }
 
   .nav-main {
-    a,
-    strong {
-      color: rgba(255, 255, 255, 0.60);
-    }
+    li {
+      a,
+      strong {
+        color: rgba(255, 255, 255, 0.60);
+      }
 
-    a:focus,
-    a:hover,
-    a:active {
-      color: #fff;
-    }
-
-    &.active {
-      color: #fff;
-
-      strong,
       a:focus,
       a:hover,
       a:active {
         color: #fff;
       }
+
+      &.active {
+        color: #fff;
+
+        strong,
+        a:focus,
+        a:hover,
+        a:active {
+          color: #fff;
+        }
+      }
     }
   }
 
   .nav-meta {
-    .active {
-      strong {
-        color: $color-accent-700;
-        border-color: $color-accent-700;
-      }
-    }
-
     li {
       a,
       strong {
@@ -106,6 +101,13 @@
           color: $color-accent-700;
         }
       }
+
+    &.active {
+      strong {
+        color: $color-accent-700;
+        border-color: $color-accent-700;
+      }
+    }
     }
   }
 

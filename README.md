@@ -7,7 +7,6 @@ Inpired by Material Design by Google
 - jQuery
 - jQuery ScrollTo
 - jQuery Waypoints
-- Font Awesome
 - Font Lato
 - Font Roboto
 - Prism

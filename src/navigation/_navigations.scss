@@ -1,11 +1,14 @@
 @import "../yaml-var-globals",
-        "../mixins/yaml-mixins-core",
-        "../var-custom";
+  "../mixins/yaml-mixins-core",
+  "../var-custom";
 
 @media all {
-  .ym-hlist {
-    /* (en) containing floats in IE */
-    /* (de) Einfassen der Floats im IE */
+  .nav-main,
+  .nav-meta {
+    /**
+     * (en) containing floats in IE
+     * (de) Einfassen der Floats im IE
+     */
     width: 100%;
     overflow: hidden;
     position: relative; //(en|de) Bugfix:IE - collapsing horizontal margins
@@ -16,6 +19,7 @@
       padding: 0.5em 1.5em;
       display: inline; // (en|de) Bugfix:IE - Doubled Float Margin Bug
       float: left; // LTR
+
       li {
         display: inline; // (en|de) Bugfix:IE - Doubled Float Margin Bug
         float: left; // LTR
@@ -30,7 +34,6 @@
           background: transparent;
 
           // http://www.google.com/design/spec/components/tabs.html#tabs-specs
-          color: rgba(255, 255, 255, 0.60);
           display: block;
           font-size: 1em;
           line-height: 2em;
@@ -44,21 +47,63 @@
         a:focus,
         a:hover,
         a:active {
-          color: #fff;
           text-decoration: none;
           outline: 0 none;
         }
 
         &.active {
-          color: #fff;
-
           strong,
           a:focus,
           a:hover,
           a:active {
-            color: #fff;
             text-decoration: none;
           }
+        }
+      }
+    }
+  }
+
+  .nav-main {
+    a,
+    strong {
+      color: rgba(255, 255, 255, 0.60);
+    }
+
+    a:focus,
+    a:hover,
+    a:active {
+      color: #fff;
+    }
+
+    &.active {
+      color: #fff;
+
+      strong,
+      a:focus,
+      a:hover,
+      a:active {
+        color: #fff;
+      }
+    }
+  }
+
+  .nav-meta {
+    .active {
+      strong {
+        color: $color-accent-700;
+        border-color: $color-accent-700;
+      }
+    }
+
+    li {
+      a,
+      strong {
+        color: $color-text-secondary;
+
+        &:hover,
+        &:focus,
+        &:active {
+          color: $color-accent-700;
         }
       }
     }
@@ -86,7 +131,9 @@
     }
   }
 
-  /* ------- search form -------- */
+  /**
+   * search form
+   */
   .ym-searchform {
     float: right;
     display: inline;
@@ -107,6 +154,7 @@
       border-bottom: $color-accent-700 1px solid;
       outline: none;
       color: #fff;
+
       @include input-placeholder {
         color: rgba(255, 255, 255, 0.60);
       }
@@ -126,5 +174,53 @@
       padding: 0.25em;
       border: solid 1px transparent;
     }
+  }
+}
+
+@media screen and (max-width: $layout-breakpoint_mid) {
+  .ym-searchform {
+    display: block;
+    float: none;
+    width: auto;
+    text-align: right;
+  }
+
+  .ym-searchform input[type="search"] {
+    width: 14%;
+  }
+}
+
+@media screen and (max-width: $layout-breakpoint_small) {
+  .ym-searchform,
+  .nav-main ul,
+  .nav-meta ul {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .ym-searchform,
+  .nav-main ul,
+  .nav-main li,
+  .nav-meta ul,
+  .nav-meta li {
+    display: block !important;
+    float: none !important;
+    width: auto;
+    text-align: left;
+  }
+
+  .ym-searchform input[type="search"] {
+    width: 100%;
+
+    @include ym-box-sizing();
+  }
+
+  .nav-main ul li a,
+  .nav-main ul li strong {
+    padding: 0.5em;
+  }
+
+  .nav-breadcrumb {
+    display: none;
   }
 }

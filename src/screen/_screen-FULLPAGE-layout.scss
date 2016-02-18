@@ -111,38 +111,10 @@
     line-height: 1.5;
     position: absolute;
     top: 0.5em;
-    right: 0;
-  }
-
-  .fa {
-    & > span {
-      text-indent: -200em;
-      display: inline-block;
-      width: 0;
-    }
+    right: 1.5em;
   }
 
   /* navigation cascade */
-  .nav-meta {
-    .active strong {
-      color: $color-accent-700;
-      border-color: $color-accent-700;
-    }
-
-    li {
-      a,
-      strong {
-        color: $color-text-secondary !important;
-
-        &:hover,
-        &:focus,
-        &:active {
-          color: $color-accent-700 !important;
-        }
-      }
-    }
-  }
-
   .nav-pages {
     ul {
       @include ym-contain(dt);
@@ -270,7 +242,7 @@
 
     li {
       display: inline-block;
-      margin: 0.8em .8em 0 0;
+      margin: 0.8em 0.8em 0 0;
 
       img {
         border: 5px #ddd solid;
@@ -406,17 +378,6 @@
     @include ym-linearize-grids-and-columns();
   }
 
-  .ym-searchform {
-    display: block;
-    float: none;
-    width: auto;
-    text-align: right;
-  }
-
-  .ym-searchform input[type="search"] {
-    width: 14%;
-  }
-
   .toTop {
     display: none !important;
   }
@@ -428,39 +389,9 @@
     @include ym-linearize-grids-and-columns();
   }
 
-  .ym-searchform,
-  .ym-hlist ul {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .ym-searchform,
-  .ym-hlist ul,
-  .ym-hlist li {
-    display: block !important;
-    float: none !important;
-    width: auto;
-    text-align: left;
-  }
-
-  .ym-hlist ul li a,
-  .ym-hlist ul li strong {
-    padding: 0.5em;
-  }
-
-  .nav-breadcrumb {
-    display: none;
-  }
-
-  .ym-searchform input[type="search"] {
-    width: 100%;
-
-    @include ym-box-sizing();
-  }
-
   .nav-pages {
     a {
-      span:not(.fa) {
+      span {
         display: inline-block;
         text-indent: -200em;
         width: 0;

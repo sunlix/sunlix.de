@@ -251,14 +251,16 @@
   }
 
   /* article cascade */
-  .permalink {
+  .article-permalink {
     opacity: 0.1;
     filter: alpha(opacity=0.1);
+    transition: opacity 0.5s;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 
     &:hover,
     &:focus {
-      opacity: 0.6;
-      filter: alpha(opacity=0.8);
+      opacity: 1;
+      filter: alpha(opacity=1);
       text-decoration: none;
     }
   }
@@ -429,7 +431,7 @@
   }
 
   .site-credits,
-  .permalink {
+  .article-permalink {
     display: none;
   }
 }

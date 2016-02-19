@@ -50,7 +50,7 @@
   h4,
   h5,
   h6,
-  .permalink {
+  .article-permalink {
     font-family: $ym-font-sans;
     font-weight: 400;
     color: $ym-headings-color;
@@ -58,7 +58,7 @@
   }
 
   h1,
-  .permalink {
+  .article-permalink {
     /*! font-size: #{$ym-base-font-size * $ym-h1-font-scale}px; */
     font-size: $ym-h1-font-scale * 100%;
     line-height: 2 * $line-height / $ym-h1-font-scale;

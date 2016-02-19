@@ -194,7 +194,7 @@
   .toTop {
     position: fixed !important;
     right: 1em;
-    bottom: 2em;
+    bottom: 3em;
 
     @include md-button(fab, $color-main-500);
 

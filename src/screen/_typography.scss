@@ -194,6 +194,7 @@
     /*! font-size: #{$ym-base-font-size * $ym-text-small-font-scale}px; */
     font-size: $ym-text-small-font-scale * 100%;
     line-height: 1 * $line-height / $ym-text-small-font-scale;
+    color: $color-text-secondary;
   }
 
   pre,

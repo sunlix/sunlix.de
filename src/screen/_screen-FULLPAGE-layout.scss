@@ -114,6 +114,22 @@
     right: 1.5em;
   }
 
+  .tiles {
+    column-count: 4;
+    column-gap: 1em;
+
+    .tile {
+      background-color: #fff;
+      border-left: 5px solid $color-main-500;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+      display: inline-block;
+      margin: 0.75em 0 0.75em;
+      padding: 1.5em;
+
+      @include ym-box-sizing(border-box);
+    }
+  }
+
   /* navigation cascade */
   .nav-pages {
     ul {
@@ -398,6 +414,14 @@
         text-indent: -200em;
         width: 0;
       }
+    }
+  }
+
+  .tiles {
+    column-count: initial;
+
+    .tile {
+      width: auto;
     }
   }
 

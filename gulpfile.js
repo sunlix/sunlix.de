@@ -121,7 +121,7 @@ gulp.task('compile:preview', ['assets:concat'], function () {
             }))
             .pipe(plugins.sourcemaps.write('.'))
             .pipe(gulp.dest(assets_css))
-            .pipe(plugins.livereload());;
+            .pipe(plugins.livereload());
 });
 
 gulp.task('compile:production', ['compile:preview'], function() {

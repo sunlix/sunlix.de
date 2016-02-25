@@ -3,7 +3,7 @@
  */
 
 var gulp       = require('gulp'),
-    plugins    = require('gulp-load-plugins')();
+    plugins    = require('gulp-load-plugins')(),
     del        = require('del'),
     vinylPaths = require('vinyl-paths'),
     merge      = require('merge-stream');

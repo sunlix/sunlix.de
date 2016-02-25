@@ -6,8 +6,7 @@ var gulp       = require('gulp'),
     plugins    = require('gulp-load-plugins')();
     del        = require('del'),
     vinylPaths = require('vinyl-paths'),
-    merge      = require('merge-stream'),
-    exec       = require('child_process').execSync;
+    merge      = require('merge-stream');
 
 /**
  * Path variables

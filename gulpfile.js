@@ -66,7 +66,7 @@ gulp.task('assets:find', ['clean'], function() {
                     '!**/jquery.*.js'
                 ], {cwd: src})
                 .pipe(plugins.flatten())
-                .pipe(gulp.dest(assets_js))
+                .pipe(gulp.dest(assets_js));
 
     var l = gulp
                 .src('**/jquery.*.js', {cwd: src})
